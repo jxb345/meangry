@@ -20,6 +20,7 @@
   "homepage": "https://github.com/jxb345/meangry#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "nodemailer": "^6.4.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "webpack": "^4.42.1",

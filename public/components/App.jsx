@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-class App extends React.Component {
+function App ()  {
 
-  render () {
-    return (
+
+  return (
       <div>
-        <form action="">
+      <form action="/send" method="POST">
           <label >
             SUBJECT
           </label>
@@ -14,10 +14,12 @@ class App extends React.Component {
           <label >
             BODY
           </label>
+          <input type="text"/>
+          <button type="submit">SEND</button>
         </form>
       </div>
     )
-  }
 
 }
+
 export default App;

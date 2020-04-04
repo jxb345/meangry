@@ -6,7 +6,15 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        angry
+        <form action="">
+          <label >
+            SUBJECT
+          </label>
+          <input type="text"/>
+          <label >
+            BODY
+          </label>
+        </form>
       </div>
     )
   }

@@ -16,19 +16,17 @@ const  [body, setBody] = useState('');
     console.log('body', body)
   }
 
-  const handleSubmit = () => {
-    let email = {
-      subject: subject,
-      body: body
-    }
-
-    fetch('/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'applicatoin/json'
-      },
-      body: JSON.stringify(email),
+  async function handleSubmit (){
+    // let email = {
+    //   subject: subject,
+    //   body: body
+    // }
+    const response = await fetch('/test')
+    .then((data) => {
+      console.log('hi')
     })
+    return await response.json();
+
   }
 
   return (

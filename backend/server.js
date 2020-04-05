@@ -6,6 +6,11 @@ const { send } = require('./sendEmail.js')
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }))
 
+app.get('/test', (req, res) => {
+  console.log('inside test endpoint')
+  res.send('test worked');
+})
+
 app.post('/send', (req, res) => {
   console.log('req.body', req.body);
   res.status('email sent');

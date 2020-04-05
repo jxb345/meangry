@@ -1,0 +1,15 @@
+button {
+  border-radius: 5px;
+  height: 30px;
+  width: 60px;
+  color: white;
+  background-color: green;
+  font-weight: 700;
+}
+
+.body {
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+
+}

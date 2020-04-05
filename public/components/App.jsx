@@ -7,14 +7,11 @@ function App ()  {
   return (
       <div>
       <form action="/send" method="POST">
-          <label >
-            SUBJECT
-          </label>
-          <input type="text"/>
+          <input type="text" placeholder="Subject"/>
           <label >
             BODY
           </label>
-          <input type="text"/>
+          <input type="text" className="body"/>
           <button type="submit">SEND</button>
         </form>
       </div>

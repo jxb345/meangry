@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 function App ()  {
 const  [subject, setSubject] = useState('');
 const  [body, setBody] = useState('');
-let sub = '';
 
   const handleSubjectChange = (e) => {
     e.preventDefault();
@@ -17,14 +16,29 @@ let sub = '';
     console.log('body', body)
   }
 
+  const handleSubmit = () => {
+    let email = {
+      subject: subject,
+      body: body
+    }
+
+    fetch('/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'applicatoin/json'
+      },
+      body: JSON.stringify(email),
+    })
+  }
+
   return (
       <div>
-      <form action="/send" method="POST">
+      <form>
           <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>
           <br/>
-          <input type="text" className="body" onChange={handleSubjectChange}/>
+          <textarea type="text" className="body" rows="20" cols="100" onChange={handleBodyChange}/>
           <br/>
-          <button type="submit">SEND</button>
+          <button type="submit" onSubmit={handleSubmit}>SEND</button>
         </form>
       </div>
     )

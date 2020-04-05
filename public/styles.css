@@ -1,27 +1,24 @@
 button {
   border-radius: 5px;
-  height: 30px;
+  height: 40px;
+  width: 80px;
   color: white;
-  width: 60px;
   margin: 0 auto;
   display: block;
   background-color: green;
   font-weight: 700;
+  font-size: small;
 }
 
-
 .body {
-  width: 500px;
-  height: 200px;
   margin: 0 auto;
   display: block;
   border-radius: 5px;
-
 }
 
 .subject {
   border-radius: 5px;
-  width: 500px;
+  width: 615px;
   height: 20px;
   margin: 0 auto;
   display: block;

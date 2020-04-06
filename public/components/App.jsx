@@ -20,8 +20,7 @@ const  [body, setBody] = useState('');
     const response = await fetch('/send', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
     });
@@ -30,8 +29,8 @@ const  [body, setBody] = useState('');
 
   const handleSubmit = () => {
     let email = {
-      subject: "subject",
-      body: "body"
+      subject: subject,
+      body: body
     }
 
     console.log('ex', JSON.stringify(email))

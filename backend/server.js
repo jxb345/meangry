@@ -10,14 +10,14 @@ app.use(express.urlencoded({ extended: true }))
 app.get('/test', (req, res) => {
   console.log('inside test endpoint')
   res.send('test worked');
-  selectEmailAddress(() => {
-    send(req.body.subject, req.body.body)
-  })
-})
 
-app.post('/send', (req, res) => {
-  console.log('req.body', req.body);
-  res.status('email sent');
+  app.post('/send', (req, res) => {
+    console.log('req.body', req.body);
+    selectEmailAddress(() => {
+      send(req.body.subject, req.body.body)
+    })
+  })
+    res.status('email sent');
 });
 
 app.listen(port, () => {

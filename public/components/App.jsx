@@ -17,15 +17,21 @@ const  [body, setBody] = useState('');
   }
 
   async function handleSubmit (){
-    // let email = {
-    //   subject: subject,
-    //   body: body
-    // }
-    const response = await fetch('/test')
+    let email = {
+      subject: subject,
+      body: body
+    }
+    const response = await fetch('/test', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(email);
+    })
     .then((data) => {
       console.log('hi')
     })
-    return await response.json();
+
 
   }
 
@@ -36,7 +42,7 @@ const  [body, setBody] = useState('');
           <br/>
           <textarea type="text" className="body" rows="20" cols="100" onChange={handleBodyChange}/>
           <br/>
-          <button type="submit" onSubmit={handleSubmit}>SEND</button>
+          <button type="submit" onClick={handleSubmit}>SEND</button>
         </form>
       </div>
     )

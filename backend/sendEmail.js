@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 
-const send = (email, password, from, to, subject, body) => {
+const send = (to, subject, body) => {
 
     let transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -22,6 +22,7 @@ const send = (email, password, from, to, subject, body) => {
         console.log('error', error);
       } else {
         console.log('Email sent', + info.response)
+        return;
       }
 
     })

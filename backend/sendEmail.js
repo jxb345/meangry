@@ -1,11 +1,13 @@
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
+
 
 
 const send = (to, subject, body) => {
   console.log('to', to)
 
     let transporter = nodemailer.createTransport({
-      service: 'gmail',
+      service: process.env.MAILSERVICE,
       auth: {
         user: process.env.USER,
         pass: process.env.PASS

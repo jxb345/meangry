@@ -2,12 +2,13 @@ const nodemailer = require('nodemailer');
 
 
 const send = (to, subject, body) => {
+  console.log('to', to)
 
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: user,
-        pass: pass
+        user: process.env.USER,
+        pass: process.env.PASS
       }
     });
 

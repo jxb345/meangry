@@ -17,7 +17,6 @@ function Signup () {
       },
       body: JSON.stringify(email)
     })
-
   }
 
   return (

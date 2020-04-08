@@ -1,5 +1,6 @@
 const path = require('path')
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
+const { db, connect } = require('./emailsDbConnect.js');
 
 
 const selectEmailAddress = () => {
@@ -26,5 +27,14 @@ const selectEmailAddress = () => {
     }
   })
 };
+
+// const insertTest = () => {
+  //  const collection = db.collection('emails')
+
+// }
+// insertTest();
+// connect();
+
+
 
 module.exports = { selectEmailAddress }

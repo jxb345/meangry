@@ -26,7 +26,7 @@ const [signup, setSignup] = useState(false);
       },
       body: JSON.stringify(data)
     });
-    return await response.json();
+    return await response;
   }
 
   const handleSubmit = () => {
@@ -39,9 +39,9 @@ const [signup, setSignup] = useState(false);
 
     postEmail(email)
       .then((d) => {
-        console.log('data', d);
-        setSignup(false);
+        setSignup(true);
         console.log('signup', signup)
+        console.log('d', d)
       });
   }
 

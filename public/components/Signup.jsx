@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 function Signup () {
   const [email, setEmail] = useState({});
+  const [signup, setSignup] = useState(true);
+
 
   const handleChangeForEmail = (e) => {
     setEmail({ email: e.target.value });

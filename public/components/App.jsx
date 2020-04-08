@@ -5,7 +5,7 @@ import Signup from './Signup.jsx';
 function App ()  {
 const  [subject, setSubject] = useState('');
 const  [body, setBody] = useState('');
-const [signup, setSignup] = useState(false);
+const [signup, setSignup] = useState(true);
 
   const handleSubjectChange = (e) => {
     e.preventDefault();

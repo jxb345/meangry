@@ -20,7 +20,11 @@ app.post('/send', (req, res) => {
     res.send('all complete from server.js')
 });
 
-app.listen(3500, () => {
-  console.log(`listening on 3500`);
+app.post('/email', (req, res) => {
+  console.log('req,body in /eamil', req.body)
+})
+
+app.listen(3600, () => {
+  console.log(`listening on 3600`);
 })
 

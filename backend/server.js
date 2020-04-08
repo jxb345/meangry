@@ -17,10 +17,10 @@ app.post('/send', (req, res) => {
   let body = req.body.body;
   selectEmailAddress()
    .then(recipient => send(recipient, subject, body));
-    res.status(console.log('email sent'));
+    res.send('all complete from server.js')
 });
 
-app.listen(PORT, () => {
-  console.log(`listening on ${PORT}`);
+app.listen(3500, () => {
+  console.log(`listening on 3500`);
 })
 

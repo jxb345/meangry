@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import Signup from './Signup.jsx';
 
 
 function App ()  {
 const  [subject, setSubject] = useState('');
 const  [body, setBody] = useState('');
+const [signup, setSignup] = useState(false);
 
   const handleSubjectChange = (e) => {
     e.preventDefault();
@@ -38,11 +40,14 @@ const  [body, setBody] = useState('');
     postEmail(email)
       .then((d) => {
         console.log('data', d);
+        setSignup(false);
+        console.log('signup', signup)
       });
   }
 
   return (
       <div>
+        {((signup) ? <Signup/> :
       <form>
           <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>
           <br/>
@@ -50,6 +55,7 @@ const  [body, setBody] = useState('');
           <br/>
           <button type="button" onClick={handleSubmit}>SEND</button>
         </form>
+        )}
       </div>
     )
 

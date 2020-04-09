@@ -17,11 +17,12 @@ app.post('/send', (req, res) => {
   console.log('req.body in /send: ', req.body);
   let subject = req.body.subject;
   let body = req.body.body;
-  selectEmailAddress()
-   .then(recipient => send(recipient, subject, body))
-   .then(() => {
-     res.send(console.log('all complete from server.js'));
-   });
+  selectEmailAddress((recipient) => {
+    send(recipient, subject, body)
+  //  .then(() => {
+  //    res.send(console.log('all complete from server.js'));
+  //  });
+  });
 });
 
 app.post('/email', (req, res) => {

@@ -20,9 +20,15 @@ mongoose.connect('mongodb://localhost/emailAddresses');
 let emailSchema = mongoose.Schema({
   id: Number,
   email: String,
+  numSent: Number
 });
 
 let Email = mongoose.model('Email', emailSchema);
 
+const saveEmail = (email) => {
 
+  Email.create({ email: email, numSent: 0 }, cb)
+}
+
+module.exports = { saveEmail };
 

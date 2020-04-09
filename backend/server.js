@@ -7,6 +7,8 @@ const PORT = process.env.PORT;
 const bodyParser = require('body-parser')
 const { send } = require('./sendEmail.js');
 const { selectEmailAddress } = require('./models.js');
+const {  saveEmail } = require('./emailsDbConnect.js')
+
 
 app.use(express.static('public'));
 app.use(bodyParser.json())
@@ -22,6 +24,7 @@ app.post('/send', (req, res) => {
 
 app.post('/email', (req, res) => {
   console.log('req,body in /eamil', req.body)
+  saveEmail(req.body)
 })
 
 app.listen(3600, () => {

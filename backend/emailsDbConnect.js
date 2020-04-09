@@ -25,23 +25,13 @@ let emailSchema = mongoose.Schema({
 
 let Email = mongoose.model('Email', emailSchema);
 
-const saveEmail = (email) => {
-  let save;
-  Email.create({ email: email, numSent: 0 }, (err, data) => {
+const saveEmail = (email, cb) => {
+  Email.create({ email: email, numSent: 0 }, (err) => {
     if (err) { throw err; }
-
     console.log('email saved !!!');
-    save = true;
+    cb();
   })
-  return new Promise ((resolve, reject) => {
-    if (save) {
-      resolve();
-    } else {
-      reject();
-    }
-  })
-
-}
+};
 
 module.exports = { saveEmail };
 

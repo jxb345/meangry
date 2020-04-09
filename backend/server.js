@@ -14,18 +14,20 @@ app.use(express.static('public'));
 app.use(bodyParser.json())
 
 app.post('/send', (req, res) => {
-  console.log('req.body', req.body);
+  console.log('req.body in /send: ', req.body);
   let subject = req.body.subject;
   let body = req.body.body;
   selectEmailAddress()
-   .then(recipient => send(recipient, subject, body));
-    res.send('all complete from server.js')
+   .then(recipient => send(recipient, subject, body))
+   .then(() => {
+     res.send(console.log('all complete from server.js'));
+   });
 });
 
 app.post('/email', (req, res) => {
-  console.log('req,body in /eamil', req.body)
-  saveEmail(req.body.email).then(() => {
-      res.send('email saved from serverjs');
+  console.log('req.body in /email: ', req.body)
+  saveEmail(req.body.email, () => {
+    res.send('email saved from server.js');
   })
 });
 

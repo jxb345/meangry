@@ -19,6 +19,9 @@ function Signup () {
       },
       body: JSON.stringify(email)
     })
+    .then(res => {
+      console.log('res', res);
+    })
   }
 
   return (

@@ -24,10 +24,12 @@ app.post('/send', (req, res) => {
 
 app.post('/email', (req, res) => {
   console.log('req,body in /eamil', req.body)
-  saveEmail(req.body)
-})
+  saveEmail(req.body.email).then(() => {
+      res.send('email saved from serverjs');
+  })
+});
 
 app.listen(3600, () => {
   console.log(`listening on 3600`);
-})
+});
 

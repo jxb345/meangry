@@ -6,7 +6,6 @@ const { db, connect } = require('./emailsDbConnect.js');
 const selectEmailAddress = () => {
   const emailAddresses = {
     "emailUsername": 0,
-
   }
 
   let least = 0;
@@ -18,7 +17,6 @@ const selectEmailAddress = () => {
       recipient = process.env.EMAIL;
     }
   }
-  console.log('recipient', recipient)
   return new Promise((resolve, reject) => {
     if (recipient) {
       resolve(recipient);
@@ -27,14 +25,5 @@ const selectEmailAddress = () => {
     }
   })
 };
-
-// const insertTest = () => {
-  //  const collection = db.collection('emails')
-
-// }
-// insertTest();
-// connect();
-
-
 
 module.exports = { selectEmailAddress }

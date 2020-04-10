@@ -14,11 +14,10 @@ app.use(express.static('public'));
 app.use(bodyParser.json())
 
 app.post('/send', (req, res) => {
-  console.log('req.body in /send: ', req.body);
   let subject = req.body.subject;
   let body = req.body.body;
   selectEmailAddress((recipient) => {
-    send(recipient, subject, body)
+    send(recipient.email, subject, body)
   //  .then(() => {
   //    res.send(console.log('all complete from server.js'));
   //  });

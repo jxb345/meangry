@@ -17,11 +17,15 @@ const selectEmailAddress = (callback) => {
   //   }
   // }
 
-  Email.findOne({}).sort({ numSent: 'descending'}).exec( (err, result) => {
+  Email.findOne({}).sort({ numSent: 1 }).exec( (err, result) => {
     if (err) { throw err; }
+    console.log('result', result)
     let recipient = result;
-    console.log('recipient in selectEmailAddress', recipient);
-    callback(recipient);
+    let numSentValue = result.numSent;
+    result.numSent = numSentValue + 1;
+    console.log('recipient in selectEmailAddress', recipient._id);
+    // Email.findOneAndUpdate(  { email: recipient.email }, { email: 'updated' } )
+    result.save(callback(recipient));
   })
 };
 

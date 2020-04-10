@@ -47,11 +47,14 @@ function App ()  {
 //   }
 
   return (
-      <div>
-        <div>
-        <Signup />
+      <div className="grid">
+        <div className="one">
+          heatmail
         </div>
-        <div>
+        <div className="two">
+          <Signup />
+        </div>
+        <div className="three">
           <EmailForm />
         </div>
       {/* // <form>

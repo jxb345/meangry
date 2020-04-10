@@ -16,8 +16,35 @@ button {
   border-radius: 5px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100px 500px;
+}
+
+.one {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  text-align: center;
+}
+
+.two {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  text-align: center;
+}
+
+.three {
+  grid-column: 2;
+  grid-row: 2 / 5;
+}
+
+.email-signup {
+  width: 65%;
+}
+
 .subject {
-  width: 615px;
+  width: 75%;
   height: 20px;
   margin: 0 auto;
   display: block;

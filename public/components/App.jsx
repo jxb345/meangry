@@ -4,6 +4,9 @@ import EmailForm from './EmailForm.jsx';
 
 
 function App ()  {
+  const [signup, setSignup] = useState(false);
+  const [emailForm, setEmailForm] = useState(false);
+
 // const  [subject, setSubject] = useState('');
 // const  [body, setBody] = useState('');
 // const [signup, setSignup] = useState(true);
@@ -52,13 +55,19 @@ function App ()  {
           heatmail
         </div>
         <div className="two">
+        Receive or Write
         </div>
-        Write or Receive
         <div className="three">
-          <Signup />
+          { (!signup)?
+            <button onClick={() => { setSignup(!signup)}}>RECEIVE</button> :
+            <Signup />
+          }
         </div>
         <div className="four">
-          <EmailForm />
+          { (!emailForm) ?
+            <button onClick={() => { setEmailForm(!emailForm)}}>WRITE</button> :
+            <EmailForm />
+          }
         </div>
       {/* // <form>
       //     <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>

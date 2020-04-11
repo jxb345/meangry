@@ -52,9 +52,12 @@ function App ()  {
           heatmail
         </div>
         <div className="two">
+        </div>
+        Write or Receive
+        <div className="three">
           <Signup />
         </div>
-        <div className="three">
+        <div className="four">
           <EmailForm />
         </div>
       {/* // <form>

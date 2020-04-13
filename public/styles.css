@@ -8,6 +8,8 @@ button {
   background-color: green;
   font-weight: 700;
   font-size: small;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 
 .body {

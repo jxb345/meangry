@@ -5,7 +5,7 @@ button {
   color: white;
   margin: 0 auto;
   display: block;
-  background-color: green;
+  background-color: black;
   font-weight: 700;
   font-size: small;
   font-family:'Times New Roman', Times, serif;
@@ -20,16 +20,29 @@ button {
 
 .grid {
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 100px 100px 500px;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 65px 100px 500px;
 }
 
 .one {
   grid-column: 1 / 4;
   grid-row: 1;
-  text-align: center;
   border-bottom: 4px solid black;
   margin-bottom: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 125%;
+  position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  padding-left: 45px;
+  padding-bottom: 5px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .two {
@@ -45,6 +58,7 @@ button {
   grid-column: 1;
   grid-row: 3;
   text-align: center;
+  padding-left: 50px;
 }
 
 .four {

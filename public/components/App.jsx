@@ -9,20 +9,24 @@ function App ()  {
   return (
     <div className="grid">
           <div className="one">
-            heatmail
+            <img src="./heatMailLogo.png" height="40" width="40" />
+            <p className="vertical-center">
+              heatMail
+            </p>
+
           </div>
           <div className="two">
           Receive or Write
           </div>
           <div className="three">
             { (!signup)?
-              <button onClick={() => { setSignup(!signup)}}>RECEIVE</button> :
+              <button onMouseOver={() => { setSignup(!signup)}}>RECEIVE</button> :
               <Signup />
             }
           </div>
           <div className="four">
             { (!emailForm) ?
-              <button onClick={() => { setEmailForm(!emailForm)}}>WRITE</button> :
+              <button onMouseOver={() => { setEmailForm(!emailForm)}}>WRITE</button> :
               <EmailForm />
             }
           </div>

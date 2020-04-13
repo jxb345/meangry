@@ -26,13 +26,13 @@ function Signup () {
 
   return (
     <div>
-      <p>
-        Receive anonymous heatmail.
+      <p className="receive-text">
+        ...or <i>receive</i> anonymous heatMail.
       </p>
       <form>
         <input type="text" className="email-signup" placeholder="your email address" onChange={handleChangeForEmail}/>
         <br/>
-        <button type="button" onClick={handleSubmit}>SUBMIT</button>
+        <button className="signup-button" type="button" onClick={handleSubmit}>SUBMIT</button>
 
     </form>
     </div>

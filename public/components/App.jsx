@@ -16,19 +16,22 @@ function App ()  {
 
           </div>
           <div className="two">
-          Receive or Write
+          <br/>
+          <span className="furious">
+            You are FURIOUS!
+          </span>
+          <p>
+            That email from your colleague, friend, family member, etc. sets off an emotional surge <br/> that <i>needs</i> an outlet,
+            but your primitive fight response will only lead to regrets later... <br/> instead, say what you MEAN and send it off <u>anonymously</u> to a stranger.
+          </p>
           </div>
           <div className="three">
-            { (!signup)?
-              <button onMouseOver={() => { setSignup(!signup)}}>RECEIVE</button> :
               <Signup />
-            }
+
           </div>
           <div className="four">
-            { (!emailForm) ?
-              <button onMouseOver={() => { setEmailForm(!emailForm)}}>WRITE</button> :
               <EmailForm />
-            }
+
           </div>
         </div>
     )

@@ -84,7 +84,7 @@ function App ()  {
             <Preview body={body} subject={subject} handleSend={handleSend} />
           }
         </div>
-        <div>
+        <div className="five">
           {
             (previewChecked) ?
           <button type="button" onClick={handlePreviewClick}>PREVIEW</button>

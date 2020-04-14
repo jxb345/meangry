@@ -70,7 +70,7 @@ button {
 
 
 .three {
-  padding-top: 70px;
+  padding-top: 120px;
   grid-column: 1;
   grid-row: 3;
   text-align: center;
@@ -80,7 +80,7 @@ button {
 .four {
   grid-column: 2;
   grid-row: 3;
-  padding-top: 45px
+  padding-top: 30px
 }
 
 .email-signup {

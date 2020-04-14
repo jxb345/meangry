@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import Preview from './Preview.jsx'
 
-const Form = () => {
+
+const EmailForm = () => {
 
   const  [subject, setSubject] = useState('');
   const  [body, setBody] = useState('');
+  const [previewChecked, setPreviewChecked] = useState(true);
+
 
     const handleSubjectChange = (e) => {
       e.preventDefault();
@@ -27,7 +31,7 @@ const Form = () => {
       return await response;
     }
 
-    const handleSubmit = () => {
+    const handleSend = () => {
       let email = {
         subject: subject,
         body: body
@@ -41,16 +45,35 @@ const Form = () => {
         });
     }
 
+    const togglePreview = () => {
+      setPreviewChecked(!previewChecked);
+      console.log('previewChecked', previewChecked)
+    }
+
+    const handlePreview = () => {
+      console.log('handlePreview');
+    }
+
   return (
-<form>
-  <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>
-  <br/>
-  <textarea type="text" className="body" rows="20" cols="100" onChange={handleBodyChange}/>
-  <br/>
-  <button type="button" onClick={handleSubmit}>SEND</button>
-</form>
+  <div>
+    <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>
+    <br/>
+    <textarea type="text" className="body" rows="20" cols="100" onChange={handleBodyChange}/>
+    <br/>
+    <div>
+      {
+        (previewChecked) ?
+      <button type="button" onClick={handlePreview}>PREVIEW</button>
+      :
+      <button type="button" onClick={handleSend}>SEND</button>
+      }
+      <input type="checkbox" id="preview" name="preview" onChange={togglePreview body={}}/>
+      <label htmlFor="preview">Preview Before Sending Email</label>
+    </div>
+
+  </div>
   )
 }
 
-export default Form
+export default EmailForm;
 

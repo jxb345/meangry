@@ -16,14 +16,16 @@ function App ()  {
 
           </div>
           <div className="two">
-          <br/>
           <span className="furious">
             You are FURIOUS!
           </span>
-          <p>
-            That email from your colleague, friend, family member, etc. sets off an emotional surge <br/> that <i>needs</i> an outlet,
-            but your primitive fight response will only lead to regrets later... <br/> instead, say what you MEAN and send it off <u>anonymously</u> to a stranger.
-          </p>
+          <br/>
+          <span>
+            That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
+            but don't click 'REPLY'.
+            {/* your primitive fight response will only lead to regrets later...  */}
+            <br/> Instead, fire it off <u>anonymously</u> to a stranger.
+          </span>
           </div>
           <div className="three">
               <Signup />

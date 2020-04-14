@@ -19,16 +19,17 @@ const EmailForm = (props) => {
       props.setBody(e.target.value)
     }
 
-    async function postEmail (data) {
-      const response = await fetch('/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-      return await response;
-    }
+    // moved to App.jsx
+      // async function postEmail (data) {
+      //   const response = await fetch('/send', {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     },
+      //     body: JSON.stringify(data)
+      //   });
+      //   return await response;
+      // }
 
     // moved to App.jsx
       // const handleSend = () => {

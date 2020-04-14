@@ -12,6 +12,11 @@ function App ()  {
   const [preview, setPreview] = useState(null);
 
 
+  const handlePreviewClick = () => {
+    setPreview(true);
+    setPreviewChecked(false);
+  }
+
   const handleSend = () => {
     let email = {
       subject: subject,
@@ -26,6 +31,16 @@ function App ()  {
       });
   }
 
+  async function postEmail (data) {
+    const response = await fetch('/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+    return await response;
+  }
 
   const togglePreview = () => {
     setPreviewChecked(!previewChecked);
@@ -72,15 +87,24 @@ function App ()  {
         <div>
           {
             (previewChecked) ?
-          <button type="button" onClick={() => { setPreview(true)}}>PREVIEW</button>
+          <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
           :
-          <button type="button">SEND</button>
+          <button type="button" onClick={handleSend}>SEND</button>
           }
-          <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
-          <label htmlFor="preview">Preview Before Sending Email</label>
+          {
+            (preview === null)
+            ?
+            <div>
+              <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
+              <label htmlFor="preview">Preview Before Sending Email</label>
+            </div>
+            :
+            <p></p>
+          }
         </div>
       </div>
     )
 }
+
 
 export default App;

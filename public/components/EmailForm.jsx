@@ -50,10 +50,6 @@ const EmailForm = () => {
       console.log('previewChecked', previewChecked)
     }
 
-    const handlePreview = () => {
-      console.log('handlePreview');
-    }
-
   return (
   <div>
     <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>
@@ -63,11 +59,11 @@ const EmailForm = () => {
     <div>
       {
         (previewChecked) ?
-      <button type="button" onClick={handlePreview}>PREVIEW</button>
+      <button type="button" onClick={() => {<Preview body={body} subject={subject} handleSend={handleSend}/>}}>PREVIEW</button>
       :
-      <button type="button" onClick={handleSend}>SEND</button>
+      <button type="button">SEND</button>
       }
-      <input type="checkbox" id="preview" name="preview" onChange={togglePreview body={}}/>
+      <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
       <label htmlFor="preview">Preview Before Sending Email</label>
     </div>
 

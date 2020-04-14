@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 import Preview from './Preview.jsx'
 
 
-const EmailForm = () => {
-
-  const  [subject, setSubject] = useState('');
-  const  [body, setBody] = useState('');
-  const [previewChecked, setPreviewChecked] = useState(true);
+const EmailForm = (props) => {
+  // moved to App.jsx
+    // const  [subject, setSubject] = useState('');
+    // const  [body, setBody] = useState('');
+    // const [previewChecked, setPreviewChecked] = useState(true);
 
 
     const handleSubjectChange = (e) => {
       e.preventDefault();
-      setSubject(e.target.value)
+      props.setSubject(e.target.value)
     }
 
     const handleBodyChange = (e) => {
       e.preventDefault();
-      setBody(e.target.value)
-      console.log('body', body)
+      props.setBody(e.target.value)
     }
 
     async function postEmail (data) {
@@ -31,24 +30,25 @@ const EmailForm = () => {
       return await response;
     }
 
-    const handleSend = () => {
-      let email = {
-        subject: subject,
-        body: body
-      }
+    // moved to App.jsx
+      // const handleSend = () => {
+      //   let email = {
+      //     subject: subject,
+      //     body: body
+      //   }
 
-      console.log('ex', JSON.stringify(email))
+      //   console.log('ex', JSON.stringify(email))
 
-      postEmail(email)
-        .then((d) => {
-          console.log('d', d)
-        });
-    }
-
-    const togglePreview = () => {
-      setPreviewChecked(!previewChecked);
-      console.log('previewChecked', previewChecked)
-    }
+      //   postEmail(email)
+      //     .then((d) => {
+      //       console.log('d', d)
+      //     });
+      // }
+    // moved to App.jsx
+      // const togglePreview = () => {
+      //   setPreviewChecked(!previewChecked);
+      //   console.log('previewChecked', previewChecked)
+      // }
 
   return (
   <div>
@@ -56,16 +56,17 @@ const EmailForm = () => {
     <br/>
     <textarea type="text" className="body" rows="20" cols="100" onChange={handleBodyChange}/>
     <br/>
-    <div>
-      {
-        (previewChecked) ?
-      <button type="button" onClick={() => {<Preview body={body} subject={subject} handleSend={handleSend}/>}}>PREVIEW</button>
-      :
-      <button type="button">SEND</button>
-      }
-      <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
-      <label htmlFor="preview">Preview Before Sending Email</label>
-    </div>
+    {/* Moved to App.jsx}
+        {/* <div>
+          {
+            (previewChecked) ?
+          <button type="button" onClick={() => {<Preview body={body} subject={subject} handleSend={handleSend}/>}}>PREVIEW</button>
+          :
+          <button type="button">SEND</button>
+          }
+          <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
+          <label htmlFor="preview">Preview Before Sending Email</label>
+        </div> */}
 
   </div>
   )

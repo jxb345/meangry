@@ -4,15 +4,13 @@ const Preview = (props) => {
   console.log('props', props);
   return (
     <div>
-      <p>
-        Preview
-      </p>
-      <p>
+      <div className="subject-preview">
         {props.subject}
-      </p>
-      <p>
+      </div>
+      <br/>
+      <div className="body-preview">
         {props.body}
-      </p>
+      </div>
     </div>
   )
 }

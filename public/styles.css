@@ -121,3 +121,14 @@ button {
   font-size: small;
 }
 
+.subject-preview {
+  font-family: 'Raleway',sans-serif;
+  padding-left: 105px;
+  padding-top: 10px;
+}
+
+.body-preview {
+  font-family: 'Raleway',sans-serif;
+  padding-left: 105px;
+  padding-top: 10px;
+}

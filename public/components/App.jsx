@@ -63,7 +63,7 @@ function App ()  {
         <div className="one">
           <img src="./heatMailLogo.png" height="40" width="40" />
           <p className="vertical-center">
-            heatMail
+            furious
           </p>
 
         </div>

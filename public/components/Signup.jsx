@@ -27,7 +27,7 @@ function Signup () {
   return (
     <div>
       <p className="receive-text">
-        ...or <i>receive</i> anonymous heatMail:
+        ...<i>receive</i> anonymous fury:
       </p>
       <form>
         <input type="text" className="email-signup" placeholder="your email address" onChange={handleChangeForEmail}/>

@@ -53,9 +53,9 @@ const EmailForm = (props) => {
 
   return (
   <div>
-    <input type="text" className="subject" placeholder="Subject" onChange={handleSubjectChange}/>
+    <input type="text" className="subject" placeholder="subject" onChange={handleSubjectChange}/>
     <br/>
-    <textarea type="text" className="body" rows="20" cols="100" onChange={handleBodyChange}/>
+    <textarea type="text" className="body" rows="15" cols="75" onChange={handleBodyChange}/>
     <br/>
     {/* Moved to App.jsx}
         {/* <div>

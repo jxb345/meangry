@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function Signup () {
   const [email, setEmail] = useState({});
   const [signup, setSignup] = useState(true);
+  const [emailAdded, setEmailAdded] = useState(false);
 
 
   const handleChangeForEmail = (e) => {
@@ -21,6 +22,7 @@ function Signup () {
     })
     .then(res => {
       console.log('res', res);
+      setEmailAdded(true);
     })
   }
 
@@ -32,8 +34,13 @@ function Signup () {
       <form>
         <input type="text" className="email-signup" placeholder="your email address" onChange={handleChangeForEmail}/>
         <br/>
-        <button className="signup-button" type="button" onClick={handleSubmit}>SUBMIT</button>
-
+        {
+        (!emailAdded)
+        ?
+          <button className="signup-button" id="signup" type="button" onClick={handleSubmit}>GET FURY</button>
+          :
+          <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey"}} onClick={handleSubmit}>ADDED</button>
+        }
     </form>
     </div>
   )

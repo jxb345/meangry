@@ -4,12 +4,13 @@ import EmailForm from './EmailForm.jsx';
 import Preview from './Preview.jsx';
 
 function App ()  {
-  const [signup, setSignup] = useState(false);
-  const [emailForm, setEmailForm] = useState(false);
+  // const [signup, setSignup] = useState(false);
+  // const [emailForm, setEmailForm] = useState(false);
   const  [subject, setSubject] = useState('');
   const  [body, setBody] = useState('');
   const [previewChecked, setPreviewChecked] = useState(true);
   const [preview, setPreview] = useState(null);
+  const [emailSent, setEmailSent] = useState(false);
 
 
   const handlePreviewClick = () => {
@@ -18,6 +19,7 @@ function App ()  {
   }
 
   const handleSend = () => {
+    setEmailSent(true);
     let email = {
       subject: subject,
       body: body
@@ -29,6 +31,11 @@ function App ()  {
       .then((d) => {
         console.log('d', d)
       });
+  }
+
+  const handleSent = () => {
+    setPreview(null);
+    setPreviewChecked(true);
   }
 
   async function postEmail (data) {
@@ -81,7 +88,7 @@ function App ()  {
             ?
             <EmailForm setSubject={setSubject} setBody={setBody}/>
             :
-            <Preview body={body} subject={subject} handleSend={handleSend} />
+            <Preview body={body} subject={subject} handleSend={handleSend} emailSent={emailSent} />
           }
         </div>
         <div className="five">
@@ -89,7 +96,10 @@ function App ()  {
             (previewChecked) ?
           <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
           :
+          (!emailSent) ?
           <button type="button" onClick={handleSend}>SEND</button>
+          :
+          <button type="button" onClick={handleSent}>BACK</button>
           }
           {
             (preview === null)

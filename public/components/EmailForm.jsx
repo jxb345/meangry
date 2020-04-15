@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Preview from './Preview.jsx'
 
 
@@ -18,6 +18,12 @@ const EmailForm = (props) => {
       e.preventDefault();
       props.setBody(e.target.value)
     }
+
+    useEffect(() => {
+        document.getElementById('subject').value = props.subject;
+        document.getElementById('body').value = props.body;
+      }
+    )
 
     // moved to App.jsx
       // async function postEmail (data) {
@@ -53,9 +59,9 @@ const EmailForm = (props) => {
 
   return (
   <div>
-    <input type="text" className="subject" placeholder="subject" onChange={handleSubjectChange}/>
+    <input type="text" id="subject" className="subject" placeholder="subject" onChange={handleSubjectChange}/>
     <br/>
-    <textarea type="text" className="body" rows="15" cols="75" onChange={handleBodyChange}/>
+    <textarea type="text" id="body" className="body" rows="15" cols="75" onChange={handleBodyChange}/>
     <br/>
     {/* Moved to App.jsx}
         {/* <div>

@@ -13,12 +13,17 @@ function App ()  {
   const [emailSent, setEmailSent] = useState(false);
 
 
+  const handleEdit = () => {
+    setPreview(null);
+    setPreviewChecked(true);
+  }
+
   const handlePreviewClick = () => {
     setPreview(true);
     setPreviewChecked(false);
   }
 
-  const handleSend = () => {
+  const handleSendEmail = () => {
     setEmailSent(true);
     let email = {
       subject: subject,
@@ -33,9 +38,11 @@ function App ()  {
       });
   }
 
-  const handleSent = () => {
+  const handleConfirmationSent = () => {
     setPreview(null);
     setPreviewChecked(true);
+    setBody('');
+    setSubject('');
   }
 
   async function postEmail (data) {
@@ -86,9 +93,9 @@ function App ()  {
           {
             (preview === null)
             ?
-            <EmailForm setSubject={setSubject} setBody={setBody}/>
+            <EmailForm subject={subject} setSubject={setSubject} body={body} setBody={setBody}/>
             :
-            <Preview body={body} subject={subject} handleSend={handleSend} emailSent={emailSent} />
+            <Preview body={body} subject={subject} handleSendEmail={handleSendEmail} emailSent={emailSent} />
           }
         </div>
         <div className="five">
@@ -97,9 +104,12 @@ function App ()  {
           <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
           :
           (!emailSent) ?
-          <button type="button" onClick={handleSend}>SEND</button>
+          <div>
+            <button type="button" onClick={handleEdit}>EDIT</button>
+            <button type="button" onClick={handleSendEmail}>SEND</button>
+          </div>
           :
-          <button type="button" onClick={handleSent}>BACK</button>
+          <button type="button" onClick={handleConfirmationSent}>BACK</button>
           }
           {
             (preview === null)

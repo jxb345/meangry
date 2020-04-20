@@ -11,6 +11,7 @@ function App ()  {
   const [previewChecked, setPreviewChecked] = useState(true);
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
+  const [backButton, setBackButton] = useState(false);
 
 
   const handleEdit = () => {
@@ -21,6 +22,7 @@ function App ()  {
   const handlePreviewClick = () => {
     setPreview(true);
     setPreviewChecked(false);
+    setBackButton(true)// show 'edit' button
   }
 
   const handleSendEmail = () => {
@@ -100,16 +102,22 @@ function App ()  {
         </div>
         <div className="five">
           {
-            (previewChecked) ?
-          <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
-          :
-          (!emailSent) ?
-          <div>
-            <button type="button" onClick={handleEdit}>EDIT</button>
-            <button type="button" onClick={handleSendEmail}>SEND</button>
-          </div>
-          :
-          <button type="button" onClick={handleConfirmationSent}>BACK</button>
+            (previewChecked)
+            ?
+              <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
+            :
+              (!emailSent)
+              ?
+              (!backButton)
+              ?
+              <button type="button" onClick={handleSendEmail}>SEND</button>
+              :
+                <div>
+                  <button type="button" onClick={handleEdit}>EDIT</button>
+                  <button type="button" onClick={handleSendEmail}>SEND</button>
+                </div>
+              :
+                <button type="button" onClick={handleConfirmationSent}>BACK</button>
           }
           {
             (preview === null)

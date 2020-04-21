@@ -77,15 +77,18 @@ function App ()  {
 
         </div>
         <div className="two">
-        <span className="furious">
+          <div className="arrows">
+          <img src="chalk-steam.png" height="100" width="100" alt=""/>
+          <br/>
+          </div>
+        {/* <span className="furious">
           You are FURIOUS!
-        </span>
-        <br/>
+        </span> */}
         <span>
           That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
-          but don't click 'REPLY'.
+          but don't click 'REPLY'. <br/>
           {/* your primitive fight response will only lead to regrets later...  */}
-          <br/> Instead, fire it off <u>anonymously</u> to a stranger.
+          Instead, fire it off <u>anonymously</u> to a stranger.
         </span>
         </div>
         <div className="three">

@@ -1,3 +1,7 @@
+div {
+  background-color: #343434;
+}
+
 button {
   border-radius: 3px;
   height: 45px;
@@ -46,12 +50,14 @@ input {
 .one {
   grid-column: 1 / 4;
   grid-row: 1;
-  border-bottom: 4px solid black;
+  /* border-bottom: 4px solid white; */
   margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bolder;
   font-size: 125%;
   position: relative;
+  background-color: #343434;
+  color: white;
 }
 
 .vertical-center {
@@ -62,6 +68,7 @@ input {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  background-color: #343434;
 }
 
 /* .one-half {
@@ -79,7 +86,7 @@ input {
   line-height: 1.2;
   color: white;
   border-radius: 4px;
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid white; */
   background-color: #343434;
   padding-top: 10px;
   /* margin-bottom: 10px; */
@@ -98,13 +105,16 @@ input {
   grid-column: 1;
   grid-row: 3;
   text-align: center;
-  border-right: 2px solid gray;
+  /* border-right: 2px solid gray; */
+  background-color: #343434;
+  color: white;
 }
 
 .four {
   grid-column: 2;
   grid-row: 3;
-  padding-top: 30px
+  padding-top: 30px;
+  background-color: #343434;
 }
 
 .five {
@@ -113,6 +123,7 @@ input {
   margin: 0 auto;
   display: block;
   padding-top: 5px;
+  background-color: #343434;
 }
 
 .email-signup {
@@ -127,7 +138,7 @@ input {
   height: 30px;
   margin: 0 auto;
   display: block;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 2px;
   text-align: left;
   font-size: small;
@@ -161,7 +172,7 @@ input {
 .preview-title {
   font-family: 'Raleway',sans-serif;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .sent-preview {

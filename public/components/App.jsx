@@ -70,9 +70,9 @@ function App ()  {
   return (
     <div className="grid">
         <div className="one">
-          {/* <img src="./heatMailLogo.png" height="40" width="40" /> */}
+          <img src="./heatMailLogo.png" height="40" width="40" />
           <p className="vertical-center">
-            fury
+            {/* heatMail */}
           </p>
 
         </div>

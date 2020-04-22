@@ -6,10 +6,10 @@ button {
   border-radius: 3px;
   height: 45px;
   width: 100px;
-  color: white;
+  /* color: white; */
   margin: 0 auto;
   display: block;
-  background-color: black;
+  background-color: white;
   font-weight: 700;
   font-size: small;
   font-family:'Times New Roman', Times, serif;
@@ -18,7 +18,7 @@ button {
 }
 
 button:hover {
-  background-color: #33454f;
+  background-color:lightgrey;
 }
 
 textarea {
@@ -56,8 +56,8 @@ input {
   font-weight: bolder;
   font-size: 125%;
   position: relative;
-  background-color: #343434;
-  color: white;
+  background-color: white;
+  color: #343434;
 }
 
 .vertical-center {
@@ -68,7 +68,8 @@ input {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-color: #343434;
+  background-color: white;
+  color: #343434;
 }
 
 /* .one-half {

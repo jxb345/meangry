@@ -78,6 +78,9 @@ function App ()  {
         </div>
         <div className="two">
         <span className="furious">
+          {/* <div className="unhappy-face">
+            <img src="unhappy-face.png" alt="unhappy face" height="80" width="80"/>
+          </div> */}
           You are FURIOUS!
         </span>
         <br/>

@@ -10,6 +10,11 @@ button {
   font-size: small;
   font-family:'Times New Roman', Times, serif;
   font-weight: bold;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  background-color:rgb(65, 57, 57);
 }
 
 textarea {

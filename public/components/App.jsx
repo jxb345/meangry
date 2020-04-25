@@ -29,18 +29,17 @@ function App ()  {
   }
 
   const handleSendEmail = () => {
+    console.log('preview', preview)
+    setPreview(true)
     setEmailSent(true);
     let email = {
       subject: subject,
       body: body
     }
 
-    console.log('ex', JSON.stringify(email))
-
     postEmail(email)
       .then((d) => {
         console.log('d', d)
-        window.location.href = window.location.href
       });
   }
 
@@ -67,10 +66,6 @@ function App ()  {
     console.log('previewChecked', previewChecked)
   }
 
-  // const handlePreviewClick = () => {
-  //   setPreview(true)};
-  // }
-
   return (
     <div className="grid">
         <div className="one">
@@ -82,9 +77,6 @@ function App ()  {
         </div>
         <div className="two">
         <span className="furious">
-          {/* <div className="unhappy-face">
-            <img src="unhappy-face.png" alt="unhappy face" height="80" width="80"/>
-          </div> */}
           You are FURIOUS!
         </span>
         <br/>
@@ -126,6 +118,7 @@ function App ()  {
             ?
             <EmailForm subject={subject} setSubject={setSubject} body={body} setBody={setBody}/>
             :
+            // confirmation message displayed in Preview when emailSent === true
             <Preview body={body} subject={subject} handleSendEmail={handleSendEmail} emailSent={emailSent} />
           }
         </div>
@@ -133,12 +126,14 @@ function App ()  {
           {
             (previewChecked)
             ?
+              // setPreview(true); setPreviewChecked(false); setBackButton(true)
               <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
             :
               (!emailSent)
               ?
               (!backButton)
               ?
+              // setEmailSent(true);
               <button type="button" onClick={handleSendEmail}>SEND</button>
               :
                 <div>

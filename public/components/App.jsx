@@ -14,6 +14,9 @@ function App ()  {
   const [backButton, setBackButton] = useState(false);
 
 
+  // emailSent === true && preivew !== null - to display email confirmation sent message
+
+
   const handleEdit = () => {
     setPreview(null);
     setPreviewChecked(true);
@@ -37,6 +40,7 @@ function App ()  {
     postEmail(email)
       .then((d) => {
         console.log('d', d)
+        window.location.href = window.location.href
       });
   }
 

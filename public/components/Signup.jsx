@@ -20,8 +20,8 @@ function Signup () {
       },
       body: JSON.stringify(email)
     })
-    .then(res => {
-      console.log('res', res);
+    .then(data => {
+      console.log('data', data);
       setEmailAdded(true);
     })
   }

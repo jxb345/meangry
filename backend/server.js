@@ -27,7 +27,8 @@ app.post('/send', (req, res) => {
 app.post('/email', (req, res) => {
   console.log('req.body in /email: ', req.body)
   saveEmail(req.body.email, () => {
-    res.send('email saved from server.js');
+    console.log('email saved from server.js');
+    res.send('emailed saved from server.js');
   })
 });
 

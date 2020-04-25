@@ -29,7 +29,7 @@ function Signup () {
   return (
     <div>
       <p className="receive-text">
-        ...<i>receive</i> anonymous fury:
+        ...<i>receive</i> anonymous email:
       </p>
       <form>
         <input type="text" className="email-signup" placeholder="your email address" onChange={handleChangeForEmail}/>
@@ -37,7 +37,7 @@ function Signup () {
         {
         (!emailAdded)
         ?
-          <button className="signup-button" id="signup" type="button" onClick={handleSubmit}>GET FURY</button>
+          <button className="signup-button" id="signup" type="button" onClick={handleSubmit}>SIGN UP</button>
           :
           <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey"}} onClick={handleSubmit}>ADDED</button>
         }

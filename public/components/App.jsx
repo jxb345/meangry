@@ -71,7 +71,7 @@ function App ()  {
         <div className="one">
           <img src="./heatMailLogo.png" height="40" width="40" />
           <p className="vertical-center">
-            fury
+            heatMail
           </p>
 
         </div>
@@ -148,7 +148,7 @@ function App ()  {
             ?
             <div>
               <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
-              <label htmlFor="preview">preview before sending fury</label>
+              <label htmlFor="preview">preview before sending email</label>
             </div>
             :
             <p></p>

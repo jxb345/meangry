@@ -91,27 +91,6 @@ function App ()  {
           <Signup />
         </div>
 
-        {/*
-        button flow:
-        if preview checked
-        - preview button
-        else
-        - send button
-
-        -----------
-        if preview button clicked
-        - edit button
-        - send button
-
-        if edit button clicked
-        - return to 'if preview checked' (with current text)
-
-        if send button clicked
-        - confirmation message
-        - back button
-
-        */}
-
         <div className="four">
           {
             (preview === null)
@@ -157,6 +136,5 @@ function App ()  {
       </div>
     )
 }
-
 
 export default App;

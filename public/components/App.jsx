@@ -14,7 +14,7 @@ function App ()  {
   const [backButton, setBackButton] = useState(false);
 
 
-  // emailSent === true && preivew !== null - to display email confirmation sent message
+  // emailSent === true && preview !== null - to display email confirmation sent message
 
 
   const handleEdit = () => {
@@ -82,7 +82,7 @@ function App ()  {
         <br/>
         <span>
           That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
-          but don't click 'REPLY'.
+          but don&apos;t click &apos;REPLY&apos;.
           {/* your primitive fight response will only lead to regrets later...  */}
           <br/> Instead, fire it off <u>anonymously</u> to a stranger.
         </span>

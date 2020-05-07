@@ -16,7 +16,7 @@ const selectEmailAddress = (callback) => {
 };
 
 const numOfUsers = (callback) => {
-  Email.count().exec( (err, result) => {
+  Email.countDocuments().exec( (err, result) => {
     if (err) { throw err; }
     console.log('num of users', result);
     callback(result);

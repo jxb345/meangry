@@ -28,7 +28,6 @@ function Signup () {
   }
 
   useEffect(() => {
-    // place holder to fetch number of users
     fetch('/users')
     .then(response => response.json())
     .then(data => setUsers(data.users))

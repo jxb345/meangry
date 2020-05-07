@@ -22,6 +22,7 @@ app.get('/users', (req, res) => {
 app.post('/send', (req, res) => {
   let subject = req.body.subject;
   let body = req.body.body;
+  console.log('insde /send', body)
   selectEmailAddress((recipient) => {
     send(recipient.email, subject, body)
   //  .then(() => {

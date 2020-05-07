@@ -16,6 +16,7 @@ const send = (to, subject, body) => {
       to: to,
       subject: subject,
       text: body
+      // html: '<a href="https://78sidekick.com">78</a>'
     }
 
 

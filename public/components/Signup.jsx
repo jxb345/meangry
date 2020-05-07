@@ -36,10 +36,6 @@ function Signup () {
 
   return (
     <div>
-      <div>
-        {console.log('uers', users)}
-        {users} signed up to receive heatMail.
-      </div>
       <p className="receive-text">
         ...<i>receive</i> anonymous email:
       </p>
@@ -54,6 +50,13 @@ function Signup () {
           <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey"}} onClick={handleSubmit}>ADDED</button>
         }
     </form>
+    <div>
+      <br/>
+      <br/>
+    </div>
+      <div>
+        {users} signed up to receive heatMail.
+      </div>
     </div>
   )
 

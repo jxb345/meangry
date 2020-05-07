@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT;
 const bodyParser = require('body-parser')
 const { send } = require('./sendEmail.js');
-const { selectEmailAddress } = require('./models.js');
+const { selectEmailAddress, numOfUsers } = require('./models.js');
 const {  saveEmail } = require('./emailsDbConnect.js')
 
 
@@ -14,7 +14,11 @@ app.use(express.static('public'));
 app.use(bodyParser.json())
 
 app.get('/users', (req, res) => {
-
+  numOfUsers()
+  .then(data => {
+    console.log('data in users' , data);
+    res.send(data);
+  })
 })
 
 app.post('/send', (req, res) => {

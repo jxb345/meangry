@@ -31,12 +31,13 @@ function Signup () {
     // place holder to fetch number of users
     fetch('/users')
     .then(response => response.json())
-    .then(data => console.log('data from signup', data))
+    .then(data => setUsers(data.users))
   })
 
   return (
     <div>
       <div>
+        {console.log('uers', users)}
         {users} signed up to receive heatMail.
       </div>
       <p className="receive-text">

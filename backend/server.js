@@ -15,8 +15,7 @@ app.use(bodyParser.json())
 
 app.get('/users', (req, res) => {
   numOfUsers((users) => {
-    console.log('users', users)
-    res.send(users);
+    res.send({ users });
     });
   });
 

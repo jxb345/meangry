@@ -13,6 +13,10 @@ const {  saveEmail } = require('./emailsDbConnect.js')
 app.use(express.static('public'));
 app.use(bodyParser.json())
 
+app.get('/users', (req, res) => {
+
+})
+
 app.post('/send', (req, res) => {
   let subject = req.body.subject;
   let body = req.body.body;

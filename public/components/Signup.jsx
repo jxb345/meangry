@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Signup () {
   const [email, setEmail] = useState({});
   const [signup, setSignup] = useState(true);
   const [emailAdded, setEmailAdded] = useState(false);
+  const [users, setUsers] = useState(0);
 
 
   const handleChangeForEmail = (e) => {
@@ -26,8 +27,18 @@ function Signup () {
     })
   }
 
+  useEffect(() => {
+    // place holder to fetch number of users
+    fetch('/users')
+    .then(response => response.json())
+    .then(data => console.log('data from signup', data))
+  })
+
   return (
     <div>
+      <div>
+        {users} signed up to receive heatMail.
+      </div>
       <p className="receive-text">
         ...<i>receive</i> anonymous email:
       </p>

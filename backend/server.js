@@ -14,12 +14,11 @@ app.use(express.static('public'));
 app.use(bodyParser.json())
 
 app.get('/users', (req, res) => {
-  numOfUsers()
-  .then(data => {
-    console.log('data in users' , data);
-    res.send(data);
-  })
-})
+  numOfUsers((users) => {
+    console.log('users', users)
+    res.send(users);
+    });
+  });
 
 app.post('/send', (req, res) => {
   let subject = req.body.subject;

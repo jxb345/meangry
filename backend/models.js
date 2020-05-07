@@ -15,13 +15,14 @@ const selectEmailAddress = (callback) => {
   })
 };
 
-const numOfUsers = () => {
+const numOfUsers = (callback) => {
   Email.count().exec( (err, result) => {
     if (err) { throw err; }
     console.log('num of users', result);
-    return new Promise ((resolve, reject) => {
-      resolve(result);
-    });
+    callback(result);
+    // return new Promise ((resolve, reject) => {
+    //   resolve(result);
+    // });
   })
 }
 

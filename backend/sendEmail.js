@@ -15,8 +15,8 @@ const send = (to, subject, body) => {
     let mailOptions = {
       to: to,
       subject: subject,
-      text: body
-      // html: '<a href="https://78sidekick.com">78</a>'
+      text: body,
+      html: '<a href="https://78sidekick.com">78</a>'
     }
 
 

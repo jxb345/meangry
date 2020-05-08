@@ -82,7 +82,8 @@ function App ()  {
         <br/>
         <span>
           That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
-          but don&apos;t click &apos;REPLY&apos;.
+          but don&apos;©98
+          t click &apos;REPLY&apos;.
           {/* your primitive fight response will only lead to regrets later...  */}
           <br/> Instead, fire it off <u>anonymously</u> to a stranger.
         </span>

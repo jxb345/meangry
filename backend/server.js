@@ -19,6 +19,10 @@ app.get('/users', (req, res) => {
     });
   });
 
+app.get('/unsubscribe', (req, res) => {
+  res.send('<div>≈ <button>Unsubscribe</button>')
+})
+
 app.post('/send', (req, res) => {
   let subject = req.body.subject;
   let body = req.body.body;

@@ -16,9 +16,10 @@ const send = (to, subject, body) => {
       to: to,
       subject: subject,
       html:
-      `<p>${body}</p><br/>
+      `<p>${body}</p>
+      <br/>
       <div>
-      Click <a href="https://78sidekick.com">HERE</a> to stop
+      Click <a href="http://www.78sidekick.com">HERE</a> to stop
       receiving heatMail.
       </div>
       `

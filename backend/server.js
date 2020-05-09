@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT;
 const bodyParser = require('body-parser')
 const { send } = require('./sendEmail.js');
-const { selectEmailAddress, numOfUsers } = require('./models.js');
+const { selectEmailAddress, numOfUsers, removeEmailAddress } = require('./models.js');
 const {  saveEmail } = require('./emailsDbConnect.js')
 
 
@@ -38,6 +38,15 @@ app.post('/email', (req, res) => {
     res.send('emailed saved from server.js');
   })
 });
+
+app.post('/unsubscribe', (req, res) => {
+  // function to delete email document from db
+  // const emailToRemove = req.body.???
+  removeEmailAddress(emailToRemove, () => {
+    console.log('unsubscribed w/in endpoint');
+    res.send()
+  })
+})
 
 app.listen(3600, () => {
   console.log(`listening on 3600`);

@@ -20,10 +20,15 @@ const numOfUsers = (callback) => {
     if (err) { throw err; }
     console.log('num of users', result);
     callback(result);
-    // return new Promise ((resolve, reject) => {
-    //   resolve(result);
-    // });
   })
 }
 
-module.exports = { selectEmailAddress, numOfUsers }
+const removeEmailAddress = (email, callback) => {
+  Email.deleteOne({email: email}, (err) => {
+    if (err) { throw err };
+    console.log('email deleted!')
+    callback()
+  })
+}
+
+module.exports = { selectEmailAddress, numOfUsers, removeEmailAddress }

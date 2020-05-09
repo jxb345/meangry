@@ -3,7 +3,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
 
 const send = (to, subject, body) => {
-    console.log('to: ', to);
+    console.log('body: ', body);
     let transporter = nodemailer.createTransport({
       service: process.env.MAILSERVICE,
       auth: {
@@ -15,8 +15,13 @@ const send = (to, subject, body) => {
     let mailOptions = {
       to: to,
       subject: subject,
-      text: body,
-      html: '<a href="https://78sidekick.com">78</a>'
+      html:
+      `<p>${body}</p><br/>
+      <div>
+      Click <a href="https://78sidekick.com">HERE</a> to stop
+      receiving heatMail.
+      </div>
+      `
     }
 
 

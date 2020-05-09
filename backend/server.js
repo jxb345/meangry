@@ -39,11 +39,11 @@ app.post('/email', (req, res) => {
   })
 });
 
-app.post('/unsubscribe', (req, res) => {
-  // function to delete email document from db
-  // const emailToRemove = req.body.???
+app.post('/remove', (req, res) => {
+  // edit req.body.remove below
+  const emailToRemove = req.body.remove;
   removeEmailAddress(emailToRemove, () => {
-    console.log('unsubscribed w/in endpoint');
+    console.log('unsubscribed w/in REMOVE endpoint');
     res.send()
   })
 })

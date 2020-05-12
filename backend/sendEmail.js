@@ -12,7 +12,7 @@ const send = (to, subject, body) => {
       }
     });
 
-    console.log('this is to: ', to)
+    let hrefAttribute = `http://localhost:3600/remove/${to}`;
 
     let mailOptions = {
       to: to,
@@ -21,7 +21,7 @@ const send = (to, subject, body) => {
       `<p>${body}</p>
       <br/>
       <div>
-      Click <a href="http://www.78sidekick.com">HERE</a> to stop
+      Click <a href=${hrefAttribute}>HERE</a> to stop
       receiving heatMail.
       </div>
       `

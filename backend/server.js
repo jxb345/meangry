@@ -24,7 +24,7 @@ app.get('/remove/:emailId', (req, res) => {
   const emailToRemove = req.params.emailId;
   removeEmailAddress(emailToRemove, () => {
     console.log('unsubscribed w/in REMOVE endpoint');
-    res.send()
+    res.send('<div>You will no longer receive heatMail. Sorry to see you go!</div>')
   })
 })
 

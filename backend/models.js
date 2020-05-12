@@ -23,6 +23,14 @@ const numOfUsers = (callback) => {
   })
 }
 
+const verifyEmailAddress = (email, callback) => {
+  Email.updateOne( {email: email, verified: true}, (err) => {
+    if (err) { throw err };
+    console.log('email verified');
+    callback();
+  })
+}
+
 const removeEmailAddress = (email, callback) => {
   Email.deleteOne({email: email}, (err) => {
     if (err) { throw err };
@@ -31,4 +39,5 @@ const removeEmailAddress = (email, callback) => {
   })
 }
 
-module.exports = { selectEmailAddress, numOfUsers, removeEmailAddress }
+
+module.exports = { selectEmailAddress, numOfUsers, removeEmailAddress, verifyEmailAddress }

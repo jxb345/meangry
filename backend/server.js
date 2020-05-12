@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT;
 const bodyParser = require('body-parser')
 const { send } = require('./sendEmail.js');
-const { selectEmailAddress, numOfUsers, removeEmailAddress } = require('./models.js');
+const { selectEmailAddress, numOfUsers, verifyEmailAddress, removeEmailAddress } = require('./models.js');
 const {  saveEmail } = require('./emailsDbConnect.js')
 
 
@@ -28,12 +28,22 @@ app.get('/remove/:emailId', (req, res) => {
   })
 })
 
+app.get('/verify/:emailId', (req, res) => {
+  console.log('req.params', req.params);
+  const emailToVerify = req.params.emailId;
+  verifyEmailAddress(emailToVerify, () => {
+    console.log('verified w/in verify endpoint');
+    res.send('<div>You have verified your email. You will now receive heatMail!</div>')
+  })
+})
+
+
 app.post('/send', (req, res) => {
   let subject = req.body.subject;
   let body = req.body.body;
   console.log('insde /send', body)
   selectEmailAddress((recipient) => {
-    send(recipient.email, subject, body)
+    send(recipient.email, subject, body, false)
   //  .then(() => {
   //    res.send(console.log('all complete from server.js'));
   //  });
@@ -41,8 +51,10 @@ app.post('/send', (req, res) => {
 });
 
 app.post('/email', (req, res) => {
-  console.log('req.body in /email: ', req.body)
-  saveEmail(req.body.email, () => {
+  let addToEmailList = req.body.email;
+  // console.log('req.body in /email: ', req.body)
+  saveEmail(addToEmailList, () => {
+    send(addToEmailList, 'Verify Email','', true);
     console.log('email saved from server.js');
     res.send('emailed saved from server.js');
   })

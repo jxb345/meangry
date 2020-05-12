@@ -16,11 +16,16 @@ app.use(bodyParser.json())
 app.get('/users', (req, res) => {
   numOfUsers((users) => {
     res.send({ users });
-    });
   });
+});
 
-app.get('/unsubscribe', (req, res) => {
-  res.send('<div>≈ <button>Unsubscribe</button>')
+app.get('/remove/:emailId', (req, res) => {
+  console.log('req.params', req.params);
+  const emailToRemove = req.params.emailId;
+  removeEmailAddress(emailToRemove, () => {
+    console.log('unsubscribed w/in REMOVE endpoint');
+    res.send()
+  })
 })
 
 app.post('/send', (req, res) => {
@@ -43,14 +48,6 @@ app.post('/email', (req, res) => {
   })
 });
 
-app.post('/remove', (req, res) => {
-  // edit req.body.remove below
-  const emailToRemove = req.body.remove;
-  removeEmailAddress(emailToRemove, () => {
-    console.log('unsubscribed w/in REMOVE endpoint');
-    res.send()
-  })
-})
 
 app.listen(3600, () => {
   console.log(`listening on 3600`);

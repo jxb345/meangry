@@ -12,6 +12,8 @@ const send = (to, subject, body) => {
       }
     });
 
+    console.log('this is to: ', to)
+
     let mailOptions = {
       to: to,
       subject: subject,

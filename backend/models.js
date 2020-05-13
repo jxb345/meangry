@@ -32,8 +32,8 @@ const verifyEmailAddress = (email, callback) => {
   })
 }
 
-const removeEmailAddress = (email, callback) => {
-  Email.deleteOne({email: email}, (err) => {
+const removeEmailAddress = (identifier, callback) => {
+  Email.deleteOne({identifier: identifier}, (err) => {
     if (err) { throw err };
     console.log('email deleted!')
     callback()

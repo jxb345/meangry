@@ -30,8 +30,8 @@ app.get('/remove/:emailId', (req, res) => {
 
 app.get('/verify/:emailId', (req, res) => {
   console.log('req.params', req.params);
-  const emailToVerify = req.params.emailId;
-  verifyEmailAddress(emailToVerify, () => {
+  const emailIdToVerify = req.params.emailId;
+  verifyEmailAddress(emailIdToVerify, () => {
     console.log('verified w/in verify endpoint');
     res.send('<div>You have verified your email. You will now receive heatMail!</div>')
   })

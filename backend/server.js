@@ -21,8 +21,8 @@ app.get('/users', (req, res) => {
 
 app.get('/remove/:emailId', (req, res) => {
   console.log('req.params', req.params);
-  const emailToRemove = req.params.emailId;
-  removeEmailAddress(emailToRemove, () => {
+  const emailIdToRemove = req.params.emailId;
+  removeEmailAddress(emailIdToRemove, () => {
     console.log('unsubscribed w/in REMOVE endpoint');
     res.send('<div>You will no longer receive heatMail. Sorry to see you go!</div>')
   })
@@ -43,7 +43,7 @@ app.post('/send', (req, res) => {
   let body = req.body.body;
   console.log('insde /send', body)
   selectEmailAddress((recipient) => {
-    send(recipient.email, subject, body, false)
+    send(recipient.email, recipient.identifier, subject, body, false)
   //  .then(() => {
   //    res.send(console.log('all complete from server.js'));
   //  });

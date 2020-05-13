@@ -2,7 +2,7 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
 
-const send = (to, subject, body, verifyEmail) => {
+const send = (to, identifier, subject, body, verifyEmail) => {
     console.log('body: ', body);
     let transporter = nodemailer.createTransport({
       service: process.env.MAILSERVICE,
@@ -13,12 +13,12 @@ const send = (to, subject, body, verifyEmail) => {
     });
 
     let htmlPropValue = ''
-    let hrefAttribute = `http://localhost:3600/remove/${to}`;
+    let hrefAttribute = `http://localhost:3600/remove/${identifier}`;
 
     if (verifyEmail) {
       htmlPropValue =
       `<div>
-        Click <a href=http://localhost:3600/verify/${to}>HERE</a> to VERIFY your email address.
+        Click <a href=http://localhost:3600/verify/${identifier}>HERE</a> to VERIFY your email address.
       </div>
       `
     } else {

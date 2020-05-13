@@ -26,6 +26,7 @@
     "nodemailer": "^6.4.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "uuid": "^8.0.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
@@ -42,14 +43,21 @@
     "react-test-renderer": "^16.13.1"
   },
   "jest": {
-    "modulePaths": ["/shared/vendor/modules"],
-    "moduleFileExtensions": ["js", "jsx"],
-    "moduleDirectories": ["node_modules", "bower_components", "shared"],
-
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
-
       "^react(.*)$": "<rootDir>/vendor/react-master$1",
       "^config$": "<rootDir>/configs/app-config.js"
     },

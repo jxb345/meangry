@@ -16,10 +16,10 @@ let Email = mongoose.model('Email', emailSchema);
 const saveEmail = (email, cb) => {
   let generateUnique = uuidv4();
   console.log('generateUnique', generateUnique)
-  Email.create({ identifier: generateUnique, email: email, numSent: 0, verified: false }, (err) => {
+  Email.create({ identifier: generateUnique, email: email, numSent: 0, verified: false }, (err, result) => {
     if (err) { throw err; }
     console.log('email saved !!!');
-    cb();
+    cb(result);
   })
 };
 

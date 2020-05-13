@@ -53,8 +53,8 @@ app.post('/send', (req, res) => {
 app.post('/email', (req, res) => {
   let addToEmailList = req.body.email;
   // console.log('req.body in /email: ', req.body)
-  saveEmail(addToEmailList, () => {
-    send(addToEmailList, 'Verify Email','', true);
+  saveEmail(addToEmailList, (document) => {
+    send(document.email, document.identifier, 'Verify Email','', true);
     console.log('email saved from server.js');
     res.send('emailed saved from server.js');
   })

@@ -26,7 +26,7 @@ const numOfUsers = (callback) => {
 
 const verifyEmailAddress = (identifier, callback) => {
   Email.updateOne( {identifier: identifier, verified: true}, (err) => {
-    if (err) { throw err };
+    if (err) { throw err }
     console.log('email verified');
     callback();
   })
@@ -34,7 +34,7 @@ const verifyEmailAddress = (identifier, callback) => {
 
 const removeEmailAddress = (identifier, callback) => {
   Email.deleteOne({identifier: identifier}, (err) => {
-    if (err) { throw err };
+    if (err) { throw err }
     console.log('email deleted!')
     callback()
   })

@@ -29,7 +29,6 @@ function App ()  {
   }
 
   const handleSendEmail = () => {
-    console.log('preview', preview)
     setPreview(true)
     setEmailSent(true);
     let email = {
@@ -38,8 +37,8 @@ function App ()  {
     }
 
     postEmail(email)
-      .then((d) => {
-        console.log('d', d)
+      .then((data) => {
+        console.log('data', data)
       });
   }
 

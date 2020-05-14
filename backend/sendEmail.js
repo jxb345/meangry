@@ -3,7 +3,6 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
 
 const send = (to, identifier, subject, body, verifyEmail) => {
-    console.log('identifier: ', identifier);
     let transporter = nodemailer.createTransport({
       service: process.env.MAILSERVICE,
       auth: {

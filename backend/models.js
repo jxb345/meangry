@@ -5,12 +5,9 @@ const { Email } = require('./emailsDbConnect.js');
 const selectEmailAddress = (callback) => {
   Email.findOne({ verified: true }).sort({ numSent: 1 }).exec( (err, result) => {
     if (err) { throw err; }
-    console.log('result', result)
     let recipient = result;
     let numSentValue = result.numSent;
     result.numSent = numSentValue + 1;
-    console.log('recipient in selectEmailAddress', recipient._id);
-    // Email.findOneAndUpdate(  { email: recipient.email }, { email: 'updated' } )
     result.save(callback(recipient));
   })
 };
@@ -18,15 +15,13 @@ const selectEmailAddress = (callback) => {
 const numOfUsers = (callback) => {
   Email.countDocuments().exec( (err, result) => {
     if (err) { throw err; }
-    console.log('num of users', result);
     callback(result);
   })
 }
 
 const verifyEmailAddress = (identifier, callback) => {
-  Email.findOneAndUpdate( {identifier: identifier }, { verified: true }, (err, r) => {
+  Email.findOneAndUpdate( {identifier: identifier }, { verified: true }, (err) => {
     if (err) { throw err }
-    console.log('r', r);
     callback();
   })
 }
@@ -34,7 +29,6 @@ const verifyEmailAddress = (identifier, callback) => {
 const removeEmailAddress = (identifier, callback) => {
   Email.deleteOne({identifier: identifier}, (err) => {
     if (err) { throw err }
-    console.log('email deleted!')
     callback()
   })
 }

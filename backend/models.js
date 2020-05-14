@@ -3,7 +3,6 @@ require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const { Email } = require('./emailsDbConnect.js');
 
 const selectEmailAddress = (callback) => {
-  // need to check if verfied is true in order to
   Email.findOne({ verified: true }).sort({ numSent: 1 }).exec( (err, result) => {
     if (err) { throw err; }
     console.log('result', result)

@@ -13,11 +13,11 @@ let emailSchema = mongoose.Schema({
 
 let Email = mongoose.model('Email', emailSchema);
 
-const generateUnique = () => {
-  return uuidv4();
-}
 
 const saveEmail = (email, cb) => {
+  const generateUnique = () => {
+    return uuidv4();
+  }
   Email.create({ identifier: generateUnique(), email: email, numSent: 0, verified: false }, (err, result) => {
     if (err) { throw err; }
     console.log('email saved !!!');

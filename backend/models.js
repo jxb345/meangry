@@ -25,9 +25,9 @@ const numOfUsers = (callback) => {
 }
 
 const verifyEmailAddress = (identifier, callback) => {
-  Email.updateOne( {identifier: identifier, verified: true}, (err) => {
+  Email.findOneAndUpdate( {identifier: identifier }, { verified: true }, (err, r) => {
     if (err) { throw err }
-    console.log('email verified');
+    console.log('r', r);
     callback();
   })
 }

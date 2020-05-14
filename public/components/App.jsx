@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Signup from './Signup.jsx';
 import EmailForm from './EmailForm.jsx';
 import Preview from './Preview.jsx';
@@ -47,6 +47,8 @@ function App ()  {
     setPreviewChecked(true);
     setBody('');
     setSubject('');
+    setEmailSent(false);
+    setBackButton(false);
   }
 
   async function postEmail (data) {
@@ -64,6 +66,14 @@ function App ()  {
     setPreviewChecked(!previewChecked);
     console.log('previewChecked', previewChecked)
   }
+
+  useEffect( () => {
+    console.log('previewChecked', previewChecked);
+    console.log('preview', preview);
+    console.log('emailSent', emailSent);
+    console.log('backButton' , backButton);
+    console.log('........................................')
+  })
 
   return (
     <div className="grid">

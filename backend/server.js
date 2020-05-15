@@ -14,6 +14,7 @@ app.use(express.static('public'));
 app.use(bodyParser.json())
 
 app.get('/users', (req, res) => {
+  console.log(' process.env.NODE_ENV: ----',  process.env.NODE_ENV)
   numOfUsers((users) => {
     res.send({ users });
   });

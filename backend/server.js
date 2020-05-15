@@ -39,13 +39,14 @@ app.post('/send', (req, res) => {
   let body = req.body.body;
   selectEmailAddress((recipient) => {
     send(recipient.email, recipient.identifier, subject, body, false)
+    res.send('email has been sent from /sent');
   });
 });
 
 app.post('/email', (req, res) => {
   let addToEmailList = req.body.email;
   saveEmail(addToEmailList, (document) => {
-    send(document.email, document.identifier, 'Verify Email','', true);
+    send(document.email, document.identifier, 'Welcome to heatMail - Verify Your Email Address','', true);
     res.send('emailed saved from server.js');
   })
 });

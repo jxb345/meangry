@@ -17,7 +17,7 @@ const send = (to, identifier, subject, body, verifyEmail) => {
     if (verifyEmail) {
       htmlPropValue =
       `<div>
-        Click <a href=http://localhost:3600/verify/${identifier}>HERE</a> to VERIFY your email address.
+        <a href=http://localhost:3600/verify/${identifier}>VERIFY</a> your email address to receive heatMail.
       </div>
       `
     } else {
@@ -25,8 +25,7 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       `<p>${body}</p>
         <br/>
         <div>
-        Click <a href=${hrefAttribute}>HERE</a> to stop
-        receiving heatMail.
+        <a href=${hrefAttribute}>Unsubscribe</a> to stop receiving heatMail.
         </div>
         `
     }

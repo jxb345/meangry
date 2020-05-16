@@ -1,6 +1,7 @@
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
+const Email = require('email-templates');
 
 const send = (to, identifier, subject, body, verifyEmail) => {
     let transporter = nodemailer.createTransport({
@@ -30,21 +31,47 @@ const send = (to, identifier, subject, body, verifyEmail) => {
         `
     }
 
-    let mailOptions = {
-      to: to,
-      subject: subject,
-      html: htmlPropValue
-    }
+    // let mailOptions = {
+    //   to: to,
+    //   subject: subject,
+    //   html: htmlPropValue
+    // }
 
-    transporter.sendMail(mailOptions, function(error, info) {
-      if (error) {
-        console.log('error', error);
-      } else {
-        console.log('Email sent', + info.response)
-        return;
+    const email = new Email({
+      message: {
+        from: 'too.angrily@gmail.com'
+      },
+      // uncomment below to send emails in development/test env:
+      // send: true
+      transport: {
+        jsonTransport: true
       }
+    });
 
-    })
+    email
+      .send({
+        template: 'verify',
+        message: {
+          to: 'jkurtasbell@gmail'
+        }
+        // ,
+        // locals: {
+        //   name: 'Elon'
+        // }
+      })
+      .then(console.log)
+      .catch(console.error);
+
+
+    // transporter.sendMail(email, function(error, info) {
+    //   if (error) {
+    //     console.log('error', error);
+    //   } else {
+    //     console.log('Email sent', + info.response)
+    //     return;
+    //   }
+
+    // })
   };
 
   module.exports = { send }

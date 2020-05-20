@@ -32,12 +32,6 @@ const send = (to, identifier, subject, body, verifyEmail) => {
     //     `
     // }
 
-    // let mailOptions = {
-    //   to: to,
-    //   subject: subject,
-    //   html: htmlPropValue
-    // }
-
     const email = new Email({
       message: {
         from: process.env.EMAILUSER
@@ -73,9 +67,12 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       templateInfo.template = 'vent';
       templateInfo.locals = {
         subject: subject,
-        body: body
+        body: body,
+        identifier: identifier
       }
     }
+
+    return templateInfo;
 
   }
 

@@ -12,24 +12,25 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       }
     });
 
-    let htmlPropValue = ''
-    let hrefAttribute = `http://localhost:3600/remove/${identifier}`;
+    let emailSendInfo = whichTemplate(verifyEmail, identifier, subject, body);
+    // let htmlPropValue = ''
+    // let hrefAttribute = `http://localhost:3600/remove/${identifier}`;
 
-    if (verifyEmail) {
-      htmlPropValue =
-      `<div>
-        <a href=http://localhost:3600/verify/${identifier}>VERIFY</a> your email address to receive heatMail.
-      </div>
-      `
-    } else {
-      htmlPropValue =
-      `<p>${body}</p>
-        <br/>
-        <div>
-        <a href=${hrefAttribute}>Unsubscribe</a> to stop receiving heatMail.
-        </div>
-        `
-    }
+    // if (verifyEmail) {
+    //   htmlPropValue =
+    //   `<div>
+    //     <a href=http://localhost:3600/verify/${identifier}>VERIFY</a> your email address to receive heatMail.
+    //   </div>
+    //   `
+    // } else {
+    //   htmlPropValue =
+    //   `<p>${body}</p>
+    //     <br/>
+    //     <div>
+    //     <a href=${hrefAttribute}>Unsubscribe</a> to stop receiving heatMail.
+    //     </div>
+    //     `
+    // }
 
     // let mailOptions = {
     //   to: to,
@@ -39,39 +40,44 @@ const send = (to, identifier, subject, body, verifyEmail) => {
 
     const email = new Email({
       message: {
-        from: 'too.angrily@gmail.com'
+        from: process.env.EMAILUSER
       },
       // uncomment below to send emails in development/test env:
-      // send: true
-      transport: {
-        jsonTransport: true
-      }
+      send: true,
+      transport: transporter
     });
 
     email
       .send({
-        template: 'verify',
+        template: emailSendInfo.template,
         message: {
-          to: 'jkurtasbell@gmail'
+          to: to
         }
-        // ,
-        // locals: {
-        //   name: 'Elon'
-        // }
+        ,
+        locals: emailSendInfo.locals
       })
       .then(console.log)
       .catch(console.error);
 
-
-    // transporter.sendMail(email, function(error, info) {
-    //   if (error) {
-    //     console.log('error', error);
-    //   } else {
-    //     console.log('Email sent', + info.response)
-    //     return;
-    //   }
-
-    // })
   };
+
+  const whichTemplate = (verifyEmail, identifier, subject, body) => {
+    const templateInfo = {};
+
+    if (verifyEmail) {
+      templateInfo.template = 'verify';
+      templateInfo.locals = {
+        id: identifier
+      }
+    } else {
+      templateInfo.template = 'vent';
+      templateInfo.locals = {
+        subject: subject,
+        body: body
+      }
+    }
+
+  }
+
 
   module.exports = { send }

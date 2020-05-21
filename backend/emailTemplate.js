@@ -14,7 +14,9 @@ const Email = require('email-templates');
 const emailTemp = (template) => {
 
   console.log('template', template)
+    const root = path.join(__dirname, 'emails');
     const email = new Email({
+      views: { root },
       message: {
         from: process.env.EMAILUSER
       },
@@ -47,7 +49,5 @@ const emailTemp = (template) => {
       .catch(console.error);
 
 }
-
-emailTemp({ name: 'verify', locals: { identifier: '666'}})
 
 module.exports = { emailTemp }

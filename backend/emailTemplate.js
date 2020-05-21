@@ -11,36 +11,43 @@ const Email = require('email-templates');
 //     pass: process.env.PASS
 //   }
 // });
+const emailTemp = (template) => {
 
-const email = new Email({
-  message: {
-    from: process.env.EMAILUSER
-  },
-  // uncomment below to send emails in development/test env:
-  send: true,
-  transport: nodemailer.createTransport({
-    service: process.env.MAILSERVICE,
-    auth: {
-      user: process.env.EMAILUSER,
-      pass: process.env.PASS
-    }
-  })
-});
+  console.log('template', template)
+    const email = new Email({
+      message: {
+        from: process.env.EMAILUSER
+      },
+      // uncomment below to send emails in development/test env:
+      send: true,
+      transport: nodemailer.createTransport({
+        service: process.env.MAILSERVICE,
+        auth: {
+          user: process.env.EMAILUSER,
+          pass: process.env.PASS
+        }
+      })
+    });
 
-console.log('email.send', email.send)
 
-email
-  .send(
-    {
-    template: 'verify',
-    message: {
-      to: process.env.EMAIL
-    }
-    ,
-    locals: {
-      identifier: 'testId'
-    }
-  }
-  )
-  .then(console.log)
-  .catch(console.error);
+    email
+      .send(
+        {
+        template: template.name,
+        message: {
+          to: process.env.EMAIL
+        }
+        ,
+        locals: {
+          identifier: template.locals
+        }
+      }
+      )
+      .then(console.log)
+      .catch(console.error);
+
+}
+
+emailTemp({ name: 'verify', locals: { identifier: '666'}})
+
+module.exports = { emailTemp }

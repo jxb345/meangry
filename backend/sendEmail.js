@@ -2,15 +2,38 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
 const Email = require('email-templates');
+const { emailTemp } = require('./emailTemplate.js')
 
 const send = (to, identifier, subject, body, verifyEmail) => {
-    let transporter = nodemailer.createTransport({
-      service: process.env.MAILSERVICE,
-      auth: {
-        user: process.env.EMAILUSER,
-        pass: process.env.PASS
+
+
+  const whichTemplate = (verifyEmail, identifier, subject, body) => {
+    const templateInfo = {};
+
+    if (verifyEmail) {
+      templateInfo.name = 'verify';
+      templateInfo.locals = {
+        identifier: identifier
       }
-    });
+    } else {
+      templateInfo.name = 'vent';
+      templateInfo.locals = {
+        subject: subject,
+        body: body,
+        identifier: identifier
+      }
+    }
+
+    return templateInfo;
+
+  }
+    // let transporter = nodemailer.createTransport({
+    //   service: process.env.MAILSERVICE,
+    //   auth: {
+    //     user: process.env.EMAILUSER,
+    //     pass: process.env.PASS
+    //   }
+    // });
 
     let emailSendInfo = whichTemplate(verifyEmail, identifier, subject, body);
     // let htmlPropValue = ''
@@ -32,49 +55,38 @@ const send = (to, identifier, subject, body, verifyEmail) => {
     //     `
     // }
 
-    const email = new Email({
-      message: {
-        from: process.env.EMAILUSER
-      },
-      // uncomment below to send emails in development/test env:
-      send: true,
-      transport: transporter
-    });
+    // const email = new Email({
+    //   message: {
+    //     from: process.env.EMAILUSER
+    //   },
+    //   // uncomment below to send emails in development/test env:
+    //   send: true,
+    //   transport: nodemailer.createTransport({
+    //     service: process.env.MAILSERVICE,
+    //     auth: {
+    //       user: process.env.EMAILUSER,
+    //       pass: process.env.PASS
+    //     }
+    //   })
+    // });
 
-    email
-      .send({
-        template: emailSendInfo.template,
-        message: {
-          to: to
-        }
-        ,
-        locals: emailSendInfo.locals
-      })
-      .then(console.log)
-      .catch(console.error);
+    console.log('emailSendInfo', emailSendInfo)
 
-  };
+  //   email
+  //     .send({
+  //       template: emailSendInfo.template,
+  //       message: {
+  //         to: to
+  //       }
+  //       ,
+  //       locals: emailSendInfo.locals
+  //     })
+  //     .then(console.log)
+  //     .catch(console.error);
 
-  const whichTemplate = (verifyEmail, identifier, subject, body) => {
-    const templateInfo = {};
+  // };
 
-    if (verifyEmail) {
-      templateInfo.template = 'verify';
-      templateInfo.locals = {
-        id: identifier
-      }
-    } else {
-      templateInfo.template = 'vent';
-      templateInfo.locals = {
-        subject: subject,
-        body: body,
-        identifier: identifier
-      }
-    }
-
-    return templateInfo;
-
-  }
-
+  emailTemp(emailSendInfo)
+}
 
   module.exports = { send }

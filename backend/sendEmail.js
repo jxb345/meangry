@@ -2,7 +2,6 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 const nodemailer = require('nodemailer');
 const Email = require('email-templates');
-const { emailTemp } = require('./emailTemplate.js')
 
 const send = (to, identifier, subject, body, verifyEmail) => {
 
@@ -51,13 +50,9 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       template: template.name,
       message: {
         to: process.env.EMAIL
-      }
-      ,
-      locals: {
-        identifier: template.locals
-      }
-    }
-    )
+      },
+      locals: template.locals
+    })
     .then(console.log)
     .catch(console.error);
 

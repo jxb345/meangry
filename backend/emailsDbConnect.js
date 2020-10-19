@@ -17,9 +17,19 @@ const saveEmail = (email, cb) => {
     return uuidv4();
   }
 
-  Email.create({ identifier: generateUnique(), email: email, numSent: 0, verified: false }, (err, result) => {
+  // check if email address already in db
+
+  Email.findOne( { email: email}, (err, docs) => {
     if (err) { throw err; }
-    cb(result);
+    console.log('docs------', docs)
+    if (docs === null) {
+      Email.create({ identifier: generateUnique(), email: email, numSent: 0, verified: false }, (err, result) => {
+        if (err) { throw err; }
+        cb(result);
+      })
+    } else {
+      cb();
+    }
   })
 };
 

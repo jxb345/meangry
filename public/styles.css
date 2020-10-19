@@ -2,10 +2,11 @@ button {
   border-radius: 3px;
   height: 45px;
   width: 100px;
-  color: white;
+  /* color: white; */
   margin: 0 auto;
   display: block;
-  background-color: black;
+  background-color: white;
+  border: 1px solid black;
   font-weight: 700;
   font-size: small;
   font-family:'Times New Roman', Times, serif;
@@ -15,6 +16,7 @@ button {
 
 button:hover {
   background-color:rgb(65, 57, 57);
+  color: white;
 }
 
 textarea {

@@ -22,13 +22,16 @@ const saveEmail = (email, cb) => {
   Email.findOne( { email: email}, (err, docs) => {
     if (err) { throw err; }
     console.log('docs------', docs)
-    if (docs === null) {
+  })
+  .then((results) => {
+    console.log('results', results)
+    if (results === null) {
       Email.create({ identifier: generateUnique(), email: email, numSent: 0, verified: false }, (err, result) => {
         if (err) { throw err; }
         cb(result);
       })
     } else {
-      cb();
+      cb('email already present');
     }
   })
 };

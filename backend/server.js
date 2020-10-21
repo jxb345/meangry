@@ -45,9 +45,16 @@ app.post('/send', (req, res) => {
 
 app.post('/email', (req, res) => {
   let addToEmailList = req.body.email;
+  let emailList = {};
   saveEmail(addToEmailList, (document) => {
-    send(document.email, document.identifier, 'Welcome to heatMail - Verify Your Email Address','', true);
-    res.send('emailed saved from server.js');
+    if (document === 'email already present') {
+      emailList.status = 'already on list';
+      res.send(emailList)
+    } else {
+      send(document.email, document.identifier, 'Welcome to heatMail - Verify Your Email Address','', true);
+      emailList.status = 'just added';
+      res.send(emailList);
+    }
   })
 });
 

@@ -21,10 +21,11 @@ function Signup () {
       },
       body: JSON.stringify(email)
     })
-    .then(data => {
-      console.log('data', data);
+    .then(response => response.json())
+    .then(r => {
+      console.log('r', r);
       setEmailAdded(true);
-    })
+      })
   }
 
   useEffect(() => {

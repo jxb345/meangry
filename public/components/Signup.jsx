@@ -5,6 +5,7 @@ function Signup () {
   const [signup, setSignup] = useState(true);
   const [emailAdded, setEmailAdded] = useState(false);
   const [users, setUsers] = useState(0);
+  const [buttonMessage, setButtonMessage] = useState('')
 
 
   const handleChangeForEmail = (e) => {
@@ -22,9 +23,9 @@ function Signup () {
       body: JSON.stringify(email)
     })
     .then(response => response.json())
-    .then(r => {
-      console.log('r', r);
-      setEmailAdded(true);
+    .then(data => {
+      console.log('data', data);
+      setButtonMessage(data.status);
       })
   }
 
@@ -43,11 +44,11 @@ function Signup () {
         <input type="text" className="email-signup" placeholder="your email address" onChange={handleChangeForEmail}/>
         <br/>
         {
-        (!emailAdded)
+        (buttonMessage === '')
         ?
           <button className="signup-button" id="signup" type="button" onClick={handleSubmit}>SIGN UP</button>
           :
-          <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey"}} onClick={handleSubmit}>ADDED</button>
+          <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey"}} onClick={handleSubmit}>{buttonMessage}</button>
         }
     </form>
     <div>

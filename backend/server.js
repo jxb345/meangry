@@ -48,11 +48,11 @@ app.post('/email', (req, res) => {
   let emailList = {};
   saveEmail(addToEmailList, (document) => {
     if (document === 'email already present') {
-      emailList.status = 'already on list';
+      emailList.status = 'ALREADY SIGNED UP!';
       res.send(emailList)
     } else {
       send(document.email, document.identifier, 'Welcome to heatMail - Verify Your Email Address','', true);
-      emailList.status = 'just added';
+      emailList.status = 'ADDED!';
       res.send(emailList);
     }
   })

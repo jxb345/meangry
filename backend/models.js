@@ -5,6 +5,7 @@ const { Email } = require('./emailsDbConnect.js');
 const selectEmailAddress = (callback) => {
   Email.findOne({ verified: true }).sort({ numSent: 1 }).exec( (err, result) => {
     if (err) { throw err; }
+    console.log('result---  ', result)
     let recipient = result;
     let numSentValue = result.numSent;
     result.numSent = numSentValue + 1;

@@ -8,25 +8,36 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
     style(type='text/css').
+      a {
+        color: white
+      }
       body {
         font-family: arial, sans-serif;
-        padding-left: 20px;
-        padding-right: 20px;
-        border: solid 30px black;
-        width: 400px;
+        font-size: 15px;
+        padding: 5%;
+        width: 60%;
+        height: 80%;
+        background-color: #F3F8FF;
+        border-radius: 2px;
       }
-      div {
-        color: white;
+      button {
+        border-radius: 3px;
         background-color: black;
-        border-radius: 5px;
-      }
-      a {
-        color: gray;
+        height: 45px;
+        width: 110px;
       }
   body
-    p Your heatmail:
+    div
+    img(src="../../public/heatMailLogo.png", alt="heat mail logo")
     |
     |
     p #{body}
-
-    a(href=`http://localhost:3600/remove/${identifier}`) Unsubscribe
+    |
+    |
+    div Sincerely,
+    div Anonymous
+    |
+    |
+    |
+    |
+    button: a(href=`http://localhost:3600/remove/${identifier}`) Unsubscribe

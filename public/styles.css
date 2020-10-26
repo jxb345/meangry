@@ -2,11 +2,11 @@ button {
   border-radius: 3px;
   height: 45px;
   width: 100px;
-  /* color: white; */
+  color: #646262;
   margin: 0 auto;
   display: block;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid gray;
   font-weight: 700;
   font-size: small;
   font-family:'Times New Roman', Times, serif;
@@ -15,7 +15,7 @@ button {
 }
 
 button:hover {
-  background-color:rgb(65, 57, 57);
+  background-color: #FF9B7C;
   color: white;
 }
 
@@ -37,18 +37,19 @@ input {
   margin: 0 auto;
   display: block;
   border-radius: 2px;
+  border: 1px gray solid;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 65px 190px 360px 75px;
+  grid-template-columns: 20% 55% 25%;
+  grid-template-rows: 65px 150px 360px 75px;
 }
 
-.one {
+.grid-title {
+  padding-left: 5%;
   grid-column: 1 / 4;
   grid-row: 1;
-  border-bottom: 4px solid black;
   margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bolder;
@@ -58,6 +59,7 @@ input {
 
 .vertical-center {
   margin: 0;
+  color: #646262;
   padding-left: 45px;
   padding-bottom: 5px;
   position: absolute;
@@ -66,39 +68,44 @@ input {
   transform: translateY(-50%);
 }
 
-.two {
-  grid-column: 1 / 4;
+.grid-text {
+  grid-column: 2 / 3;
+  /* padding-top: 2%;l */
+  margin-left: 6%;
+  margin-right: 6%;
+  /* background-color: #FDFED3; */
   grid-row: 2;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 125%;
+  font-size: 105%;
   line-height: 1.3;
-  color: rgb(236, 234, 234);
-  /* background-color: black; */
+  color: #646262;
+  /* color: rgb(236, 234, 234); */
   border-radius: 4px;
-  border-bottom: 2px solid black;
+  /* border-bottom: 1px solid black; */
   /* margin-bottom: 10px; */
-  background-image: url("black-background.jpg");
-  padding-top: 25px;
 
 }
 
 
-.three {
-  padding-top: 120px;
+.grid-signup {
+  padding-top: 250px;
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 2 / 5;
   text-align: center;
-  border-right: 2px solid gray;
+  /* border-right: 1px solid gray; */
+  background-color: #FAFAFA;
+  border-radius: 4px;
 }
 
-.four {
+.grid-body {
+  /* background-color: #F8F8F8; */
   grid-column: 2;
   grid-row: 3;
   padding-top: 30px
 }
 
-.five {
+.grid-buttons {
   grid-column: 2;
   grid-row: 4;
   margin: 0 auto;
@@ -118,7 +125,7 @@ input {
   height: 30px;
   margin: 0 auto;
   display: block;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 2px;
   text-align: left;
   font-size: small;
@@ -128,7 +135,6 @@ input {
 .furious {
   font-size: 190%;
   font-weight: 900;
-  color: white;
   font-family: 'Raleway',sans-serif;
 }
 

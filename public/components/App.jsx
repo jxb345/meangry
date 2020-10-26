@@ -77,31 +77,30 @@ function App ()  {
 
   return (
     <div className="grid">
-        <div className="one">
+        <div className="grid-title">
           <img src="./heatMailLogo.png" height="40" width="40" />
           <p className="vertical-center">
             heatMail
           </p>
 
         </div>
-        <div className="two">
+        <div className="grid-text">
         <span className="furious">
-          You are FURIOUS!
+          You are <img src="./bubble.png" height="90" width="120" alt="thought bubble"/>
         </span>
         <br/>
         <span>
           That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
-          but don&apos;©98
-          t click &apos;REPLY&apos;.
+          but don&apos;t click &quot;REPLY.&quot;
           {/* your primitive fight response will only lead to regrets later...  */}
           <br/> Instead, fire it off <u>anonymously</u> to a stranger.
         </span>
         </div>
-        <div className="three">
+        <div className="grid-signup">
           <Signup />
         </div>
 
-        <div className="four">
+        <div className="grid-body">
           {
             (preview === null)
             ?
@@ -111,7 +110,7 @@ function App ()  {
             <Preview body={body} subject={subject} handleSendEmail={handleSendEmail} emailSent={emailSent} />
           }
         </div>
-        <div className="five">
+        <div className="grid-buttons">
           {
             (previewChecked)
             ?

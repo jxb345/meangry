@@ -85,11 +85,11 @@ function App ()  {
 
         </div>
         <div className="grid-text">
-        <span className="furious">
-          You are <img src="./bubble.png" height="90" width="120" alt="thought bubble"/>
+        <span className="you-are">
+          You are <img src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </span>
         <br/>
-        <span>
+        <span className="explanation-text">
           That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
           but don&apos;t click &quot;REPLY.&quot;
           {/* your primitive fight response will only lead to regrets later...  */}
@@ -134,9 +134,9 @@ function App ()  {
           {
             (preview === null)
             ?
-            <div>
+            <div className="preview-button">
               <input type="checkbox" id="preview" name="preview" onChange={togglePreview} defaultChecked/>
-              <label htmlFor="preview">preview before sending email</label>
+              <label htmlFor="preview">&nbsp;&nbsp;preview before sending email</label>
             </div>
             :
             <p></p>

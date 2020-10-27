@@ -86,14 +86,15 @@ function App ()  {
         </div>
         <div className="grid-text">
         <span className="you-are">
-          You are <img src="./bubble.png" height="80" width="110" alt="thought bubble"/>
+          You are <img className="though-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </span>
         <br/>
         <span className="explanation-text">
-          That email you received sets off an emotional surge <br/> that <i>needs</i> an outlet,
-          but don&apos;t click &quot;REPLY.&quot;
+          The email that you just received ignites an emotional <br/> surge that <i>needs</i> an outlet -
+          but DON&apos;T <span> <button className="reply-graphic">REPLY</button></span>
+          {/* click &quot;REPLY.&quot; */}
           {/* your primitive fight response will only lead to regrets later...  */}
-          <br/> Instead, fire it off <u>anonymously</u> to a stranger.
+          <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
         </span>
         </div>
         <div className="grid-signup">

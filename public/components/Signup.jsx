@@ -55,7 +55,7 @@ function Signup () {
       <br/>
       <br/>
     </div>
-      <div>
+      <div className="signup-tally">
         {users} signed up to receive heatMail.
       </div>
     </div>

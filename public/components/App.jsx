@@ -6,7 +6,7 @@ import Preview from './Preview.jsx';
 function App ()  {
   // const [signup, setSignup] = useState(false);
   // const [emailForm, setEmailForm] = useState(false);
-  const  [subject, setSubject] = useState('');
+  const  [subject, setSubject] = useState('I feel...');
   const  [body, setBody] = useState('');
   const [previewChecked, setPreviewChecked] = useState(true);
   const [preview, setPreview] = useState(null);
@@ -85,17 +85,30 @@ function App ()  {
 
         </div>
         <div className="grid-text">
+          {
+            (preview === null)
+            ?
+            <div>
         <span className="you-are">
-          You are <img className="though-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
+          You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </span>
         <br/>
         <span className="explanation-text">
-          The email that you just received ignites an emotional <br/> surge that <i>needs</i> an outlet -
+          The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
           but DON&apos;T <span> <button className="reply-graphic">REPLY</button></span>
           {/* click &quot;REPLY.&quot; */}
           {/* your primitive fight response will only lead to regrets later...  */}
+          <span className="e-t">
           <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
+          </span>
         </span>
+
+        </div>
+        :
+          <div className="preview-header">
+            Review Your Message Below
+          </div>
+        }
         </div>
         <div className="grid-signup">
           <Signup />
@@ -125,9 +138,9 @@ function App ()  {
               // setEmailSent(true);
               <button type="button" onClick={handleSendEmail}>SEND</button>
               :
-                <div>
-                  <button type="button" onClick={handleEdit}>EDIT</button>
-                  <button type="button" onClick={handleSendEmail}>SEND</button>
+                <div className="edit-send-buttons-wrapper">
+                  <button className="edit-send-buttons" type="button" onClick={handleEdit}>EDIT</button>
+                  <button className="edit-send-buttons" type="button" onClick={handleSendEmail}>SEND</button>
                 </div>
               :
                 <button type="button" onClick={handleConfirmationSent}>BACK</button>

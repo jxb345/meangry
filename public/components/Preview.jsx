@@ -7,12 +7,12 @@ const Preview = (props) => {
       {
         (!props.emailSent)
         ?
-        <div>
-          <div className="subject-preview">
+        <div className="preview-window">
+          <div className="preview-subject">
             {props.subject}
           </div>
           <br/>
-          <div className="body-preview">
+          <div className="preview-body">
             {props.body}
           </div>
         </div>

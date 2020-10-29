@@ -17,7 +17,7 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       templateInfo.locals = {
         subject: subject,
         body: body,
-        identifier: identifier
+        identifier: identifier,
       }
     }
     return templateInfo;
@@ -31,7 +31,7 @@ const send = (to, identifier, subject, body, verifyEmail) => {
   const email = new Email({
     views: { root },
     message: {
-      from: process.env.EMAILUSER
+      from: process.env.EMAILUSER,
     },
     // uncomment below to send emails in development/test env:
     send: true,
@@ -49,7 +49,13 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       {
       template: template.name,
       message: {
-        to: process.env.EMAIL
+        to: process.env.EMAIL,
+           // html: 'Embedded image: <img src="cid:1234"/>',
+        // attachments: [{
+        //     filename: 'heatMailLogo.png',
+        //     path: './public/heatMailLogo.png',
+        //     cid: '1234' //same cid value as in the html img src
+        // }]
       },
       locals: template.locals
     })

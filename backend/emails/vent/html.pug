@@ -9,7 +9,8 @@ html
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
     style(type='text/css').
       a {
-        color: white
+        color: white;
+        text-decoration: none;
       }
       body {
         font-family: arial, sans-serif;
@@ -17,27 +18,33 @@ html
         padding: 5%;
         width: 60%;
         height: 80%;
-        background-color: #F3F8FF;
-        border-radius: 2px;
+        background-color: #FAFAFA;
+        border-radius: 4px;
       }
       button {
         border-radius: 3px;
-        background-color: black;
+        border: 1px solid gray;
+        background-color: #FF2727;
         height: 45px;
-        width: 110px;
+        width: 120px;
+        font-weight: 600;
+      }
+      img {
+        width: 40px;
+        height: 40px;
       }
   body
+    <img src="cid:1234"/>
     div
-    img(src="../../public/heatMailLogo.png", alt="heat mail logo")
+    <br />
+    <br />
+    To Whom It May Concern,
+    |
+    <p> #{body} </p>
     |
     |
-    p #{body}
-    |
-    |
-    div Sincerely,
+    div Feeling A Bit Better,
     div Anonymous
-    |
-    |
-    |
-    |
-    button: a(href=`http://localhost:3600/remove/${identifier}`) Unsubscribe
+    <br />
+    <button><a href="http://localhost:3600/">heatMail</a></button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button><a href="http://localhost:3600/remove/${identifier}">unsubscribe</a></button

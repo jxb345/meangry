@@ -9,7 +9,6 @@ const { send } = require('./sendEmail.js');
 const { selectEmailAddress, numOfUsers, verifyEmailAddress, removeEmailAddress } = require('./models.js');
 const {  saveEmail } = require('./emailsDbConnect.js')
 
-
 app.use(express.static('public'));
 app.use(bodyParser.json())
 

@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Signup from './Signup.jsx';
 import EmailForm from './EmailForm.jsx';
 import Preview from './Preview.jsx';
+import Sidebar from './Sidebar.jsx';
 
 function App ()  {
   // const [signup, setSignup] = useState(false);
   // const [emailForm, setEmailForm] = useState(false);
-  const  [subject, setSubject] = useState('I feel...');
+  const  [subject, setSubject] = useState('');
   const  [body, setBody] = useState('');
   const [previewChecked, setPreviewChecked] = useState(true);
   const [preview, setPreview] = useState(null);
@@ -156,6 +157,16 @@ function App ()  {
             <p></p>
           }
           </div>
+          {
+            (subject === '')
+            ?
+          <div>
+          </div>
+          :
+          <div className="grid-sidebar-rules">
+            <Sidebar />
+          </div>
+          }
       </div>
     )
 }

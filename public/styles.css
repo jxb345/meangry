@@ -114,6 +114,19 @@ input {
   padding-top: 12px;
 }
 
+.grid-sidebar-rules {
+  grid-row: 1 / 5;
+  grid-column: 3;
+  background-color: #FCFCA4;
+  border-radius: 4px;
+  margin: 0 auto;
+  width: 80%;
+  height: 95%;
+  position: relative;
+  right: 20%;
+  top: 10%;
+}
+
 .send-button {
   display: inline-block;
   position: relative;

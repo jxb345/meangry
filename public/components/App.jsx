@@ -167,7 +167,7 @@ function App ()  {
             <Sidebar />
           </div>
           }
-      </div>
+    </div>
     )
 }
 

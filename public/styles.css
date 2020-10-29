@@ -115,16 +115,18 @@ input {
 }
 
 .grid-sidebar-rules {
-  grid-row: 1 / 5;
+  grid-row: 2 / 4;
   grid-column: 3;
   background-color: #FCFCA4;
   border-radius: 4px;
   margin: 0 auto;
-  width: 80%;
-  height: 95%;
+  width: 90%;
+  height: 30%;
   position: relative;
-  right: 20%;
-  top: 10%;
+  right: 10%;
+  top: 30%;
+  padding: 6% 5%;
+  color: #646262;
 }
 
 .send-button {
@@ -206,6 +208,21 @@ input {
 .receive-text {
   font-family: 'Raleway',sans-serif;
   font-size: small;
+}
+
+.rules-title {
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+  border-bottom: 1px solid gray;
+}
+
+.rules {
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.2;
+  padding: 4% 2%;
 }
 
 .subject-preview {

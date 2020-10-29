@@ -24,7 +24,7 @@ const EmailForm = (props) => {
   <div>
     <input type="text" id="subject" className="subject" placeholder="I feel _______" onChange={handleSubjectChange}/>
     <br/>
-    <textarea type="text" id="body" className="body" rows="15" cols="75" placeholder=" because..." onChange={handleBodyChange}/>
+    <textarea type="text" id="body" className="body" rows="13" cols="65" placeholder=" because..." onChange={handleBodyChange}/>
     <br/>
   </div>
   )

@@ -38,6 +38,11 @@ input {
   display: block;
   border-radius: 2px;
   border: 1px gray solid;
+  /* font-size: medium; */
+}
+
+textarea {
+  font-size: large;
 }
 
 .grid {
@@ -111,7 +116,7 @@ input {
   width: 300px;
   margin: 0 auto;
   display: block;
-  padding-top: 12px;
+  padding-top: 3%;
 }
 
 .grid-sidebar-rules {
@@ -123,7 +128,7 @@ input {
   width: 90%;
   height: 30%;
   position: relative;
-  right: 10%;
+  right: 7%;
   top: 30%;
   padding: 6% 5%;
   color: #646262;
@@ -183,14 +188,14 @@ input {
 }
 
 .subject {
-  width: 606px;
+  width: 87%;
   height: 38px;
   margin: 0 auto;
   display: block;
   border: 1px solid gray;
   border-radius: 2px;
   text-align: left;
-  font-size: small;
+  font-size: medium;
   padding-left: 10px;
 }
 

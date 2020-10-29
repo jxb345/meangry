@@ -34,9 +34,9 @@ input {
 }
 
 .body {
-  margin: 0 auto;
+  /* margin: 0 auto;
   display: block;
-  border-radius: 2px;
+  border-radius: 2px; */
   border: 1px gray solid;
 }
 
@@ -102,7 +102,11 @@ input {
   /* background-color: pink; */
   grid-column: 2;
   grid-row: 3;
-  padding-top: 30px
+  padding-top: 30px;
+  margin: 0 auto;
+  border-radius: 3px;
+  display: block;
+  width: 50%;
 }
 
 .grid-buttons {
@@ -154,12 +158,12 @@ input {
 }
 
 .rules {
-  padding: 3%;
+  padding: 1%;
   font-size: medium;
   background-color: #FEFFA2;
   border-radius: 5px;
   width: 60%;
-  height: 120px;
+  height: 125px;
   margin: 0 auto;
   text-align: left;
 }
@@ -189,10 +193,10 @@ input {
 .subject {
   width: 606px;
   height: 38px;
-  margin: 0 auto;
-  display: block;
+  /* margin: 0 auto;
+  display: block; */
   border: 1px solid gray;
-  border-radius: 2px;
+  /* border-radius: 2px; */
   text-align: left;
   font-size: small;
   padding-left: 10px;
@@ -217,6 +221,7 @@ input {
 
 .preview-body {
   font-family: 'Raleway',sans-serif;
+
   /* padding-left: 105px;
   padding-top: 10px; */
 }
@@ -243,7 +248,10 @@ input {
 .preview {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: x-large;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
+
 
 .preview-window {
   border: 1px solid gray;

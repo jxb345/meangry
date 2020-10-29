@@ -8,11 +8,15 @@ const Preview = (props) => {
         (!props.emailSent)
         ?
         <div className="preview-window">
-          <div className="preview-subject">
+          <div
+          // className="preview-subject"
+          >
             {props.subject}
           </div>
           <br/>
-          <div className="preview-body">
+          <div
+          // className="preview-body"
+          >
             {props.body}
           </div>
         </div>

@@ -4,9 +4,10 @@ import react from 'react'
 const PreviewHeader = () => {
 
   return (
+    <div>
     <div className="preview">
       PREVIEW
-      <br/>
+      </div>
       <div className="rules">
         <div className="rules-title">
         Do NOT use:
@@ -17,7 +18,6 @@ const PreviewHeader = () => {
         - racist, sexist, homophobic, ageism, or religious predjustice language
       </div>
     </div>
-
   )
 }
 

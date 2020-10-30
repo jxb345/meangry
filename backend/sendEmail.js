@@ -50,12 +50,12 @@ const send = (to, identifier, subject, body, verifyEmail) => {
       template: template.name,
       message: {
         to: process.env.EMAIL,
-           // html: 'Embedded image: <img src="cid:1234"/>',
-        // attachments: [{
-        //     filename: 'heatMailLogo.png',
-        //     path: './public/heatMailLogo.png',
-        //     cid: '1234' //same cid value as in the html img src
-        // }]
+          //  html: 'boo image: <img src="cid:1234"/>',
+        attachments: [{
+            filename: 'heatMailTitle.png',
+            path: './public/heatMailTitle.png',
+            cid: '1234' //same cid value as in the html img src
+        }]
       },
       locals: template.locals
     })

@@ -17,7 +17,7 @@ const Sidebar = () => {
       &#8226; personal information <br/>
       &#8226; names, locations, etc. <br/>
       &#8226; bigoted language of ANY kind <br/>
-      &#8226; threatening language, incluing violence <br/>
+      &#8226; threatening, violent language <br/>
 
       </div>
     </div>

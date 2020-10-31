@@ -18,7 +18,8 @@ const Preview = (props) => {
         </div>
         :
         <div className="sent-preview">
-          Your fury has been sent.
+          Feeling any better? <br/>
+          Your heatMail has been sent.
         </div>
       }
     </div>

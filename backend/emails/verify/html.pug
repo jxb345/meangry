@@ -8,18 +8,38 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
     style(type='text/css').
+      a {
+        color: white;
+        text-decoration: none;
+      }
       body {
         font-family: arial, sans-serif;
         padding-left: 20px;
         padding-right: 20px;
       }
-      div {
-        color: white;
-        background-color: black;
+       button {
         border-radius: 5px;
+        background-color: #FF2727;
+        height: 45px;
+        width: 125px;
+        font-weight: 600;
+      }
+       div {
+        font-family: arial, sans-serif;
+        font-size: 15px;
+        padding: 3%;
+        width: 60%;
+        height: 50%;
+        background-color: #FAFAFA;
+        border-radius: 4px;
+      }
+       img {
+        width: 165px;
+        height: 85px;
       }
   body
-    a(href=`http://localhost:3600/verify/${identifier}`) Verify
-    p your email address to begin receiving anonymous Vents!
+    <img src="cid:1234"/>
+    div
+      p Click to verify your email address to begin receiving anonymous heatMeal.
+      <button><a href="http://localhost:3600/verify/${identifier}">verify</a></button
 
-    div vent 2020

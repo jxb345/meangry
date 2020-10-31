@@ -6,7 +6,7 @@ button {
   margin: 0 auto;
   display: block;
   background-color: white;
-  border: 1px solid gray;
+  border: 1px solid #646262;
   font-weight: 700;
   font-size: small;
   font-family:'Times New Roman', Times, serif;
@@ -256,10 +256,13 @@ textarea {
 }
 
 .sent-preview {
-  color: grey;
+  position: relative;
+  top: -80px;
+  font-size: large;
+  color: #646262;
   text-align: center;
   padding-top: 100px;
-  line-height: 1em;
+  line-height: 1.5em;
   /* color: */
 }
 

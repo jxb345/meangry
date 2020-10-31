@@ -48,7 +48,7 @@ function Signup () {
         ?
           <button className="signup-button" id="signup" type="button" onClick={handleSubmit}>SIGN UP</button>
           :
-          <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey"}} onClick={handleSubmit}>{buttonMessage}</button>
+          <button className="signup-button" id="signup" type="button" style={{backgroundColor: "Grey;color: White"}} onClick={handleSubmit}>{buttonMessage}</button>
         }
     </form>
     <div>

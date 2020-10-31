@@ -13,6 +13,7 @@ function App ()  {
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
+  const [previewHeaderMessage, setPreviewHeaderMessage] = useState('Please Review Your Message.')
 
 
   // emailSent === true && preview !== null - to display email confirmation sent message
@@ -30,6 +31,7 @@ function App ()  {
   }
 
   const handleSendEmail = () => {
+    setPreviewHeaderMessage('');
     setPreview(true)
     setEmailSent(true);
     let email = {
@@ -50,6 +52,7 @@ function App ()  {
     setSubject('');
     setEmailSent(false);
     setBackButton(false);
+    setPreviewHeaderMessage('Please Review Your Message.');
   }
 
   async function postEmail (data) {
@@ -107,7 +110,7 @@ function App ()  {
         </div>
         :
           <div className="preview-header">
-            Review Your Message Below
+              {previewHeaderMessage}
           </div>
         }
         </div>

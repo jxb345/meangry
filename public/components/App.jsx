@@ -49,7 +49,7 @@ function App ()  {
     setPreview(null);
     setPreviewChecked(true);
     setBody('');
-    setSubject('');
+    // setSubject('');
     setEmailSent(false);
     setBackButton(false);
     setPreviewHeaderMessage('Please Review Your Message.');
@@ -72,11 +72,14 @@ function App ()  {
   }
 
   useEffect( () => {
-    console.log('previewChecked', previewChecked);
-    console.log('preview', preview);
-    console.log('emailSent', emailSent);
-    console.log('backButton' , backButton);
-    console.log('........................................')
+    if (emailSent) {
+      setSubject('')
+    }
+    // console.log('previewChecked', previewChecked);
+    // console.log('preview', preview);
+    // console.log('emailSent', emailSent);
+    // console.log('backButton' , backButton);
+    // console.log('........................................')
   })
 
   return (

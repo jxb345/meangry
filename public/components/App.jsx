@@ -13,7 +13,7 @@ function App ()  {
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
-  const [previewHeaderMessage, setPreviewHeaderMessage] = useState('Please Review Your Message.')
+  const [previewHeaderMessage, setPreviewHeaderMessage] = useState('Please Review Your Message')
 
 
   // emailSent === true && preview !== null - to display email confirmation sent message

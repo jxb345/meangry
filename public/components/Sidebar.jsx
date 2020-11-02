@@ -16,7 +16,7 @@ const Sidebar = () => {
       Do <strong>NOT</strong> use or include: <br/>
       &#8226; personal information <br/>
       &#8226; names, locations, etc. <br/>
-      &#8226; bigoted language of ANY kind <br/>
+      &#8226; bigoted language of any kind <br/>
       &#8226; threatening, violent language <br/>
 
       </div>

@@ -7,8 +7,8 @@ import Sidebar from './Sidebar.jsx';
 function App ()  {
   // const [signup, setSignup] = useState(false);
   // const [emailForm, setEmailForm] = useState(false);
-  const  [subject, setSubject] = useState('');
-  const  [body, setBody] = useState('');
+  const  [subject, setSubject] = useState('Spaghetti with homemade marinara');
+  const  [body, setBody] = useState('Making your own marinara sauce is easy, says Fran, the woman who shared this recipe. All you have to do is saute a large can of tomatoes, half an onion (chopped), and a pinch of garlic together for 10-20 minutes, adding salt and pepper to taste. Pour this flavorful, colorful sauce over a package of cooked spaghetti or other pasta, and you’re good to goAdding a few pieces of garlic-buttered toast is a great way to round out this absolutely delicious meal — which can fill up a family of four for about $2 if the garden is producing.');
   const [previewChecked, setPreviewChecked] = useState(true);
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);

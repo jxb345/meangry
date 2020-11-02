@@ -75,6 +75,7 @@ textarea {
 }
 
 .grid-text {
+  /* background-color: purple; */
   grid-column: 2 / 3;
   margin-bottom: 2%;
   margin-left: 6%;
@@ -233,30 +234,51 @@ textarea {
 }
 
 .preview {
-  background-color: #F8F8F8;
-  width: 86%;
-  text-align: center;
-  /* position: relative;
-  left: -52px;
-  top: 14px */
+  font-family: 'Courier New', Courier, monospace;
+  /* padding: 7% 5% 7% 0%; */
+  /* background-color: #F8F8F8; */
+  border-radius: 3px;
+  width: 84%;
+  /* height: 90%;  */
+  /* text-align: center; */
+ position: relative;
+ top: -8px;
+ right: -40px
+
 }
 
 .subject-preview {
   font-family: 'Raleway',sans-serif;
-  padding-left: 105px;
-  padding-top: 10px;
+  /* padding-left: 105px;
+  padding-top: 10px; */
+  padding: 3%;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+
 }
 
 .body-preview {
   font-family: 'Raleway',sans-serif;
-  padding-left: 105px;
-  padding-top: 10px;
+  padding: 4%;
+  border-radius: 3px;
+  /* padding-left: 105px;
+  padding-top: 10px; */
+  background-color: #F8F8F8;
 }
 
 .preview-button {
   padding-top: 8px;
   color: #646262;
   padding-left: 40px;
+}
+
+.preview-header {
+  /* font-size: x-large; */
+  padding-top: 10%;
+  font-size: 145%;
+  font-weight: 900;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
 }
 
 .preview-title {

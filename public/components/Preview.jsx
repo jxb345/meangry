@@ -17,7 +17,7 @@ const Preview = (props) => {
           </div>
         </div>
         :
-        <div className="sent-preview">
+      <div className="sent-preview">
           Feeling any better? <br/>
           Your heatMail has been sent.
         </div>

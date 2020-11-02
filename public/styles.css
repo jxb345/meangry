@@ -231,6 +231,15 @@ textarea {
   padding: 4% 2%;
 }
 
+.preview {
+  background-color: pink;
+  width: 86%;
+  text-align: center;
+  position: relative;
+  left: -52px;
+  top: 14px
+}
+
 .subject-preview {
   font-family: 'Raleway',sans-serif;
   padding-left: 105px;

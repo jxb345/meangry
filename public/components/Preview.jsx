@@ -7,7 +7,7 @@ const Preview = (props) => {
       {
         (!props.emailSent)
         ?
-        <div>
+        <div className="preview">
           <div className="subject-preview">
             {props.subject}
           </div>

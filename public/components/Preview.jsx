@@ -11,7 +11,6 @@ const Preview = (props) => {
           <div className="subject-preview">
             {props.subject}
           </div>
-          <br/>
           <div className="body-preview">
             {props.body}
           </div>

@@ -20,6 +20,7 @@ button:hover {
 }
 
 textarea {
+  font-family: 'Times New Roman', Times, serif;
   font-size: medium;
   padding: 1%;
 }
@@ -32,6 +33,11 @@ input {
   height: 40px;
   width: 90px;
   margin-top: 10px
+}
+
+.arrow-img {
+  text-align: center;
+  margin-top: 1%;
 }
 
 .body {
@@ -182,6 +188,8 @@ textarea {
 .edit-send-buttons-wrapper {
   width: 100%;
   text-align: center;
+  position: relative;
+  top: -4px;
 }
 
 .edit-send-buttons {
@@ -197,7 +205,7 @@ textarea {
 
 .subject {
   font-family: 'Times New Roman', Times, serif;
-  width: 86%;
+  width: 85.5%;
   height: 38px;
   margin: 0 auto;
   display: block;
@@ -245,7 +253,7 @@ textarea {
   /* padding: 7% 5% 7% 0%; */
   /* background-color: #F8F8F8; */
   border-radius: 3px;
-  width: 84%;
+  width: 89%;
   /* height: 90%;  */
   /* text-align: center; */
  position: relative;
@@ -259,10 +267,10 @@ textarea {
   font-size: large;
   /* padding-left: 105px;
   padding-top: 10px; */
-  padding: 3%;
+  padding: 2% 3% 2% 3%;
   border-radius: 3px;
   background-color: #F8F8F8;
-
+  margin-bottom: 1%;
 }
 
 .body-preview {
@@ -270,8 +278,8 @@ textarea {
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
   padding: 3%;
-  width: 590px;
-  height: 190px;
+  width: 635px;
+  height: 211px;
   border-radius: 3px;
   background-color: #F8F8F8;
   overflow: auto;
@@ -285,11 +293,10 @@ textarea {
 
 .preview-header {
   /* font-size: x-large; */
-  padding-top: 10%;
-  font-size: 145%;
+  padding-top: 9%;
+  font-size: 150%;
   font-weight: 900;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .preview-title {

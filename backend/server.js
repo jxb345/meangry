@@ -46,7 +46,7 @@ app.post('/email', (req, res) => {
   let addToEmailList = req.body.email;
   let emailList = {};
   saveEmail(addToEmailList, (document) => {
-    if (document === 'email already present') {
+    if (document === 'ALREADY ADDED') {
       emailList.status = 'ALREADY SIGNED UP!';
       res.send(emailList)
     } else {

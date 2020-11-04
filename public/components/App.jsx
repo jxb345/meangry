@@ -14,6 +14,7 @@ function App ()  {
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
   const [previewHeaderMessage, setPreviewHeaderMessage] = useState('Please Review Your Message')
+  const arrow = document.getElementsByClassName('arrow-img');
 
 
   // emailSent === true && preview !== null - to display email confirmation sent message
@@ -25,12 +26,15 @@ function App ()  {
   }
 
   const handlePreviewClick = () => {
+    // arrow[0].style.display = 'block'
+    // console.log('arrow----', arrow[0])
     setPreview(true);
     setPreviewChecked(false);
     setBackButton(true)// show 'edit' button
   }
 
   const handleSendEmail = () => {
+    arrow[0].style.display = 'none'
     setPreviewHeaderMessage('');
     setPreview(true)
     setEmailSent(true);
@@ -46,6 +50,7 @@ function App ()  {
   }
 
   const handleConfirmationSent = () => {
+    console.log('hCS-----------')
     setPreview(null);
     setPreviewChecked(true);
     setBody('');
@@ -72,6 +77,8 @@ function App ()  {
   }
 
   useEffect( () => {
+    console.log('arrow----', arrow[0])
+
     if (emailSent) {
       setSubject('')
     }
@@ -111,7 +118,7 @@ function App ()  {
               {previewHeaderMessage}
               <br/>
               <div className="arrow-img">
-              <img src="./arrow.png" alt="down arrow" height="50px" width="50px"/>
+                <img src="./arrow.png" alt="down arrow" height="50px" width="50px"/>
               </div>
           </div>
         }

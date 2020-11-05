@@ -1,4 +1,5 @@
 
+
 html
   head
     meta(charset="utf-8")
@@ -12,14 +13,16 @@ html
         color: white;
         text-decoration: none;
       }
+      body {
+         margin-left: 25%;
+      }
       div {
-        margin-left: 15%;
         font-family: arial, sans-serif;
         color: black;
         font-size: 17px;
         padding: 3%;
         width: 60%;
-        height: 25%;
+        height: 15%;
         background-color: #F5F5F5;
         border-radius: 4px;
       }
@@ -38,9 +41,8 @@ html
         height: 55px;
       }
   body
-    <img src="../public/heatMailLogo.png"/>
+    img(src='/heatMailTitle.png' style='width:135px; height:55px')
     div
-      h3 Sorry to see you go - thanks for checking out heatMail!
-
+      h4 Sorry to see you go - thanks for checking out heatMail!
       <button><a href="http://localhost:3600/">heatMail</a></button>
 

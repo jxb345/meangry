@@ -7,8 +7,8 @@ import Sidebar from './Sidebar.jsx';
 function App ()  {
   // const [signup, setSignup] = useState(false);
   // const [emailForm, setEmailForm] = useState(false);
-  const  [subject, setSubject] = useState('');
-  const  [body, setBody] = useState('');
+  const  [subject, setSubject] = useState('i feel maddy');
+  const  [body, setBody] = useState('Black beans and rice, suggested by Angela and others, is one of those easy, cheap meals almost everyone loves, and a staple dish of many cultures. This recipe only requires a handful of inexpensive ingredients, yet is full of flavor.Start by heating your oil in a stockpot over medium-high heat. Add the onion and garlic and saute for 4 minutes, then add the rice and saute for another 2 minutes. Next, add in the vegetable broth, bring to a boil, lower the heat and cook for 20 minutes. The spices and black beans should be added right before you’re ready to serve.')
   const [previewChecked, setPreviewChecked] = useState(true);
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);

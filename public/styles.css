@@ -140,7 +140,7 @@ textarea {
   width: 85%;
   height: 30%;
   position: relative;
-  right: 1%;
+  right: 2%;
   top: 30%;
   padding: 6% 5%;
   color: #646262;
@@ -260,28 +260,26 @@ textarea {
   /* height: 90%;  */
   /* text-align: center; */
  position: relative;
- top: -8px;
- right: -40px;
+ /* top: -10px; */
+ right: -20px;
 
 }
 
 .subject-preview {
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
-  /* padding-left: 105px;
-  padding-top: 10px; */
-  padding: 2% 3% 2% 3%;
+  padding: 2% 2% 2% 2%;
   border-radius: 3px;
   background-color: #F8F8F8;
   margin-bottom: 1%;
+  width: 101.5%;
 }
 
 .body-preview {
-  /* font-family: 'Raleway',sans-serif; */
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
-  padding: 3%;
-  width: 635px;
+  padding: 2%;
+  width: 101.5%;
   height: 211px;
   border-radius: 3px;
   background-color: #F8F8F8;

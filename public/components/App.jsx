@@ -26,8 +26,6 @@ function App ()  {
   }
 
   const handlePreviewClick = () => {
-    // arrow[0].style.display = 'block'
-    console.log('arrow----', arrow)
     setPreview(true);
     setPreviewChecked(false);
     setBackButton(true)// show 'edit' button

@@ -9,6 +9,9 @@ const { send } = require('./sendEmail.js');
 const { selectEmailAddress, numOfUsers, verifyEmailAddress, removeEmailAddress } = require('./models.js');
 const {  saveEmail } = require('./emailsDbConnect.js')
 
+app.set('views', './views');
+app.set('view engine', 'pug');
+
 app.use(express.static('public'));
 app.use(bodyParser.json())
 
@@ -21,14 +24,14 @@ app.get('/users', (req, res) => {
 app.get('/remove/:emailId', (req, res) => {
   const emailIdToRemove = req.params.emailId;
   removeEmailAddress(emailIdToRemove, () => {
-    res.send('<div>You will no longer receive heatMail. Sorry to see you go!</div>')
+    res.render('unsubscribed')
   })
 })
 
 app.get('/verify/:emailId', (req, res) => {
   const emailIdToVerify = req.params.emailId;
   verifyEmailAddress(emailIdToVerify, () => {
-    res.send('<div>You have verified your email. You will now receive heatMail!</div>')
+    res.render('verified');
   })
 })
 

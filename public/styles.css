@@ -15,7 +15,7 @@ button {
 }
 
 button:hover {
-  background-color: #FF2727;
+  background-color: #E82222;
   color: white;
 }
 
@@ -137,7 +137,7 @@ textarea {
   background-color: #FCFCA4;
   border-radius: 4px;
   margin: 0 auto;
-  width: 89%;
+  width: 85%;
   height: 30%;
   position: relative;
   right: 1%;
@@ -185,7 +185,7 @@ textarea {
   height: 30px;
   width: 60px;
   color: white;
-  background-color: #FF2727;
+  background-color: #E82222;
 }
 
 .edit-send-buttons-wrapper {

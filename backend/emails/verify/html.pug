@@ -23,6 +23,7 @@ html
         height: 45px;
         width: 125px;
         font-weight: 600;
+        cursor: pointer;
       }
        div {
         font-family: georgia, serif;
@@ -39,10 +40,13 @@ html
         width: 135px;
         height: 55px;
       }
+      .thanks {
+        font-weight: bold;
+      }
   body
     <img src="cid:1234"/>
     div
-      p Thanks for signing up to receive anonymous heatMail!
+      p.thanks Thanks for signing up to receive anonymous heatMail!
       p Click to verify your email address.
       <button><a href="http://localhost:3600/verify/#{identifier}">verify</a></button
 

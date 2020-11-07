@@ -23,6 +23,9 @@ textarea {
   font-family: 'Times New Roman', Times, serif;
   font-size: medium;
   padding: 2%;
+  resize: none;
+  box-sizing: border-box;
+  width: 90.5%;
 }
 
 input {

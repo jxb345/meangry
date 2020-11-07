@@ -96,11 +96,10 @@ function App ()  {
             (preview === null)
             ?
             <div>
-        <span className="you-are">
+        <div className="you-are">
           You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
-        </span>
-        <br/>
-        <span className="explanation-text">
+        </div>
+        <div className="explanation-text">
           The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
           but DON&apos;T <span> <button className="reply-graphic">REPLY</button></span>
           {/* click &quot;REPLY.&quot; */}
@@ -108,7 +107,7 @@ function App ()  {
           <span className="e-t">
           <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
           </span>
-        </span>
+        </div>
 
         </div>
         :

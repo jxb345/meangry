@@ -41,6 +41,7 @@ input {
 }
 
 .arrow-img {
+  visibility: hidden;
   text-align: center;
   margin-top: 1%;
 }

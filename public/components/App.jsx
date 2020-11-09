@@ -4,9 +4,7 @@ import EmailForm from './EmailForm.jsx';
 import Preview from './Preview.jsx';
 import Sidebar from './Sidebar.jsx';
 
-function App ()  {
-  // const [signup, setSignup] = useState(false);
-  // const [emailForm, setEmailForm] = useState(false);
+function App () {
   const  [subject, setSubject] = useState('i feel maddy');
   const  [body, setBody] = useState('Black beans and rice, suggested by Angela and others, is one of those easy, cheap meals almost everyone loves, and a staple dish of many cultures. This recipe only requires a handful of inexpensive ingredients, yet is full of flavor.Start by heating your oil in a stockpot over medium-high heat. Add the onion and garlic and saute for 4 minutes, then add the rice and saute for another 2 minutes. Next, add in the vegetable broth, bring to a boil, lower the heat and cook for 20 minutes. The spices and black beans should be added right before you’re ready to serve.')
   const [previewChecked, setPreviewChecked] = useState(true);
@@ -16,10 +14,7 @@ function App ()  {
   const [previewHeaderMessage, setPreviewHeaderMessage] = useState('Please Review Your Message')
   const arrow = document.getElementsByClassName('arrow-img');
 
-
   // emailSent === true && preview !== null - to display email confirmation sent message
-
-
   const handleEdit = () => {
     setPreview(null);
     setPreviewChecked(true);
@@ -32,7 +27,6 @@ function App ()  {
   }
 
   const handleSendEmail = () => {
-    arrow[0].style.display = 'none'
     setPreviewHeaderMessage('');
     setPreview(true)
     setEmailSent(true);
@@ -48,11 +42,9 @@ function App ()  {
   }
 
   const handleConfirmationSent = () => {
-    console.log('hCS-----------')
     setPreview(null);
     setPreviewChecked(true);
     setBody('');
-    // setSubject('');
     setEmailSent(false);
     setBackButton(false);
     setPreviewHeaderMessage('Please Review Your Message.');
@@ -75,10 +67,14 @@ function App ()  {
   }
 
   useEffect( () => {
-    console.log('arrow----', arrow[0])
-
     if (emailSent) {
       setSubject('')
+    }
+    if (preview) {
+      arrow[0].style.visibility = 'visible';
+    }
+    if (emailSent) {
+      arrow[0].style.visibility = 'hidden';
     }
   })
 
@@ -102,8 +98,6 @@ function App ()  {
         <div className="explanation-text">
           The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
           but DON&apos;T <span> <button className="reply-graphic">REPLY</button></span>
-          {/* click &quot;REPLY.&quot; */}
-          {/* your primitive fight response will only lead to regrets later...  */}
           <span className="e-t">
           <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
           </span>

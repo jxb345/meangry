@@ -291,13 +291,11 @@ textarea {
 }
 
 .sent-preview {
-  position: relative;
-  top: -80px;
-  font-size: large;
+  padding-right: 5%;
+  font-size: 19px;
   color: #646262;
   text-align: center;
-  padding-top: 100px;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 

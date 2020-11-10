@@ -91,7 +91,7 @@ function App () {
           {
             (preview === null)
             ?
-            <div>
+      <div>
         <div className="you-are">
           You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </div>
@@ -102,7 +102,6 @@ function App () {
           <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
           </span>
         </div>
-
         </div>
         :
           <div className="preview-header">

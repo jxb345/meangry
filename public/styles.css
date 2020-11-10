@@ -61,7 +61,7 @@ textarea {
 .grid {
   display: grid;
   grid-template-columns: 20% 55% 25%;
-  grid-template-rows: 50px 170px 320px 75px 115px;
+  grid-template-rows: 60px 170px 320px 75px 115px;
 }
 
 .grid-title {
@@ -210,7 +210,7 @@ textarea {
 
 .thought-bubble {
   position: relative;
-  top: -3px;
+  top: -6px;
 }
 
 .you-are {
@@ -218,7 +218,7 @@ textarea {
   font-weight: 900;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow: auto;
-  height: 80px;
+  height: 90px;
 
 }
 
@@ -302,7 +302,9 @@ textarea {
   line-height: 2em;
 }
 
-
+.test-text {
+  margin-top: 10px;
+}
 
 
 input[type=checkbox] {

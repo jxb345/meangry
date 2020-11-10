@@ -91,7 +91,7 @@ function App () {
           {
             (preview === null)
             ?
-      <div>
+      <div className="test-text">
         <div className="you-are">
           You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </div>

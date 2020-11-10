@@ -90,7 +90,7 @@ textarea {
 .grid-text {
   /* background-color: green; */
   grid-column: 2 / 3;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
   margin-left: 6%;
   grid-row: 2;
   text-align: center;
@@ -110,10 +110,11 @@ textarea {
 }
 
 .grid-body {
+  /* background-color: magenta; */
   margin-left: 6%;
   grid-column: 2;
   grid-row: 3;
-  padding-top: 30px
+  padding-top: 35px
 }
 
 .grid-buttons {
@@ -157,7 +158,7 @@ textarea {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   line-height: 1.6em;
-  height: 80px;
+  height: 85px;
   overflow: auto;
 }
 
@@ -210,15 +211,17 @@ textarea {
 
 .thought-bubble {
   position: relative;
-  top: -6px;
+  top: -8px;
 }
 
 .you-are {
+  /* background-color: red; */
   font-size: 220%;
   font-weight: 900;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow: auto;
-  height: 90px;
+  height: 85px;
+  padding-top: 1%;
 
 }
 

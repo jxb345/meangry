@@ -132,21 +132,21 @@ function App () {
             (previewChecked)
             ?
               // setPreview(true); setPreviewChecked(false); setBackButton(true)
-              <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
+              <button type="button" onClick={handlePreviewClick}>Preview</button>
             :
               (!emailSent)
               ?
               (!backButton)
               ?
               // setEmailSent(true);
-              <button type="button" onClick={handleSendEmail}>SEND</button>
+              <button type="button" onClick={handleSendEmail}>Send</button>
               :
                 <div className="edit-send-buttons-wrapper">
-                  <button className="edit-send-buttons" type="button" onClick={handleEdit}>EDIT</button>
-                  <button className="edit-send-buttons" type="button" onClick={handleSendEmail}>SEND</button>
+                  <button className="edit-send-buttons" type="button" onClick={handleEdit}>Edit</button>
+                  <button className="edit-send-buttons" type="button" onClick={handleSendEmail}>Send</button>
                 </div>
               :
-                <button type="button" onClick={handleConfirmationSent}>BACK</button>
+                <button type="button" onClick={handleConfirmationSent}>Back</button>
           }
           {
             (preview === null)

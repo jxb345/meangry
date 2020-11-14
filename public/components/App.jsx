@@ -91,18 +91,17 @@ function App () {
           {
             (preview === null)
             ?
-            <div>
+      <div className="test-text">
         <div className="you-are">
           You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </div>
         <div className="explanation-text">
           The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
-          but DON&apos;T <span> <button className="reply-graphic">REPLY</button></span>
+          but DON&apos;T <span> <button title="do NOT reply" className="reply-graphic">REPLY</button></span>
           <span className="e-t">
           <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
           </span>
         </div>
-
         </div>
         :
           <div className="preview-header">
@@ -133,21 +132,21 @@ function App () {
             (previewChecked)
             ?
               // setPreview(true); setPreviewChecked(false); setBackButton(true)
-              <button type="button" onClick={handlePreviewClick}>PREVIEW</button>
+              <button type="button" onClick={handlePreviewClick}>Preview</button>
             :
               (!emailSent)
               ?
               (!backButton)
               ?
               // setEmailSent(true);
-              <button type="button" onClick={handleSendEmail}>SEND</button>
+              <button type="button" onClick={handleSendEmail}>Send</button>
               :
                 <div className="edit-send-buttons-wrapper">
-                  <button className="edit-send-buttons" type="button" onClick={handleEdit}>EDIT</button>
-                  <button className="edit-send-buttons" type="button" onClick={handleSendEmail}>SEND</button>
+                  <button className="edit-send-buttons" type="button" onClick={handleEdit}>Edit</button>
+                  <button className="edit-send-buttons" type="button" onClick={handleSendEmail}>Send</button>
                 </div>
               :
-                <button type="button" onClick={handleConfirmationSent}>BACK</button>
+                <button type="button" onClick={handleConfirmationSent}>Back</button>
           }
           {
             (preview === null)

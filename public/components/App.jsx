@@ -97,7 +97,7 @@ function App () {
         </div>
         <div className="explanation-text">
           The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
-          but DON&apos;T <span> <button className="reply-graphic">REPLY</button></span>
+          but DON&apos;T <span> <button title="do NOT reply" className="reply-graphic">REPLY</button></span>
           <span className="e-t">
           <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
           </span>

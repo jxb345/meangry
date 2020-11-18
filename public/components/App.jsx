@@ -96,10 +96,10 @@ function App () {
           You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </div>
         <div className="explanation-text">
-          The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
+          That message ignites an emotional surge  <br/> that <i>needs</i> an outlet -
           but DON&apos;T <span> <button title="do NOT reply" className="reply-graphic">REPLY</button></span>
           <span className="e-t">
-          <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
+          <br/> Instead, send it <strong>anonymously</strong> to a random.
           </span>
         </div>
         </div>

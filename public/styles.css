@@ -82,7 +82,7 @@ textarea {
   margin-top: 1%;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
-  line-height: 1.6em;
+  line-height: 1.7em;
   height: 85px;
   overflow: auto;
 }
@@ -272,7 +272,7 @@ textarea {
 
 .thought-bubble-img {
   position: relative;
-  top: -8px;
+  top: -9.5px;
 }
 
 .vertical-center {
@@ -287,7 +287,7 @@ textarea {
 }
 
 .you-are-title {
-  font-size: 220%;
+  font-size: 330%;
   font-weight: 900;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

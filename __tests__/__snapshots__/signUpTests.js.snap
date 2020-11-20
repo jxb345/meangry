@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`preview-snapshot-test 1`] = `
+<div>
+  <p
+    className="receive-text"
+  >
+    ...
+    <i>
+      receive
+    </i>
+     anonymous email:
+  </p>
+  <form>
+    <input
+      className="email-signup"
+      onChange={[Function]}
+      placeholder="your email address"
+      type="text"
+    />
+    <br />
+    <button
+      className="signup-button"
+      id="signup"
+      onClick={[Function]}
+      type="button"
+    >
+      Sign Up
+    </button>
+  </form>
+  <div>
+    <br />
+    <br />
+  </div>
+  <div
+    className="signup-tally"
+  >
+    0
+     signed up to receive heatMail.
+  </div>
+</div>
+`;

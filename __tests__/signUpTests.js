@@ -1,7 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
+import Enzyme from 'enzyme';
+import { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Signup from '../public/components/Signup.jsx';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 test('preview-snapshot-test', () => {
   const component = renderer.create(
@@ -9,6 +13,12 @@ test('preview-snapshot-test', () => {
 
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+})
 
-    console.log('tree------c.p', tree.children[0].props);
+test('sign up button', () => {
+
+  const signup = shallow(<Signup />);
+  expect(signup.find('button').text()).toEqual('Sign Up');
+
+  expect(signup.containsMatchingElement(<p className="receive-text"></p>)).to.equal(true);
 })

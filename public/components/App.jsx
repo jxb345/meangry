@@ -91,7 +91,7 @@ function App () {
             ?
       <div className="explanation-text-wrapper">
         <div className="you-are-title">
-          You are <img className="thought-bubble-img" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
+          You feel <img className="thought-bubble-img" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </div>
         <div className="explanation-text">
           That message ignites an emotional surge  <br/> that <i>needs</i> an outlet -

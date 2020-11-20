@@ -287,8 +287,9 @@ textarea {
 }
 
 .you-are-title {
-  font-size: 310%;
+  font-size: 320%;
   font-weight: 900;
+  color: #585858;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   overflow: auto;

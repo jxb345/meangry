@@ -155,7 +155,7 @@ function App () {
           }
           </div>
           {
-            (subject === '')
+            (subject === '' && body === '')
             ?
           <div>
           </div>

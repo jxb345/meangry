@@ -12,17 +12,19 @@ function Signup() {
   };
 
   const handleSubmit = () => {
-    fetch("/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(email),
-    })
+    if (Object.keys(email).length > 0) {
+      fetch("/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(email),
+      })
       .then((response) => response.json())
       .then((data) => {
         setButtonMessage(data.status);
       });
+    }
   };
 
   useEffect(() => {
@@ -42,6 +44,7 @@ function Signup() {
           className="email-signup"
           placeholder="your email address"
           onChange={handleChangeForEmail}
+          required
         />
         <br />
         {buttonMessage === "" ? (

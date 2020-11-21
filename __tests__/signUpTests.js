@@ -20,5 +20,8 @@ test('sign up button', () => {
   const signup = shallow(<Signup />);
   expect(signup.find('button').text()).toEqual('Sign Up');
 
-  expect(signup.containsMatchingElement(<p className="receive-text"></p>)).to.equal(true);
+  expect(signup.containsMatchingElement(<p className="receive-text">
+  ...<i>receive</i> anonymous email:
+</p>)).toBeTruthy();
+
 })

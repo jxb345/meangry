@@ -14,7 +14,6 @@ function App () {
   const [previewHeaderMessage, setPreviewHeaderMessage] = useState('Please Review Your Message')
   const arrow = document.getElementsByClassName('arrow-img');
 
-  // emailSent === true && preview !== null - to display email confirmation sent message
   const handleEdit = () => {
     setPreview(null);
     setPreviewChecked(true);
@@ -23,12 +22,12 @@ function App () {
   const handlePreviewClick = () => {
     setPreview(true);
     setPreviewChecked(false);
-    setBackButton(true)// show 'edit' button
+    setBackButton(true);
   }
 
   const handleSendEmail = () => {
     setPreviewHeaderMessage('');
-    setPreview(true)
+    setPreview(true);
     setEmailSent(true);
     let email = {
       subject: subject,
@@ -63,7 +62,6 @@ function App () {
 
   const togglePreview = () => {
     setPreviewChecked(!previewChecked);
-    console.log('previewChecked', previewChecked)
   }
 
   useEffect( () => {
@@ -91,15 +89,15 @@ function App () {
           {
             (preview === null)
             ?
-      <div className="test-text">
-        <div className="you-are">
-          You are <img className="thought-bubble" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
+      <div className="explanation-text-wrapper">
+        <div className="you-are-title">
+          You feel <img className="thought-bubble-img" src="./bubble.png" height="80" width="110" alt="thought bubble"/>
         </div>
         <div className="explanation-text">
-          The message that you just read ignites an emotional <br/> surge that <i>needs</i> an outlet -
+          That message ignites an emotional surge  <br/> that <i>needs</i> an outlet -
           but DON&apos;T <span> <button title="do NOT reply" className="reply-graphic">REPLY</button></span>
-          <span className="e-t">
-          <br/> Instead, fire it off <strong>anonymously</strong> to a stranger.
+          <span className="explanation-text-last">
+          <br/> Instead, send it <strong>anonymously</strong> to a random.
           </span>
         </div>
         </div>
@@ -123,7 +121,6 @@ function App () {
             ?
             <EmailForm subject={subject} setSubject={setSubject} body={body} setBody={setBody}/>
             :
-            // confirmation message displayed in Preview when emailSent === true
             <Preview body={body} subject={subject} handleSendEmail={handleSendEmail} emailSent={emailSent} />
           }
         </div>
@@ -131,14 +128,12 @@ function App () {
           {
             (previewChecked)
             ?
-              // setPreview(true); setPreviewChecked(false); setBackButton(true)
               <button type="button" onClick={handlePreviewClick}>Preview</button>
             :
               (!emailSent)
               ?
               (!backButton)
               ?
-              // setEmailSent(true);
               <button type="button" onClick={handleSendEmail}>Send</button>
               :
                 <div className="edit-send-buttons-wrapper">
@@ -160,7 +155,7 @@ function App () {
           }
           </div>
           {
-            (subject === '')
+            (subject === '' && body === '')
             ?
           <div>
           </div>

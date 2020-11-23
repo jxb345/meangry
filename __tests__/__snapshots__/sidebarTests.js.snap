@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`preview-snapshot-test 1`] = `
+<div>
+  <div
+    className="rules-title"
+  >
+    IMPORTANT
+  </div>
+  <div
+    className="rules"
+  >
+    Do 
+    <strong>
+      NOT
+    </strong>
+     use or include: 
+    <br />
+    • personal information 
+    <br />
+    • names, locations, etc. 
+    <br />
+    • bigoted language of any kind 
+    <br />
+    • threatening, violent language 
+    <br />
+  </div>
+</div>
+`;

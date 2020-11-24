@@ -40,6 +40,7 @@ app.get("/verify/:emailId", (req, res) => {
 });
 
 app.post("/send", (req, res) => {
+  console.log('/send -----------')
   let subject = req.body.subject;
   let body = req.body.body;
   selectEmailAddress((recipient) => {

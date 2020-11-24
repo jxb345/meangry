@@ -33,7 +33,6 @@ function App () {
       subject: subject,
       body: body
     }
-
     postEmail(email)
       .then((data) => {
         console.log('data', data)
@@ -49,15 +48,23 @@ function App () {
     setPreviewHeaderMessage('Please Review Your Message.');
   }
 
-  async function postEmail (data) {
-    const response = await fetch('/send', {
+  // async function postEmail (email) {
+    const postEmail = (email) => {
+    // const response = await fetch('/send', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // });
+    // return await response;
+    fetch('/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data)
-    });
-    return await response;
+      body: JSON.stringify(email)
+    })
   }
 
   const togglePreview = () => {

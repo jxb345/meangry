@@ -24,6 +24,7 @@ const send = (to, identifier, subject, body, verifyEmail) => {
 
   let template = findTemplate(verifyEmail, identifier, subject, body);
 
+  console.log('to------------------', to)
   console.log("template", template);
 
   const root = path.join(__dirname, "emails");

@@ -48,16 +48,7 @@ function App () {
     setPreviewHeaderMessage('Please Review Your Message.');
   }
 
-  // async function postEmail (email) {
     const postEmail = (email) => {
-    // const response = await fetch('/send', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // });
-    // return await response;
     fetch('/send', {
       method: 'POST',
       headers: {

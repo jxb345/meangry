@@ -95,7 +95,7 @@ function App () {
           That message ignites an emotional surge  <br/> that <i>needs</i> an outlet -
           but DON&apos;T <span> <button title="do NOT reply" className="reply-graphic">REPLY</button></span>
           <span className="explanation-text-last">
-          <br/> Instead, send it <strong>anonymously</strong> to a random.
+          <br/> Instead, send an <strong>anon</strong> note to a random.
           </span>
         </div>
         </div>

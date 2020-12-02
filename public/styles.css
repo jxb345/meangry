@@ -8,10 +8,11 @@ button {
   display: block;
   border: none;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
   transition-duration: 0.3s;
+  letter-spacing: .07rem;
 }
 
 button:hover {
@@ -79,14 +80,18 @@ textarea {
 }
 
 .explanation-text {
-  /* background-color: #f7f7f7;
-  border-radius: 3px; */
+ /* background-color: #f7f7f7; */
+ /* border: 1px lightgray solid; */
+  border-radius: 5px;
   font-weight: 100;
   margin-top: 1%;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-size: medium; */
   letter-spacing: 1px;
   line-height: 1.7em;
   height: 85px;
+  /* width: 90%;
+  margin-left: 5%; */
   overflow: auto;
 }
 
@@ -124,7 +129,7 @@ textarea {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 110%;
-  color: #646262;
+  color: #919191;
 }
 
 .grid-signup {
@@ -175,6 +180,7 @@ textarea {
   font-size: small;
   color: white;
   background-color: #e82222;
+  letter-spacing: normal;
 }
 
 .preview {
@@ -290,9 +296,9 @@ textarea {
 }
 
 .you-are-title {
-  font-size: 320%;
+  font-size: 300%;
   font-weight: 900;
-  color: black;
+  color: #2A2929;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   overflow: auto;

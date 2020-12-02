@@ -3,6 +3,7 @@ require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
+const pug = require('pug');
 const bodyParser = require("body-parser");
 const { send } = require("./sendEmail.js");
 const {
@@ -19,6 +20,11 @@ app.set("view engine", "pug");
 app.use(express.static("public"));
 app.use(bodyParser.json());
 
+app.get("/do-not-reply", (req, res) => {
+  console.log('do NOOOOT')
+  return res.render("do-not-reply");
+})
+
 app.get("/users", (req, res) => {
   numOfUsers((users) => {
     res.send({ users });
@@ -28,7 +34,7 @@ app.get("/users", (req, res) => {
 app.get("/remove/:emailId", (req, res) => {
   const emailIdToRemove = req.params.emailId;
   removeEmailAddress(emailIdToRemove, () => {
-    res.render("unsubscribed");
+    res.render("do-not-reply");
   });
 });
 

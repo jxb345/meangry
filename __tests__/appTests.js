@@ -1,7 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
+import Enzyme from 'enzyme';
+import { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import App from '../public/components/App.jsx';
+
+Enzyme.configure({ adapter: new Adapter() });
+
 
 test('app-snapshot-test', () => {
   const component = renderer.create(
@@ -9,6 +14,8 @@ test('app-snapshot-test', () => {
 
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+
+  })
 
     test('preview button', () => {
 
@@ -18,4 +25,3 @@ test('app-snapshot-test', () => {
       expect(app.containsMatchingElement(<p className="vertical-center">
       heatMail</p>)).toBeTruthy();
   })
-})

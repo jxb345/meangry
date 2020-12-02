@@ -14,5 +14,8 @@ test('app-snapshot-test', () => {
 
       const app = shallow(<App />);
       expect(app.find('button').text()).toEqual('Preview');
+
+      expect(app.containsMatchingElement(<p className="vertical-center">
+      heatMail</p>)).toBeTruthy();
   })
 })

@@ -20,10 +20,10 @@ app.set("view engine", "pug");
 app.use(express.static("public"));
 app.use(bodyParser.json());
 
-app.get("/do-not-reply", (req, res) => {
-  console.log('do NOOOOT')
-  return res.render("do-not-reply");
-})
+// app.get("/doNotReply", (req, res) => {
+//   console.log('do NOOOOT')
+//   res.render("doNotReply");
+// })
 
 app.get("/users", (req, res) => {
   numOfUsers((users) => {
@@ -31,11 +31,11 @@ app.get("/users", (req, res) => {
   });
 });
 
-app.get("/remove/:emailId", (req, res) => {
-  const emailIdToRemove = req.params.emailId;
-  removeEmailAddress(emailIdToRemove, () => {
-    res.render("do-not-reply");
-  });
+app.get("/doNotReply", (req, res) => {
+  // const emailIdToRemove = req.params.emailId;
+  // removeEmailAddress(emailIdToRemove, () => {
+    res.render("doNotReply");
+  // });
 });
 
 app.get("/verify/:emailId", (req, res) => {

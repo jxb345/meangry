@@ -57,15 +57,6 @@ function App () {
     })
   }
 
-  const handleDoNotReply = () => {
-    fetch("/do-not-reply", {
-      method: 'GET',
-    })
-    .then((data) => {
-      console.log('data', data)
-    })
-  }
-
   const togglePreview = () => {
     setPreviewChecked(!previewChecked);
   }
@@ -101,7 +92,7 @@ function App () {
         </div>
         <div className="explanation-text">
           That message ignites an emotional surge  <br/> that <i>needs</i> an outlet -
-          but DON&apos;T <span> <button title="do NOT reply" className="reply-graphic" onClick={()=> { handleDoNotReply()}}>REPLY</button></span>
+          but DON&apos;T <span> <a href="http://localhost:3600/doNotReply"><button title="do NOT reply" className="reply-graphic">REPLY</button></a></span>
           <span className="explanation-text-last">
           <br/> Instead, send an <strong>anon</strong> note to a random.
           </span>

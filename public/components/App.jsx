@@ -17,6 +17,7 @@ function App () {
   const handleEdit = () => {
     setPreview(null);
     setPreviewChecked(true);
+    setBackButton(false);
   }
 
   const handlePreviewClick = () => {
@@ -57,11 +58,16 @@ function App () {
     })
   }
 
+
   const togglePreview = () => {
     setPreviewChecked(!previewChecked);
   }
 
   useEffect( () => {
+    console.log('preview----', preview)
+    console.log('previewChecked----', previewChecked)
+    console.log('emailSent', emailSent)
+    console.log('backButton', backButton)
     if (emailSent) {
       setSubject('')
     }

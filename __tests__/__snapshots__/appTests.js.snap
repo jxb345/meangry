@@ -48,12 +48,16 @@ exports[`app-snapshot-test 1`] = `
          an outlet - but DON'T 
         <span>
            
-          <button
-            className="reply-graphic"
-            title="do NOT reply"
+          <a
+            href="http://localhost:3600/doNotReply"
           >
-            REPLY
-          </button>
+            <button
+              className="reply-graphic"
+              title="do NOT reply"
+            >
+              REPLY
+            </button>
+          </a>
         </span>
         <span
           className="explanation-text-last"
@@ -139,6 +143,7 @@ exports[`app-snapshot-test 1`] = `
     className="grid-buttons"
   >
     <button
+      className="button-preview"
       onClick={[Function]}
       type="button"
     >

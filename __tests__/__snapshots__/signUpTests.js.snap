@@ -16,6 +16,7 @@ exports[`preview-snapshot-test 1`] = `
       className="email-signup"
       onChange={[Function]}
       placeholder="your email address"
+      required={true}
       type="text"
     />
     <br />

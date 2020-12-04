@@ -131,13 +131,13 @@ function App () {
           {
             (previewChecked)
             ?
-              <button type="button" onClick={handlePreviewClick}>Preview</button>
+              <button className="button-preview" type="button" onClick={handlePreviewClick}>Preview</button>
             :
               (!emailSent)
               ?
               (!backButton)
               ?
-              <button type="button" onClick={handleSendEmail}>Send</button>
+              <button className="button-send" type="button" onClick={handleSendEmail}>Send</button>
               :
                 <div className="edit-send-buttons-wrapper">
                   <button className="edit-send-buttons" type="button" onClick={handleEdit}>Edit</button>

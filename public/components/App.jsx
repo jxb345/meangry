@@ -13,6 +13,7 @@ function App() {
   const [backButton, setBackButton] = useState(false);
   const [previewHeaderMessage, setPreviewHeaderMessage] = useState("Preview");
   const arrow = document.getElementsByClassName("arrow-img");
+  const wrapper = document.getElementsByClassName("preview-explanation-text-wrapper")
 
   const handleEdit = () => {
     setPreview(null);
@@ -27,14 +28,16 @@ function App() {
   };
 
   const handleSendEmail = () => {
-    setPreviewHeaderMessage("");
+    // setPreviewHeaderMessage("");
     setPreview(true);
     setEmailSent(true);
     let email = {
       subject: subject,
       body: body,
     };
-    postEmail(email).then((data) => {});
+    postEmail(email)
+    // .then((data) => {})
+    ;
   };
 
   const handleConfirmationSent = () => {
@@ -68,12 +71,12 @@ function App() {
     if (emailSent) {
       setSubject("");
     }
-    // if (preview) {
-    //   arrow[0].style.visibility = 'visible';
-    // }
-    // if (emailSent) {
-    //   arrow[0].style.visibility = 'hidden';
-    // }
+    if (preview) {
+      wrapper[0].style.display = 'block';
+    }
+    if (emailSent) {
+      wrapper[0].style.display = 'none';
+    }
   });
 
   return (
@@ -113,7 +116,7 @@ function App() {
           </div>
         ) : (
           <div className="preview-explanation-text-wrapper">
-            <div className="preview-title">{previewHeaderMessage}{" "}
+            <div className="preview-title">Preview{" "}
               <img
                   className="thought-bubble-img"
                   src="./bubble.png"

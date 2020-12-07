@@ -68,12 +68,12 @@ function App() {
     if (emailSent) {
       setSubject("");
     }
-    if (preview) {
-      arrow[0].style.visibility = 'visible';
-    }
-    if (emailSent) {
-      arrow[0].style.visibility = 'hidden';
-    }
+    // if (preview) {
+    //   arrow[0].style.visibility = 'visible';
+    // }
+    // if (emailSent) {
+    //   arrow[0].style.visibility = 'hidden';
+    // }
   });
 
   return (
@@ -123,10 +123,21 @@ function App() {
                 />
             </div>
             <div className="preview-explanation-text">
-              Review your message before sending.
-              <div className="arrow-img">
+              Review your message before sending. <br/>
+              Follow all IMPORTANT rules in yellow. <br/>
+              Click
+              <span>
+                {" "}
+                  <button
+                    className="reply-graphic"
+                    onClick={handleSendEmail}>
+                    Send
+                  </button>
+              </span>
+               {" "}to feel the  cathartic release.
+              {/* <div className="arrow-img">
                 <img src="./arrow.png" alt="down arrow" height="40px" width="40px"/>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

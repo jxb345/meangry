@@ -11,9 +11,10 @@ function App() {
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
-  const [previewHeaderMessage, setPreviewHeaderMessage] = useState("Preview");
+  // const [previewHeaderMessage, setPreviewHeaderMessage] = useState("Preview");
   const arrow = document.getElementsByClassName("arrow-img");
-  const wrapper = document.getElementsByClassName("preview-explanation-text-wrapper")
+  const wrapper = document.getElementById('testo')
+
 
   const handleEdit = () => {
     setPreview(null);
@@ -36,7 +37,10 @@ function App() {
       body: body,
     };
     postEmail(email)
-    // .then((data) => {})
+    // commenting out .then as it caused an error;
+    // I have not removed it yet b/c I don't know
+    // why it was included in the first place
+      // .then((data) => {})
     ;
   };
 
@@ -46,7 +50,8 @@ function App() {
     setBody("");
     setEmailSent(false);
     setBackButton(false);
-    setPreviewHeaderMessage("Please Review Your Message.");
+    // can delete as entire div is set to display: none
+      // setPreviewHeaderMessage("Please Review Your Message.");
   };
 
   const postEmail = (email) => {
@@ -71,12 +76,12 @@ function App() {
     if (emailSent) {
       setSubject("");
     }
-    if (preview) {
-      wrapper[0].style.display = 'block';
-    }
-    if (emailSent) {
-      wrapper[0].style.display = 'none';
-    }
+    // if (preview) {
+      //   wrapper[0].style.display = 'block';
+      // }
+      // if (!emailSent) {
+      //   wrapper.style.visibility = 'visible';
+      // }
   });
 
   return (
@@ -91,10 +96,10 @@ function App() {
             <div className="you-are-title">
               You feel{" "}
               <img
-                className="thought-bubble-img"
+                className="thought-bubble-you-are"
                 src="./bubble.png"
-                height="80"
-                width="110"
+                height="80px"
+                width="110px"
                 alt="thought bubble"
               />
             </div>
@@ -115,19 +120,19 @@ function App() {
             </div>
           </div>
         ) : (
-          <div className="preview-explanation-text-wrapper">
+          <div id="testo" className="preview-explanation-text-wrapper">
             <div className="preview-title">Preview{" "}
               <img
-                  className="thought-bubble-img"
+                  className="thought-bubble-preview"
                   src="./bubble.png"
-                  height="80"
-                  width="110"
+                  height="80px"
+                  width="110px"
                   alt="thought bubble"
                 />
             </div>
             <div className="preview-explanation-text">
               Review your message before sending. <br/>
-              Follow all IMPORTANT rules in yellow. <br/>
+              Follow all <strong>IMPORTANT</strong> rules in yellow. <br/>
               Click
               <span>
                 {" "}
@@ -163,6 +168,7 @@ function App() {
             subject={subject}
             handleSendEmail={handleSendEmail}
             emailSent={emailSent}
+            wrapper={wrapper}
           />
         )}
       </div>

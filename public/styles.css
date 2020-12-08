@@ -82,9 +82,9 @@ textarea {
 
 .explanation-text {
  /* border: 1px lightgray solid; */
-  border-radius: 5px;
+  /* border-radius: 5px; */
   font-weight: 100;
-  margin-top: 1%;
+  /* margin-top: 1%; */
   font-family: Georgia, 'Times New Roman', Times, serif;
   /* font-size: medium; */
   letter-spacing: 1px;
@@ -100,9 +100,9 @@ textarea {
   top: -4px;
 }
 
-.explanation-text-wrapper {
+/* .explanation-text-wrapper {
   margin-top: 10px;
-}
+} */
 
 .grid {
   display: grid;
@@ -227,6 +227,7 @@ textarea {
 
 .preview-explanation-text-wrapper {
   margin-top: 2.5%;
+  /* visibility: visible; */
   /* margin-left: 2%; */
 }
 
@@ -315,10 +316,10 @@ textarea {
   top: -9.5px;
 }
 
-/* .thought-bubble-you-preview {
+.thought-bubble-you-preview {
   position: relative;
   top: -9.5px;
-} */
+}
 
 
 .vertical-center {
@@ -340,7 +341,8 @@ textarea {
     "Lucida Sans", Arial, sans-serif;
   overflow: auto;
   height: 85px;
-  padding-top: 1%;
+  padding-top: 3%;
+  /* margin-top: -4%; */
 }
 
 /* styled input checkbox */

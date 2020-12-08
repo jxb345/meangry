@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Preview = (props) => {
+
+
+  useEffect(() => {
+    console.log('props.wrapper', props.wrapper)
+    // if (!props.emailSent) {
+    //   wrapper.style.visibility = "visible"
+    // } else {
+    //   wrapper.style.visibility = "hidden"
+    // }
+  })
+
   return (
     <div>
       {!props.emailSent ? (

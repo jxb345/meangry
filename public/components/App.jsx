@@ -13,8 +13,7 @@ function App() {
   const [backButton, setBackButton] = useState(false);
   // const [previewHeaderMessage, setPreviewHeaderMessage] = useState("Preview");
   const arrow = document.getElementsByClassName("arrow-img");
-  const wrapper = document.getElementById('testo')
-
+  const wrapper = document.getElementById("testo");
 
   const handleEdit = () => {
     setPreview(null);
@@ -36,12 +35,11 @@ function App() {
       subject: subject,
       body: body,
     };
-    postEmail(email)
+    postEmail(email);
     // commenting out .then as it caused an error;
     // I have not removed it yet b/c I don't know
     // why it was included in the first place
-      // .then((data) => {})
-    ;
+    // .then((data) => {})
   };
 
   const handleConfirmationSent = () => {
@@ -51,7 +49,7 @@ function App() {
     setEmailSent(false);
     setBackButton(false);
     // can delete as entire div is set to display: none
-      // setPreviewHeaderMessage("Please Review Your Message.");
+    // setPreviewHeaderMessage("Please Review Your Message.");
   };
 
   const postEmail = (email) => {
@@ -77,11 +75,11 @@ function App() {
       setSubject("");
     }
     // if (preview) {
-      //   wrapper[0].style.display = 'block';
-      // }
-      // if (!emailSent) {
-      //   wrapper.style.visibility = 'visible';
-      // }
+    //   wrapper[0].style.display = 'block';
+    // }
+    // if (!emailSent) {
+    //   wrapper.style.visibility = 'visible';
+    // }
   });
 
   return (
@@ -119,35 +117,36 @@ function App() {
               </span>
             </div>
           </div>
-        ) : (
+        ) : emailSent === false ? (
           <div id="testo" className="preview-explanation-text-wrapper">
-            <div className="preview-title">Preview{" "}
+            <div className="preview-title">
+              Preview{" "}
               <img
-                  className="thought-bubble-preview"
-                  src="./bubble.png"
-                  height="80px"
-                  width="110px"
-                  alt="thought bubble"
-                />
+                className="thought-bubble-preview"
+                src="./bubble.png"
+                height="80px"
+                width="110px"
+                alt="thought bubble"
+              />
             </div>
             <div className="preview-explanation-text">
-              Review your message before sending. <br/>
-              Follow all <strong>IMPORTANT</strong> rules in yellow. <br/>
+              Review your message before sending. <br />
+              Follow all <strong>IMPORTANT</strong> rules in yellow. <br />
               Click
               <span>
                 {" "}
-                  <button
-                    className="reply-graphic"
-                    onClick={handleSendEmail}>
-                    Send
-                  </button>
-              </span>
-               {" "}to feel the  cathartic release.
+                <button className="reply-graphic" onClick={handleSendEmail}>
+                  Send
+                </button>
+              </span>{" "}
+              to feel the cathartic release.
               {/* <div className="arrow-img">
                 <img src="./arrow.png" alt="down arrow" height="40px" width="40px"/>
               </div> */}
             </div>
           </div>
+        ) : (
+          <div></div>
         )}
       </div>
       <div className="grid-signup">

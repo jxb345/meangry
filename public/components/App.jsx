@@ -118,7 +118,7 @@ function App() {
             </div>
           </div>
         ) : emailSent === false ? (
-          <div id="testo" className="preview-explanation-text-wrapper">
+          <div className="preview-explanation-text-wrapper">
             <div className="preview-title">
               Preview{" "}
               <img

@@ -31,10 +31,10 @@ app.get("/users", (req, res) => {
   });
 });
 
-app.get("/doNotReply", (req, res) => {
+app.get("/remove/:emailId", (req, res) => {
   const emailIdToRemove = req.params.emailId;
   removeEmailAddress(emailIdToRemove, () => {
-    res.render("doNotReply");
+    res.render("unsubscribed");
   });
 });
 

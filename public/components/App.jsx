@@ -232,9 +232,13 @@ function App() {
       {subject === "" && body === "" ? (
         <div></div>
       ) : (
+        emailSent === false ? (
         <div className="grid-sidebar-rules">
           <Sidebar />
         </div>
+        )
+        :
+        <div></div>
       )}
     </div>
   );

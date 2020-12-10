@@ -13,7 +13,6 @@ html
         text-decoration: none;
       }
       div {
-        font-family: arial, sans-serif;
         color: #2F4F4F;
         font-size: 15px;
         padding: 3%;
@@ -36,16 +35,20 @@ html
         width: 135px;
         height: 55px;
       }
+
+      pre {
+        font-family: arial, sans-serif;
+      }
   body
     <img src="cid:1234"/>
     div
-      p To Whom It May Concern,
+      pre To Whom It May Concern,
       |
-      p #{body}
+      pre #{body}
       |
       |
-      p Regards,
-      p Anonymous
+      pre Regards,
+      pre Anonymous
       br
       <button><a href="http://localhost:3600/">heatMail</a></button>
       <button><a href="http://localhost:3600/remove/#{identifier}">unsubscribe</a></button

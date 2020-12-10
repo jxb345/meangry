@@ -12,7 +12,6 @@ function App() {
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
   const [sendButton, setSendButton] = useState('disabled');
-  // const [previewHeaderMessage, setPreviewHeaderMessage] = useState("Preview");
   const arrow = document.getElementsByClassName("arrow-img");
 
   const handleEdit = () => {
@@ -28,7 +27,6 @@ function App() {
   };
 
   const handleSendEmail = () => {
-    // setPreviewHeaderMessage("");
     setPreview(true);
     setEmailSent(true);
     let email = {
@@ -49,8 +47,6 @@ function App() {
     setEmailSent(false);
     setBackButton(false);
     setSendButton('disabled')
-    // can delete as entire div is set to display: none
-    // setPreviewHeaderMessage("Please Review Your Message.");
   };
 
   const postEmail = (email) => {

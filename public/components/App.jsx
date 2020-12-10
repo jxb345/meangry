@@ -11,9 +11,9 @@ function App() {
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
+  const [sendButton, setSendButton] = useState('disabled');
   // const [previewHeaderMessage, setPreviewHeaderMessage] = useState("Preview");
   const arrow = document.getElementsByClassName("arrow-img");
-  const wrapper = document.getElementById("testo");
 
   const handleEdit = () => {
     setPreview(null);
@@ -48,6 +48,7 @@ function App() {
     setBody("");
     setEmailSent(false);
     setBackButton(false);
+    setSendButton('disabled')
     // can delete as entire div is set to display: none
     // setPreviewHeaderMessage("Please Review Your Message.");
   };
@@ -135,7 +136,7 @@ function App() {
               Click
               <span>
                 {" "}
-                <button className="reply-graphic" onClick={handleSendEmail}>
+                <button className="reply-graphic" onClick={handleSendEmail} disabled={sendButton}>
                   Send
                 </button>
               </span>{" "}
@@ -160,6 +161,7 @@ function App() {
             setSubject={setSubject}
             body={body}
             setBody={setBody}
+            setSendButton={setSendButton}
           />
         ) : (
           <Preview
@@ -167,7 +169,6 @@ function App() {
             subject={subject}
             handleSendEmail={handleSendEmail}
             emailSent={emailSent}
-            wrapper={wrapper}
           />
         )}
       </div>
@@ -186,6 +187,7 @@ function App() {
               className="button-send"
               type="button"
               onClick={handleSendEmail}
+              disabled={sendButton}
             >
               Send
             </button>
@@ -202,6 +204,7 @@ function App() {
                 className="edit-send-buttons"
                 type="button"
                 onClick={handleSendEmail}
+                disabled={sendButton}
               >
                 Send
               </button>

@@ -9,6 +9,7 @@ const EmailForm = (props) => {
   const handleBodyChange = (e) => {
     e.preventDefault();
     props.setBody(e.target.value);
+    props.setSendButton('')
   };
 
   useEffect(() => {

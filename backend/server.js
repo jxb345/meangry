@@ -21,7 +21,6 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 
 app.get("/doNotReply", (req, res) => {
-  console.log('do NOOOOT')
   res.render("doNotReply");
 })
 
@@ -47,6 +46,7 @@ app.get("/verify/:emailId", (req, res) => {
 
 app.post("/send", (req, res) => {
   console.log('/send -----------')
+  console.log('body-------in server.js', req.body)
   let subject = req.body.subject;
   let body = req.body.body;
   selectEmailAddress((recipient) => {

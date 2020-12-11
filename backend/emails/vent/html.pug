@@ -12,14 +12,19 @@ html
         color: white;
         text-decoration: none;
       }
-      div {
+      div.image-container {
+        margin-left: 11%;
+      }
+
+      div.inner-container {
         color: #2F4F4F;
         font-size: 15px;
         padding: 3%;
-        width: 60%;
+        width: 70%;
         height: 50%;
         background-color: #FAFAFA;
         border-radius: 4px;
+        margin: 0 auto;
       }
 
       button {
@@ -34,23 +39,26 @@ html
       img {
         width: 135px;
         height: 55px;
+        margin: 0 auto;
       }
 
       pre {
         font-family: arial, sans-serif;
       }
   body
-    <img src="cid:1234"/>
-    div
-      pre To Whom It May Concern,
-      |
-      pre #{body}
-      |
-      |
-      pre Regards,
-      pre Anonymous
-      br
-      <button><a href="http://localhost:3600/">heatMail</a></button>
-      <button><a href="http://localhost:3600/remove/#{identifier}">unsubscribe</a></button
+    div(class="outer-container")
+      div(class="image-container")
+        <img src="cid:1234"/>
+      div(class="inner-container")
+        pre To Whom It May Concern,
+        |
+        pre #{body}
+        |
+        |
+        pre Regards,
+        pre Anonymous
+        br
+        <button><a href="http://localhost:3600/">heatMail</a></button>
+        <button><a href="http://localhost:3600/remove/#{identifier}">unsubscribe</a></button
 
 

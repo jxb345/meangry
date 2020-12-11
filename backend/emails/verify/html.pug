@@ -25,25 +25,34 @@ html
         font-weight: 600;
         cursor: pointer;
       }
-       div {
+       div.image-container {
+        margin-left: 11%;
+      }
+
+       div.inner-container {
         font-family: georgia, serif;
         font-size: 16px;
         color: #2F4F4F;
         font-weight: 500;
         padding: 3%;
-        width: 60%;
+        width: 70%;
         height: 50%;
         background-color: #FAFAFA;
         border-radius: 4px;
+        margin: 0 auto;
+        text-align: center;
       }
        img {
         width: 135px;
         height: 55px;
+        margin: 0 auto;
       }
   body
-    <img src="cid:1234"/>
-    div
-      p Thanks for signing up to receive anonymous heatMail!
-      p Click to verify your email address.
-      <button><a href="http://localhost:3600/verify/#{identifier}">verify</a></button
+    div(class="outer-container")
+      div(class="image-container")
+        <img src="cid:1234"/>
+      div(class="inner-container")
+        p Thanks for signing up to receive anonymous heatMail!
+        p Click to verify your email address.
+        <button><a href="http://localhost:3600/verify/#{identifier}">verify</a></button>
 

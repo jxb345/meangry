@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
 
 const EmailForm = (props) => {
+  const { body, setBody, setSendButton, setSubject, subject } = props;
   const handleSubjectChange = (e) => {
     e.preventDefault();
-    props.setSubject(e.target.value);
+    setSubject(e.target.value);
   };
 
   const handleBodyChange = (e) => {
     e.preventDefault();
-    props.setBody(e.target.value);
-    props.setSendButton('')
+    setBody(e.target.value);
+    setSendButton("");
   };
 
   useEffect(() => {
-    document.getElementById("subject").value = props.subject;
-    document.getElementById("body").value = props.body;
+    document.getElementById("subject").value = subject;
+    document.getElementById("body").value = body;
   });
 
   return (

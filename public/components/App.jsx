@@ -71,12 +71,6 @@ function App() {
     if (emailSent) {
       setSubject("");
     }
-    // if (preview) {
-    //   wrapper[0].style.display = 'block';
-    // }
-    // if (!emailSent) {
-    //   wrapper.style.visibility = 'visible';
-    // }
   });
 
   return (

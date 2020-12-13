@@ -2,22 +2,15 @@ import React, { useEffect } from "react";
 
 const Preview = (props) => {
 
+  const { subject, body } = props;
 
-  useEffect(() => {
-    console.log('props.wrapper', props.wrapper)
-    // if (!props.emailSent) {
-    //   wrapper.style.visibility = "visible"
-    // } else {
-    //   wrapper.style.visibility = "hidden"
-    // }
-  })
 
   return (
     <div>
       {!props.emailSent ? (
         <div className="preview">
-          <div className="subject-preview">{props.subject}</div>
-          <div className="body-preview">{props.body}</div>
+          <div className="subject-preview">{subject}</div>
+          <div className="body-preview">{body}</div>
         </div>
       ) : (
         <div className="sent-preview">

@@ -190,6 +190,12 @@ textarea {
   font-size: medium;
   border-radius: 3px;
   width: 89%;
+  margin-left: 5%;
+  /* added margin-left: 5%
+  and commented out position: relative
+  and commented out right: -37%
+  since relative would overlap <Sidebar> when
+  resizing window
   /* position: relative;
   right: -37px; */
 }

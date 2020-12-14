@@ -81,7 +81,7 @@ function App() {
       </div>
       <div className="grid-text">
         {preview === null ? (
-          <div className="explanation-text-wrapper">
+          <div>
             <div className="you-are-title">
               You feel{" "}
               <img
@@ -121,7 +121,7 @@ function App() {
               />
             </div>
             <div className="preview-explanation-text">
-              Review your message before sending. <br />
+              Review your message below before sending. <br />
               Follow all <strong>IMPORTANT</strong> rules in yellow. <br />
               Click
               <span>

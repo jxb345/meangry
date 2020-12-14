@@ -82,17 +82,11 @@ textarea {
 
 
 .explanation-text {
- /* border: 1px lightgray solid; */
-  /* border-radius: 5px; */
   font-weight: 100;
-  /* margin-top: 1%; */
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* font-size: medium; */
   letter-spacing: 1px;
   line-height: 1.7em;
   height: 85px;
-  /* width: 90%;
-  margin-left: 5%; */
   overflow: auto;
 }
 
@@ -100,10 +94,6 @@ textarea {
   position: relative;
   top: -4px;
 }
-
-/* .explanation-text-wrapper {
-  margin-top: 10px;
-} */
 
 .grid {
   display: grid;
@@ -213,29 +203,21 @@ textarea {
     "Lucida Sans", Arial, sans-serif;
 }
 
-/* .preview-title {
-  font-family: "Raleway", sans-serif;
-  text-align: center;
-  border-bottom: 1px solid black;
-} */
-
 .preview-explanation-text {
-   border-radius: 5px;
+   /* border-radius: 5px; */
    font-weight: 100;
-   margin-top: 1%;
-   margin-left: 3%;
+   /* margin-top: 1%; */
+   /* margin-left: 3%; */
    font-family: Georgia, 'Times New Roman', Times, serif;
    letter-spacing: 1px;
    line-height: 1.7em;
    height: 85px;
-   width: 90%;
+   /* width: 90%; */
    overflow: auto;
  }
 
 .preview-explanation-text-wrapper {
   margin-top: 2.5%;
-  /* visibility: visible; */
-  /* margin-left: 2%; */
 }
 
 .preview-title {
@@ -245,9 +227,8 @@ textarea {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   overflow: auto;
-  /* margin-right: 15%; */
   height: 85px;
-  /* padding-top: 1%; */
+  padding-top: 1%;
 }
 
 

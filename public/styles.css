@@ -204,10 +204,7 @@ textarea {
 }
 
 .preview-explanation-text {
-   /* border-radius: 5px; */
    font-weight: 100;
-   /* margin-top: 1%; */
-   /* margin-left: 3%; */
    font-family: Georgia, 'Times New Roman', Times, serif;
    letter-spacing: 1px;
    line-height: 1.7em;
@@ -217,7 +214,7 @@ textarea {
  }
 
 .preview-explanation-text-wrapper {
-  margin-top: 2.5%;
+  margin-top: 2%;
 }
 
 .preview-title {
@@ -299,10 +296,23 @@ textarea {
   height: 20px;
 }
 
+@media (max-width: 500px) {
+  .thought-bubble-you-are {
+    display: none;
+  }
+}
+
 .thought-bubble-you-are {
   position: relative;
   top: -3.5px;
 }
+
+@media (max-width: 500px) {
+  .thought-bubble-preview {
+    display: none;
+  }
+}
+
 
 .thought-bubble-you-preview {
   position: relative;
@@ -330,7 +340,6 @@ textarea {
   overflow: auto;
   height: 85px;
   padding-top: 3%;
-  /* margin-top: -4%; */
 }
 
 /* styled input checkbox */

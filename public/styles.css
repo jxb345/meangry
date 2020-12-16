@@ -314,9 +314,10 @@ textarea {
 }
 
 
-.thought-bubble-you-preview {
+.thought-bubble-preview {
   position: relative;
-  top: -9.5px;
+  top: -4px;
+  left: 2.5px;
 }
 
 

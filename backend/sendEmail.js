@@ -1,7 +1,6 @@
 const path = require("path");
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const nodemailer = require("nodemailer");
-const pug = require('pug')
 const Email = require("email-templates");
 
 const send = (to, identifier, subject, body, verifyEmail) => {
@@ -49,6 +48,7 @@ const send = (to, identifier, subject, body, verifyEmail) => {
     .send({
       template: template.name,
       message: {
+        // change value to parameter "to"
         to: process.env.EMAIL,
         attachments: [
           {
@@ -57,8 +57,6 @@ const send = (to, identifier, subject, body, verifyEmail) => {
             cid: "1234", //same cid value as in the html img src
           },
         ],
-        // include the 'text' property - debug now only shows 'html' with preserved /n
-          // text: body,
       },
       locals: template.locals,
     })

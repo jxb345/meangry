@@ -45,12 +45,14 @@ app.get("/verify/:emailId", (req, res) => {
 });
 
 app.post("/send", (req, res) => {
-  console.log('/send -----------')
-  console.log('body-------in server.js', req.body)
   let subject = req.body.subject;
   let body = req.body.body;
+  // should each email be sent to... say, three
+  // recipients instead of just one?
   selectEmailAddress((recipient) => {
-    send(recipient.email, recipient.identifier, subject, body, false);
+  for (let i = 0; i < 3; i += 1) {
+      send(recipient.email, recipient.identifier, subject, body, false);
+  }
     res.send("email has been sent from /sent");
   });
 });

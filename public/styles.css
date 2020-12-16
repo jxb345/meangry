@@ -209,7 +209,6 @@ textarea {
    letter-spacing: 1px;
    line-height: 1.7em;
    height: 85px;
-   /* width: 90%; */
    overflow: auto;
  }
 
@@ -226,6 +225,7 @@ textarea {
   overflow: auto;
   height: 85px;
   padding-top: 1%;
+  margin-bottom: 1%;
 }
 
 
@@ -340,6 +340,7 @@ textarea {
   overflow: auto;
   height: 85px;
   padding-top: 3%;
+  margin-bottom: 1%;
 }
 
 /* styled input checkbox */

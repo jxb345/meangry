@@ -3,7 +3,6 @@ require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT;
-const pug = require('pug');
 const bodyParser = require("body-parser");
 const { send } = require("./sendEmail.js");
 const {
@@ -47,12 +46,8 @@ app.get("/verify/:emailId", (req, res) => {
 app.post("/send", (req, res) => {
   let subject = req.body.subject;
   let body = req.body.body;
-  // should each email be sent to... say, three
-  // recipients instead of just one?
   selectEmailAddress((recipient) => {
-  for (let i = 0; i < 3; i += 1) {
       send(recipient.email, recipient.identifier, subject, body, false);
-  }
     res.send("email has been sent from /sent");
   });
 });

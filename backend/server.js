@@ -73,6 +73,11 @@ app.post("/email", (req, res) => {
   });
 });
 
+app.post("/feedback", (req, res) => {
+  // feedback from unsubscribe
+  // need user id AND comments
+})
+
 app.listen(3600, () => {
   console.log(`listening on 3600`);
 });

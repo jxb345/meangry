@@ -74,9 +74,10 @@ html
       h2 You have unsubscribed.
       p Send us any thoughts below - thanks!
         br
-        input
+        form(action="/feedback" method="POST")
+          input(type="text" name="feedback" )
         br
-        <button><a href="http://localhost:3600/feedback">Submit</a></button>
+        input(type="submit")
       br
 
 

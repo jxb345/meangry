@@ -17,6 +17,7 @@ app.set("views", "./views");
 app.set("view engine", "pug");
 
 app.use(express.static("public"));
+app.use(express.urlencoded( { extended: true }));
 app.use(bodyParser.json());
 
 app.get("/doNotReply", (req, res) => {
@@ -74,7 +75,7 @@ app.post("/email", (req, res) => {
 });
 
 app.post("/feedback", (req, res) => {
-  console.log('req.body.feedback--------------------------------', req.body.feedback)
+  console.log('req.body--------------------------------', req.body)
   // feedback from unsubscribe
   // need user id AND comments
 })

@@ -78,6 +78,7 @@ app.post("/feedback", (req, res) => {
   console.log('req.body--------------------------------', req.body)
   // feedback from unsubscribe
   // need user id AND comments
+  res.render("thanksFeedback")
 })
 
 app.listen(3600, () => {

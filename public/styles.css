@@ -118,7 +118,7 @@ textarea {
 .grid-text {
   grid-column: 2 / 3;
   margin-left: 6%;
-  margin-right: 6%;
+  /* margin-right: 6%; */
   /* background-color: #FDFED3; */
   grid-row: 2;
   text-align: center;

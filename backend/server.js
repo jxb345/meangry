@@ -6,10 +6,11 @@ const PORT = process.env.PORT;
 const bodyParser = require("body-parser");
 const { send } = require("./sendEmail.js");
 const {
-  selectEmailAddress,
+  collectFeedback,
   numOfUsers,
-  verifyEmailAddress,
   removeEmailAddress,
+  selectEmailAddress,
+  verifyEmailAddress,
 } = require("./models.js");
 const { saveEmail } = require("./emailsDbConnect.js");
 
@@ -76,9 +77,10 @@ app.post("/email", (req, res) => {
 
 app.post("/feedback", (req, res) => {
   console.log('req.body--------------------------------', req.body)
-  // feedback from unsubscribe
-  // need user id AND comments
-  res.render("thanksFeedback")
+  let feedback = req.body.feedback
+  collectFeedback( , feedback, () => {
+    res.render("thanksFeedback")
+  })
 })
 
 app.listen(3600, () => {

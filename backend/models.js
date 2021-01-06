@@ -2,6 +2,39 @@ const path = require("path");
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const { Email } = require("./emailsDbConnect.js");
 
+const collectFeedback = (identifier, feedback, callback) => {
+  Email.findByIdAndUpdate(
+    { identifier: identifier },
+    {feedback: feedback },
+    (err) => {
+      if (err) {
+      throw new Error('A problem finding updating an unsubscribed user\'s feedback')
+      }
+      callback();
+    }
+  )
+}
+
+
+const numOfUsers = (callback) => {
+  Email.countDocuments().exec((err, result) => {
+    if (err) {
+      throw new Error('A problem with finding the total number of users');
+    }
+    callback(result);
+  });
+};
+
+const removeEmailAddress = (identifier, callback) => {
+  Email.deleteOne({ identifier: identifier }, (err) => {
+    if (err) {
+      throw new Error('A problem unsubscribing user from receiving heatMail');
+    }
+    callback();
+  });
+};
+
+
 const selectEmailAddress = (callback) => {
   Email.findOne({ verified: true })
     .sort({ numSent: 1 })
@@ -16,14 +49,6 @@ const selectEmailAddress = (callback) => {
     });
 };
 
-const numOfUsers = (callback) => {
-  Email.countDocuments().exec((err, result) => {
-    if (err) {
-      throw new Error('A problem with finding the total number of users');
-    }
-    callback(result);
-  });
-};
 
 const verifyEmailAddress = (identifier, callback) => {
   Email.findOneAndUpdate(
@@ -38,18 +63,13 @@ const verifyEmailAddress = (identifier, callback) => {
   );
 };
 
-const removeEmailAddress = (identifier, callback) => {
-  Email.deleteOne({ identifier: identifier }, (err) => {
-    if (err) {
-      throw new Error('A problem unsubscribing user from receiving heatMail');
-    }
-    callback();
-  });
-};
+
+
 
 module.exports = {
-  selectEmailAddress,
+  collectFeedback,
   numOfUsers,
   removeEmailAddress,
+  selectEmailAddress,
   verifyEmailAddress,
 };

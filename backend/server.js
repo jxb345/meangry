@@ -17,7 +17,12 @@ app.set("views", "./views");
 app.set("view engine", "pug");
 
 app.use(express.static("public"));
+app.use(express.urlencoded( { extended: true }));
 app.use(bodyParser.json());
+
+app.get("/doNotReply", (req, res) => {
+  res.render("doNotReply");
+})
 
 app.get("/users", (req, res) => {
   numOfUsers((users) => {
@@ -43,7 +48,7 @@ app.post("/send", (req, res) => {
   let subject = req.body.subject;
   let body = req.body.body;
   selectEmailAddress((recipient) => {
-    send(recipient.email, recipient.identifier, subject, body, false);
+      send(recipient.email, recipient.identifier, subject, body, false);
     res.send("email has been sent from /sent");
   });
 });
@@ -68,6 +73,13 @@ app.post("/email", (req, res) => {
     }
   });
 });
+
+app.post("/feedback", (req, res) => {
+  console.log('req.body--------------------------------', req.body)
+  // feedback from unsubscribe
+  // need user id AND comments
+  res.render("thanksFeedback")
+})
 
 app.listen(3600, () => {
   console.log(`listening on 3600`);

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-function Signup() {
+const Signup = () => {
+
   const [email, setEmail] = useState({});
-  // const [signup, setSignup] = useState(true);
-  // const [emailAdded, setEmailAdded] = useState(false);
   const [users, setUsers] = useState(0);
   const [buttonMessage, setButtonMessage] = useState("");
 

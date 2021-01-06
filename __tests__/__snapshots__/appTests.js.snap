@@ -22,15 +22,15 @@ exports[`app-snapshot-test 1`] = `
     className="grid-text"
   >
     <div
-      className="test-text"
+      className="explanation-text-wrapper"
     >
       <div
-        className="you-are"
+        className="you-are-title"
       >
-        You are 
+        You feel 
         <img
           alt="thought bubble"
-          className="thought-bubble"
+          className="thought-bubble-img"
           height="80"
           src="./bubble.png"
           width="110"
@@ -39,31 +39,35 @@ exports[`app-snapshot-test 1`] = `
       <div
         className="explanation-text"
       >
-        The message that you just read ignites an emotional 
+        That message ignites an emotional surge  
         <br />
-         surge that 
+         that 
         <i>
           needs
         </i>
          an outlet - but DON'T 
         <span>
            
-          <button
-            className="reply-graphic"
-            title="do NOT reply"
+          <a
+            href="http://localhost:3600/doNotReply"
           >
-            REPLY
-          </button>
+            <button
+              className="reply-graphic"
+              title="do NOT reply"
+            >
+              REPLY
+            </button>
+          </a>
         </span>
         <span
-          className="e-t"
+          className="explanation-text-last"
         >
           <br />
-           Instead, fire it off 
+           Instead, send an 
           <strong>
-            anonymously
+            anon
           </strong>
-           to a stranger.
+           note to a random.
         </span>
       </div>
     </div>
@@ -86,6 +90,7 @@ exports[`app-snapshot-test 1`] = `
           className="email-signup"
           onChange={[Function]}
           placeholder="your email address"
+          required={true}
           type="text"
         />
         <br />
@@ -138,6 +143,7 @@ exports[`app-snapshot-test 1`] = `
     className="grid-buttons"
   >
     <button
+      className="button-preview"
       onClick={[Function]}
       type="button"
     >

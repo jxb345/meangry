@@ -7,7 +7,7 @@ const selectEmailAddress = (callback) => {
     .sort({ numSent: 1 })
     .exec((err, result) => {
       if (err) {
-        throw err;
+        throw new Error('A problem finding an email recipient for a heatMail');
       }
       let recipient = result;
       let numSentValue = result.numSent;
@@ -19,7 +19,7 @@ const selectEmailAddress = (callback) => {
 const numOfUsers = (callback) => {
   Email.countDocuments().exec((err, result) => {
     if (err) {
-      throw err;
+      throw new Error('A problem with finding the total number of users');
     }
     callback(result);
   });
@@ -31,7 +31,7 @@ const verifyEmailAddress = (identifier, callback) => {
     { verified: true },
     (err) => {
       if (err) {
-        throw err;
+        throw new Error('A problem finding or updating user for verification');
       }
       callback();
     }
@@ -41,11 +41,14 @@ const verifyEmailAddress = (identifier, callback) => {
 const removeEmailAddress = (identifier, callback) => {
   Email.deleteOne({ identifier: identifier }, (err) => {
     if (err) {
-      throw err;
+      throw new Error('A problem unsubscribing user from receiving heatMail');
     }
     callback();
   });
 };
+
+// const saveFeedback = ()
+// save
 
 module.exports = {
   selectEmailAddress,

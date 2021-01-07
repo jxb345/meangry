@@ -12,7 +12,7 @@ const collectFeedback = (identifier, feedback, callback) => {
       }
       callback();
     }
-  )
+  );
 }
 
 
@@ -26,12 +26,22 @@ const numOfUsers = (callback) => {
 };
 
 const removeEmailAddress = (identifier, callback) => {
-  Email.deleteOne({ identifier: identifier }, (err) => {
-    if (err) {
-      throw new Error('A problem unsubscribing user from receiving heatMail');
+  Email.findOneAndUpdate(
+    { identifier: identifier },
+    { verified: false },
+    (err) => {
+      if (err) {
+        throw new Error('A problem finding or updating user for verification');
+      }
+      callback();
     }
-    callback();
-  });
+  );
+  // Email.deleteOne({ identifier: identifier }, (err) => {
+  //   if (err) {
+  //     throw new Error('A problem unsubscribing user from receiving heatMail');
+  //   }
+  //   callback();
+  // });
 };
 
 

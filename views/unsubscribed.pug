@@ -67,6 +67,9 @@ html
       }
 
   body
+    script.
+      let wLH = window.location.hef
+      console.log('w.l.h', window.location.href)
     br
     br
     br
@@ -76,10 +79,11 @@ html
     div
       h2 You have unsubscribed.
       p Send us any thoughts below - thanks!
-        form(action="/feedback" method="POST")
+        form(action="/feedback" method="POST" id={wLH})
           textarea(col="10" rows="10" name="feedback" )
           input.submit-button(type="submit")
       br
+
 
 
 

@@ -11,7 +11,7 @@ function App() {
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
-  const [sendButton, setSendButton] = useState('disabled');
+  const [sendButton, setSendButton] = useState("disabled");
   const arrow = document.getElementsByClassName("arrow-img");
 
   const handleEdit = () => {
@@ -46,7 +46,7 @@ function App() {
     setBody("");
     setEmailSent(false);
     setBackButton(false);
-    setSendButton('disabled')
+    setSendButton("disabled");
   };
 
   const postEmail = (email) => {
@@ -126,7 +126,11 @@ function App() {
               Click
               <span>
                 {" "}
-                <button className="reply-graphic" onClick={handleSendEmail} disabled={sendButton}>
+                <button
+                  className="reply-graphic"
+                  onClick={handleSendEmail}
+                  disabled={sendButton}
+                >
                   Send
                 </button>
               </span>{" "}
@@ -224,15 +228,20 @@ function App() {
       </div>
       {subject === "" && body === "" ? (
         <div></div>
-      ) : (
-        emailSent === false ? (
+      ) : emailSent === false ? (
         <div className="grid-sidebar-rules">
           <Sidebar />
         </div>
-        )
-        :
+      ) : (
         <div></div>
       )}
+      <div className="grid-contact">
+        <span>heatMail 2021</span>&nbsp;&nbsp;&nbsp;{" "}
+          <a href="mailto:too.angrily@gmail.com">Contact</a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="mailto:too.angrily@gmail.com">About</a>
+        &nbsp;&nbsp;&nbsp;
+      </div>
     </div>
   );
 }

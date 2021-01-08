@@ -236,11 +236,10 @@ function App() {
         <div></div>
       )}
       <div className="grid-contact">
-        <span>heatMail 2021</span>&nbsp;&nbsp;&nbsp;{" "}
+        <span>heatMail 2021</span>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="mailto:too.angrily@gmail.com">Contact</a>
-        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="mailto:too.angrily@gmail.com">About</a>
-        &nbsp;&nbsp;&nbsp;
       </div>
     </div>
   );

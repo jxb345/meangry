@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: #919191;
+}
+
 button {
   border-radius: 3px;
   height: 45px;
@@ -151,7 +156,9 @@ textarea {
 .grid-contact {
   grid-row: 5;
   text-align: center;
-  padding-top: 10%;
+  color: #919191;
+  padding-top: 11%;
+  padding-left: 3%;
 }
 
 .grid-sidebar-rules {

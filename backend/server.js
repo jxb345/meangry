@@ -21,38 +21,14 @@ app.use(express.static("public"));
 app.use(express.urlencoded( { extended: true }));
 app.use(bodyParser.json());
 
+
+app.get("/about", (res) => {
+  res.render("about");
+})
+
 app.get("/doNotReply", (req, res) => {
   res.render("doNotReply");
 })
-
-app.get("/users", (req, res) => {
-  numOfUsers((users) => {
-    res.send({ users });
-  });
-});
-
-app.get("/remove/:emailId", (req, res) => {
-  const emailIdToRemove = req.params.emailId;
-  removeEmailAddress(emailIdToRemove, () => {
-    res.render("unsubscribed");
-  });
-});
-
-app.get("/verify/:emailId", (req, res) => {
-  const emailIdToVerify = req.params.emailId;
-  verifyEmailAddress(emailIdToVerify, () => {
-    res.render("verified");
-  });
-});
-
-app.post("/send", (req, res) => {
-  let subject = req.body.subject;
-  let body = req.body.body;
-  selectEmailAddress((recipient) => {
-      send(recipient.email, recipient.identifier, subject, body, false);
-    res.send("email has been sent from /sent");
-  });
-});
 
 app.post("/email", (req, res) => {
   let addToEmailList = req.body.email;
@@ -83,6 +59,36 @@ app.post("/feedback", (req, res) => {
     res.render("thanksFeedback")
   })
 })
+
+app.get("/remove/:emailId", (req, res) => {
+  const emailIdToRemove = req.params.emailId;
+  removeEmailAddress(emailIdToRemove, () => {
+    res.render("unsubscribed");
+  });
+});
+
+app.post("/send", (req, res) => {
+  let subject = req.body.subject;
+  let body = req.body.body;
+  selectEmailAddress((recipient) => {
+      send(recipient.email, recipient.identifier, subject, body, false);
+    res.send("email has been sent from /sent");
+  });
+});
+
+app.get("/users", (req, res) => {
+  numOfUsers((users) => {
+    res.send({ users });
+  });
+});
+
+app.get("/verify/:emailId", (req, res) => {
+  const emailIdToVerify = req.params.emailId;
+  verifyEmailAddress(emailIdToVerify, () => {
+    res.render("verified");
+  });
+});
+
 
 app.listen(3600, () => {
   console.log(`listening on 3600`);

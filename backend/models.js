@@ -28,7 +28,7 @@ const numOfUsers = (callback) => {
 const removeEmailAddress = (identifier, callback) => {
   Email.findOneAndUpdate(
     { identifier: identifier },
-    { verified: false },
+    { unsubscribed: true },
     (err) => {
       if (err) {
         throw new Error('A problem finding or updating user for verification');

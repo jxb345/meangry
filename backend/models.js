@@ -3,12 +3,9 @@ require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const { Email } = require("./emailsDbConnect.js");
 
 const collectFeedback = (identifier, feedback, callback) => {
-  Email.findByIdAndUpdate(
+  Email.findOneAndUpdate(
     { identifier: identifier },
-    {feedback: feedback },
-    // query for email
-    // add feedback to record
-    // delete email address
+    {feedback: feedback, email: null },
     (err) => {
       if (err) {
       throw new Error('A problem finding updating an unsubscribed user\'s feedback')

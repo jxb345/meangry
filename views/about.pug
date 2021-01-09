@@ -1,5 +1,4 @@
 
-
 html
   head
     meta(charset="utf-8")
@@ -9,9 +8,26 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
     style(type='text/css').
+
       a {
-        color: white;
+        color: #000000;
         text-decoration: none;
+        font-weight: 900;
+      }
+
+      body {
+         margin-left: 25%;
+      }
+      div {
+        font-family: arial, sans-serif;
+        color: #2F4F4F;
+        font-size: 19px;
+        padding: 3%;
+        width: 60%;
+        height: 30%;
+        background-color: #F5F5F5;
+        border-radius: 4px;
+        text-align: center;
       }
       button {
         border-radius: 3px;
@@ -29,29 +45,13 @@ html
         transition-duration: 0.3s;
         letter-spacing: .07rem;
       }
-      body {
-         margin-left: 25%;
-      }
-      div {
-        font-family: arial, sans-serif;
-        color: #2F4F4F;
-        font-size: 17px;
-        font-weight: 500;
-        padding: 4%;
-        padding-top: 1%;
-        width: 60%;
-        height: 19%;
-        background-color: #F5F5F5;
-        border-radius: 4px;
-        text-align: center;
-      }
       img {
         width: 135px;
         height: 55px;
       }
-
-      p {
-        font-size: medium;
+      .button {
+        color: white;
+        text-decoration: none;
       }
 
   body
@@ -62,8 +62,10 @@ html
     br
     img(src='/heatMailTitle.png' style='width:135px; height:55px')
     div
-      h2 About
-      p This tidy little webapp was conceived and built by Jesse Bell.
-      p <button><a href="http://localhost:3600/">BACK</a></button>
+      h3 About
+      p(style="text-align:left;")
+        | This tidy, little webapp was conceived and built by...!
+        | Thanks to <a href="https://nodemailer.com/about/">Nodemailer</a> for doing the heavy-lifting by providing the email support.  You can support their work <a href="https://nodemailer.com/about/#support-nodemailer">HERE</a>.
+      br
 
-
+      <button><a class="button" href="http://localhost:3600/">BACK</a></button>

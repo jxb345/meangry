@@ -6,6 +6,9 @@ const collectFeedback = (identifier, feedback, callback) => {
   Email.findByIdAndUpdate(
     { identifier: identifier },
     {feedback: feedback },
+    // query for email
+    // add feedback to record
+    // delete email address
     (err) => {
       if (err) {
       throw new Error('A problem finding updating an unsubscribed user\'s feedback')

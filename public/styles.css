@@ -233,8 +233,7 @@ textarea {
   font-size: 300%;
   font-weight: 900;
   color: #2A2929;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   overflow: auto;
   height: 85px;
   padding-top: 1%;
@@ -349,8 +348,7 @@ textarea {
   font-size: 300%;
   font-weight: 900;
   color: #2A2929;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   overflow: auto;
   height: 85px;
   padding-top: 3%;

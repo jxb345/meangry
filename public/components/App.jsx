@@ -134,7 +134,7 @@ function App() {
                   Send
                 </button>
               </span>{" "}
-              to feel the cathartic release.
+              to feel that cathartic release.
               {/* <div className="arrow-img">
                 <img src="./arrow.png" alt="down arrow" height="40px" width="40px"/>
               </div> */}
@@ -236,7 +236,7 @@ function App() {
         <div></div>
       )}
       <div className="grid-contact">
-        <span>heatMail 2021</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>&#169;&nbsp;heatMail 2021</span>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="mailto:too.angrily@gmail.com">Contact</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="/about">About</a>

@@ -22,8 +22,8 @@ html
         font-size: 17px;
         font-weight: 500;
         padding: 4%;
-        width: 60%;
-        height: 40%;
+        width: 50%;
+        height: 50%;
         background-color: #F5F5F5;
         border-radius: 4px;
         text-align: center;
@@ -68,8 +68,8 @@ html
 
   body
     script.
-      let wLH = window.location.hef
-      console.log('w.l.h', window.location.href)
+      var wLH = window.location.href.slice(29)
+      console.log('w.l.h', wLH)
     br
     br
     br
@@ -78,9 +78,11 @@ html
     img(src='/heatMailTitle.png' style='width:135px; height:55px')
     div
       h2 You have unsubscribed.
+      br
       p Send us any thoughts below - thanks!
-        form(action="/feedback" method="POST" id={wLH})
+        form(action="/feedback" method="POST")
           textarea(col="10" rows="10" name="feedback" )
+          input(type="hidden" name=!{wHL})
           input.submit-button(type="submit")
       br
 

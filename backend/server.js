@@ -52,6 +52,7 @@ app.post("/email", (req, res) => {
 });
 
 app.post("/feedback", (req, res) => {
+  console.log('req.originalUrl----', req.originalUrl)
   console.log('req.body--------------------------------', req.body)
   let feedback = req.body.feedback;
   let tempId = 'b92a683b-1297-44fb-bff1-8b3c8377b563'

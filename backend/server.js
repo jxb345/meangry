@@ -56,6 +56,9 @@ app.post("/feedback", (req, res) => {
   console.log('req.body--------------------------------', req.body)
   let feedback = req.body.feedback;
   let tempId = 'b92a683b-1297-44fb-bff1-8b3c8377b563'
+  console.log('l', Object.keys(req.body))
+  let id = Object.keys(req.body)[1]
+  console.log('id----', id.identifier)
   collectFeedback(tempId , feedback, () => {
     res.render("thanksFeedback")
   })

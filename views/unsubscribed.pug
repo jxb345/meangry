@@ -67,8 +67,6 @@ html
       }
 
   body
-    script.
-      console.log('id', #{identifier})
     br
     br
     br
@@ -81,7 +79,7 @@ html
       p Send us any thoughts below - thanks!
         form(action="/feedback" method="POST")
           textarea(col="10" rows="10" name="feedback" )
-          input(type="hidden" name=!{wHL})
+          input(type="hidden" name={identifier} )
           input.submit-button(type="submit")
       br
 

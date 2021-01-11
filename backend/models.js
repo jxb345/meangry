@@ -33,7 +33,8 @@ const removeEmailAddress = (identifier, callback) => {
       if (err) {
         throw new Error('A problem finding or updating user for verification');
       }
-      callback();
+      console.log('id------- in rEAdd', identifier)
+      callback(identifier);
     }
   );
   // Email.deleteOne({ identifier: identifier }, (err) => {

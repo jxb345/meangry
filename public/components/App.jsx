@@ -135,9 +135,6 @@ function App() {
                 </button>
               </span>{" "}
               to feel that cathartic release.
-              {/* <div className="arrow-img">
-                <img src="./arrow.png" alt="down arrow" height="40px" width="40px"/>
-              </div> */}
             </div>
           </div>
         ) : (

@@ -87,8 +87,8 @@ function App() {
               <img
                 className="thought-bubble-you-are"
                 src="./bubble.png"
-                height="80px"
-                width="110px"
+                height="70px"
+                width="100px"
                 alt="thought bubble"
               />
             </div>
@@ -115,8 +115,8 @@ function App() {
               <img
                 className="thought-bubble-preview"
                 src="./bubble.png"
-                height="80px"
-                width="110px"
+                height="70px"
+                width="100px"
                 alt="thought bubble"
               />
             </div>

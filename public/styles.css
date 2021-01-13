@@ -48,9 +48,12 @@ textarea {
 
 .body {
   margin: 0 auto;
+  background-color: #f7f7f7;
+  border: none;
   display: block;
   border-radius: 3px;
-  border: 1px gray solid;
+  /* border: 1px gray solid; */
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
 }
 
 .body-preview {
@@ -87,7 +90,8 @@ textarea {
 
 
 .explanation-text {
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 1em;
   font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 1px;
   line-height: 1.7em;
@@ -135,6 +139,7 @@ textarea {
   text-align: center;
   background-color: #f7f7f7;
   border-radius: 4px;
+  border-top: 6px solid #e82222;
 }
 
 .grid-body {
@@ -217,7 +222,8 @@ textarea {
 }
 
 .preview-explanation-text {
-   font-weight: 100;
+   font-weight: 400;
+   font-size: 1em;
    font-family: Georgia, 'Times New Roman', Times, serif;
    letter-spacing: 1px;
    line-height: 1.7em;
@@ -230,8 +236,8 @@ textarea {
 }
 
 .preview-title {
-  font-size: 300%;
-  font-weight: 900;
+  font-size: 260%;
+  font-weight: 700;
   color: #2A2929;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   overflow: auto;
@@ -290,8 +296,11 @@ textarea {
   height: 38px;
   margin: 0 auto;
   display: block;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
+  background-color: #f7f7f7;
   border-radius: 3px;
+  border: none;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
   text-align: left;
   font-size: large;
   padding-left: 2%;
@@ -316,7 +325,7 @@ textarea {
 
 .thought-bubble-you-are {
   position: relative;
-  top: -3.5px;
+  top: -8.5px;
 }
 
 @media (max-width: 500px) {
@@ -328,7 +337,7 @@ textarea {
 
 .thought-bubble-preview {
   position: relative;
-  top: -3px;
+  top: -8.5px;
   left: 5px;
 }
 
@@ -345,8 +354,8 @@ textarea {
 }
 
 .you-are-title {
-  font-size: 300%;
-  font-weight: 900;
+  font-size: 260%;
+  font-weight: 700;
   color: #2A2929;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   overflow: auto;

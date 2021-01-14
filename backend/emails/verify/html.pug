@@ -32,9 +32,10 @@ html
         transition-duration: 0.3s;
         letter-spacing: .07rem;
       }
-       div.image-container {
-        margin-left: 11%;
+      div.image-container {
+        margin-left: 16%;
       }
+
 
        div.inner-container {
         font-family: georgia, serif;
@@ -42,7 +43,7 @@ html
         color: #2F4F4F;
         font-weight: 500;
         padding: 3%;
-        width: 70%;
+        width: 60%;
         height: 50%;
         background-color: #FAFAFA;
         border-radius: 4px;
@@ -54,12 +55,22 @@ html
         height: 55px;
         margin: 0 auto;
       }
+      p.thanks-header {
+        font-size: 17px
+      }
+
+  style.
+    @media max-width: 600px {
+        .inner-container {
+            background-color: white;
+        }
+    }
   body
     div(class="outer-container")
       div(class="image-container")
         <img src="cid:1234"/>
       div(class="inner-container")
-        p Thanks for signing up to receive anonymous heatMail!
-        p Click to verify your email address.
+        p(class="thanks-header") Thanks for signing up to receive anonymous heatMail!
+        p Please verify your email address.
         <button><a href="http://localhost:3600/verify/#{identifier}">Verify</a></button>
 

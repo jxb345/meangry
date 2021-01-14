@@ -11,7 +11,7 @@ function App() {
   const [preview, setPreview] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [backButton, setBackButton] = useState(false);
-  const [sendButton, setSendButton] = useState('disabled');
+  const [sendButton, setSendButton] = useState("disabled");
   const arrow = document.getElementsByClassName("arrow-img");
 
   const handleEdit = () => {
@@ -46,7 +46,7 @@ function App() {
     setBody("");
     setEmailSent(false);
     setBackButton(false);
-    setSendButton('disabled')
+    setSendButton("disabled");
   };
 
   const postEmail = (email) => {
@@ -86,9 +86,9 @@ function App() {
               You feel{" "}
               <img
                 className="thought-bubble-you-are"
-                src="./bubble.png"
-                height="80px"
-                width="110px"
+                src="./bubble-dg.png"
+                height="58px"
+                width="88px"
                 alt="thought bubble"
               />
             </div>
@@ -114,26 +114,27 @@ function App() {
               Preview{" "}
               <img
                 className="thought-bubble-preview"
-                src="./bubble.png"
-                height="80px"
-                width="110px"
+                src="./bubble-dg.png"
+                height="58px"
+                width="88px"
                 alt="thought bubble"
               />
             </div>
             <div className="preview-explanation-text">
-              Review your message below before sending. <br />
+              Check your message below before sending. <br />
               Follow all <strong>IMPORTANT</strong> rules in yellow. <br />
               Click
               <span>
                 {" "}
-                <button className="reply-graphic" onClick={handleSendEmail} disabled={sendButton}>
+                <button
+                  className="reply-graphic"
+                  onClick={handleSendEmail}
+                  disabled={sendButton}
+                >
                   Send
                 </button>
               </span>{" "}
-              to feel the cathartic release.
-              {/* <div className="arrow-img">
-                <img src="./arrow.png" alt="down arrow" height="40px" width="40px"/>
-              </div> */}
+              to feel that cathartic release.
             </div>
           </div>
         ) : (
@@ -224,15 +225,19 @@ function App() {
       </div>
       {subject === "" && body === "" ? (
         <div></div>
-      ) : (
-        emailSent === false ? (
+      ) : emailSent === false ? (
         <div className="grid-sidebar-rules">
           <Sidebar />
         </div>
-        )
-        :
+      ) : (
         <div></div>
       )}
+      <div className="grid-contact">
+        <span>&#169;&nbsp;heatMail 2021</span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="mailto:too.angrily@gmail.com">Contact</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/about">About</a>
+      </div>
     </div>
   );
 }

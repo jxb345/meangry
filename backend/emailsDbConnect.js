@@ -8,6 +8,8 @@ let emailSchema = mongoose.Schema({
   email: String,
   numSent: Number,
   verified: Boolean,
+  feedback: String,
+  unsubscribed: Boolean
 });
 
 let Email = mongoose.model("Email", emailSchema);
@@ -29,6 +31,9 @@ const saveEmail = (email, cb) => {
           email: email,
           numSent: 0,
           verified: false,
+          unsubscribed: null,
+          feedback: null
+
         },
         (err, result) => {
           if (err) {

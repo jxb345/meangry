@@ -86,9 +86,9 @@ function App() {
               You feel{" "}
               <img
                 className="thought-bubble-you-are"
-                src="./bubble.png"
-                height="70px"
-                width="100px"
+                src="./bubble-lg.png"
+                height="65px"
+                width="95px"
                 alt="thought bubble"
               />
             </div>
@@ -114,9 +114,9 @@ function App() {
               Preview{" "}
               <img
                 className="thought-bubble-preview"
-                src="./bubble.png"
-                height="70px"
-                width="100px"
+                src="./bubble-lg.png"
+                height="65px"
+                width="95px"
                 alt="thought bubble"
               />
             </div>

@@ -86,9 +86,9 @@ function App() {
               You feel{" "}
               <img
                 className="thought-bubble-you-are"
-                src="./bubble-lg.png"
-                height="65px"
-                width="95px"
+                src="./bubble-dg.png"
+                height="58px"
+                width="88px"
                 alt="thought bubble"
               />
             </div>
@@ -114,14 +114,14 @@ function App() {
               Preview{" "}
               <img
                 className="thought-bubble-preview"
-                src="./bubble-lg.png"
-                height="65px"
-                width="95px"
+                src="./bubble-dg.png"
+                height="58px"
+                width="88px"
                 alt="thought bubble"
               />
             </div>
             <div className="preview-explanation-text">
-              Review your message below before sending. <br />
+              Check your message below before sending. <br />
               Follow all <strong>IMPORTANT</strong> rules in yellow. <br />
               Click
               <span>

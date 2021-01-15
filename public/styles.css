@@ -53,10 +53,9 @@ textarea {
 .body {
   margin: 0 auto;
   /* background-color: #f7f7f7; */
-  border: none;
   display: block;
   border-radius: 3px;
-  /* border: 1px gray solid; */
+  border: 1px solid #E0E0E0;
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
 }
 
@@ -158,7 +157,6 @@ textarea {
 }
 
 .grid-buttons {
-  /* background-color: red; */
   grid-column: 2 / 3;
   grid-row: 4;
   width: 300px;
@@ -312,10 +310,9 @@ textarea {
   height: 38px;
   margin: 0 auto;
   display: block;
-  /* border: 1px solid gray; */
+  border: 1px solid #E0E0E0;
   /* background-color: #f7f7f7; */
   border-radius: 3px;
-  border: none;
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
   text-align: left;
   font-size: large;

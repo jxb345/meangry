@@ -6,8 +6,9 @@ a {
 button {
   border-radius: 3px;
   height: 45px;
-  width: 90px;
-  background-color: #e82222;
+  width: 40%;
+  background-color: #F93B2B;
+  /* background-color: #e82222; */
   color: white;
   /* border: 2px solid #e82222; */
   margin: 0 auto;
@@ -15,8 +16,8 @@ button {
   background-color: #DA3535;
   /* border: 1px solid #646262; */
   border: none;
-  font-weight: 700;
-  font-size: 15px;
+  /* font-weight: 700; */
+  font-size: 1.01em;
   font-family: Georgia, "Times New Roman", Times, serif;
   /* font-weight: bold; */
   transition-duration: 0.3s;

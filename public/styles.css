@@ -181,7 +181,7 @@ textarea {
   width: 90%;
   height: 30%;
   position: relative;
-  right: 7%;
+  right: 4%;
   top: 30%;
   padding: 6% 5%;
   color: #646262;
@@ -222,6 +222,7 @@ textarea {
 
 .preview-button {
   padding-top: 2%;
+  padding-left: 12%;
   color: #646262;
 }
 

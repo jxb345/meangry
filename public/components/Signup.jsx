@@ -35,7 +35,7 @@ const Signup = () => {
   return (
     <div>
       <p className="receive-text">
-        ...<i>receive</i> anonymous heatMail email:
+        ...<i>receive</i> anonymous email:
       </p>
       <form>
         <input
@@ -71,7 +71,7 @@ const Signup = () => {
         <br />
         <br />
       </div>
-      <div className="signup-tally">{users} signed up to receive heatMail.</div>
+      <div className="signup-tally">{users} signed up to receive heatMail</div>
     </div>
   );
 }

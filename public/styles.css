@@ -193,7 +193,7 @@ textarea {
 .reply-graphic {
   display: inline-block;
   position: relative;
-  top: -3.5px;
+  top: -1.5px;
   height: 30px;
   width: 62px;
   font-size: small;
@@ -333,30 +333,16 @@ textarea {
   height: 17px;
 }
 
-@media (max-width: 500px) {
-  .thought-bubble-you-are {
-    display: none;
-  }
-}
-
 .thought-bubble-you-are {
   position: relative;
   top: -8px;
 }
-
-@media (max-width: 500px) {
-  .thought-bubble-preview {
-    display: none;
-  }
-}
-
 
 .thought-bubble-preview {
   position: relative;
   top: -8px;
   left: 5px;
 }
-
 
 .vertical-center {
   margin: 0;
@@ -370,7 +356,7 @@ textarea {
 }
 
 .you-are-title {
-  font-size: 260%;
+  font-size: 2.5em;
   font-weight: 600;
   color: #646262;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -379,6 +365,21 @@ textarea {
   padding-top: 3%;
   margin-bottom: 1%;
 }
+
+@media only screen and (max-width: 425px) {
+  .you-are-title {
+    font-size: 1.5em;
+  }
+  .thought-bubble-you-are {
+    display: none;
+  }
+  .explanation-text {
+    font-size: .5em;
+  }
+
+}
+
+
 
 /* styled input checkbox */
 input[type="checkbox"] {

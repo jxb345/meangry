@@ -1,84 +1,95 @@
 .wrapper {
   display: grid;
+  width: 100%;
+  height: 250px;
   grid-template-columns: 20% 55% 25%;
   grid-template-rows: 60px 170px 320px 75px 115px;
   grid-template-areas:
-    "a a a"
-    "b c d"
-    "b c d"
-    "b e d"
-    "b f d"
+    "title . ."
+    "sign-up text rules"
+    "sign-up text rules"
+    "sign-up text rules"
+    "sign-up text rules";
 }
 
 .grid-title {
-  grid-area: "a";
-  padding-left: 5%;
-  /* grid-column: 1 / 4; */
+  grid-area: title;
+  background-color: teal;
+  /* padding-left: 5%;
+  grid-column: 1 / 4;
   grid-row: 1;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: bolder;
   font-size: 125%;
-  position: relative;
+  position: relative; */
 }
 
 .grid-text {
-  grid-area: "c";
-  /* grid-column: 2 / 3; */
+  grid-area: text;
+  background-color: tomato;
+
+  /* grid-column: 2 / 3;
   margin-left: 6%;
-  /* margin-right: 6%; */
-  /* background-color: #FDFED3; */
-  /* grid-row: 2; */
+  margin-right: 6%;
+  background-color: #FDFED3;
+  grid-row: 2;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 110%;
-  color: #919191;
+  color: #919191; */
 }
 
 .grid-signup {
-  grid-area: "b";
-  padding-top: 270px;
-  /* grid-column: 1; */
-  /* grid-row: 2 / 6; */
+  grid-area: sign-up;
+  background-color: salmon;
+  /* padding-top: 270px;
+  grid-column: 1;
+  grid-row: 2 / 6;
   text-align: center;
   background-color: #f7f7f7;
   border-radius: 4px;
-  border-top: 6px solid #F93B2B;
+  border-top: 6px solid #F93B2B; */
 }
 
 .grid-body {
-  margin-left: 6%;
+  grid-area: form;
+  background-color: forestgreen;
+  /* margin-left: 6%; */
   /* grid-column: 2;
   grid-row: 3; */
-  padding-top: 35px;
+  /* padding-top: 35px; */
 }
 
 .grid-buttons {
-  grid-area: "e";
+  grid-area: buttons;
+  background-color: black;
   /* grid-column: 2 / 3;
   grid-row: 4; */
-  width: 300px;
+  /* width: 300px;
   margin: 0 auto;
   display: block;
   padding-top: 6%;
-  padding-left: 2%;
+  padding-left: 2%; */
 }
 
 .grid-contact {
-  grid-area: "f";
+  grid-area: contact;
+  background-color: chocolate;
   /* grid-row: 5; */
-  text-align: center;
+  /* text-align: center;
   color: #919191;
   padding-top: 11%;
-  padding-left: 3%;
+  padding-left: 3%; */
 }
 
 .grid-sidebar-rules {
-  grid-area: "d";
+  grid-area: rules;
+  background-color: rebeccapurple;
   /* grid-row: 2 / 4;
   grid-column: 3; */
-  border-radius: 4px;
+  /* border-radius: 4px;
   border-top: 6px solid #FEDF32;
   border-bottom: 6px solid #FEDF32;
   margin: 0 auto;
@@ -91,5 +102,5 @@
   color: #646262;
   box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.2);
   height: 145px;
-  overflow: auto;
+  overflow: auto; */
 }

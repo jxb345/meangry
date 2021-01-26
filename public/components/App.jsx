@@ -87,8 +87,8 @@ function App() {
               <img
                 className="thought-bubble-you-are"
                 src="./bubble-dg.png"
-                // height="58px"
-                // width="88px"
+                height="58px"
+                width="88px"
                 alt="thought bubble"
               />
             </div>

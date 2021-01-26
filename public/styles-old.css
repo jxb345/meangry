@@ -139,7 +139,6 @@ textarea {
 }
 
 .grid-signup {
-  grid-area: sign;
   padding-top: 270px;
   grid-column: 1;
   grid-row: 2 / 6;

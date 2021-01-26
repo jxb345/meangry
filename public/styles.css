@@ -1,15 +1,23 @@
-.wrapper {
+.grid {
   display: grid;
-  width: 100%;
+  /* width: 100%;
   height: 250px;
   grid-template-columns: 20% 55% 25%;
-  grid-template-rows: 60px 170px 320px 75px 115px;
+  grid-template-rows: 60px 170px 320px 75px 115px; */
   grid-template-areas:
-    "title . ."
+    /* "title . ."
     "sign-up text rules"
-    "sign-up text rules"
-    "sign-up text rules"
-    "sign-up text rules";
+    "sign-up form rules"
+    "sign-up form rules"
+    "sign-up form rules"; */
+    "title"
+    "text"
+    "form"
+    "buttons"
+    "sign-up"
+    "rules"
+    "contact"
+
 }
 
 .grid-title {

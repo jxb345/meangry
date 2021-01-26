@@ -77,7 +77,7 @@ function App() {
     <div className="grid">
       <div className="grid-title">
         <img src="./heatMailLogo.png" height="40" width="40" />
-        <p className="vertical-center">heatMail</p>
+        <p className="heatmail-title">heatMail</p>
       </div>
       <div className="grid-text">
         {preview === null ? (
@@ -87,8 +87,10 @@ function App() {
               <img
                 className="thought-bubble-you-are"
                 src="./bubble-dg.png"
-                height="58px"
-                width="88px"
+                height="48px"
+                width="78px"
+                // height="58px"
+                // width="88px"
                 alt="thought bubble"
               />
             </div>

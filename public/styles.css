@@ -66,8 +66,7 @@ textarea {
       "title  ."
       "sidebar text"
       "sidebar form"
-      "sidebar buttons"
-      "rules"
+      "rules buttons"
       ". contact"
   }
 }
@@ -80,7 +79,10 @@ textarea {
       "sign-up text ."
       "sign-up form rules"
       "sign-up buttons ."
-      ". contact ."
+      "sign-up contact ."
+   }
+   .grid-signup {
+     padding-top: 270px;
    }
 }
 
@@ -111,13 +113,20 @@ textarea {
 
 .grid-signup {
   grid-area: sign-up;
-  padding-top: 270px;
+  padding: 4%;
+  /* padding-top: 270px; */
   /* grid-column: 1;
   grid-row: 2 / 6; */
   text-align: center;
   background-color: #f7f7f7;
   border-radius: 4px;
   border-top: 6px solid #F93B2B;
+}
+
+@media (min-width: 700px) {
+   .grid-signup {
+     padding-top: 100%;
+   }
 }
 
 .grid-body {

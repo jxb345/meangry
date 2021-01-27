@@ -31,6 +31,17 @@ textarea {
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
 }
 
+.email-signup {
+  width: 80%;
+  height: 35px;
+  text-align: center;
+  font-size: small;
+  border: none;
+  /* border: 1px solid #E0E0E0; */
+  border-radius: 3px;
+}
+
+
 .explanation-text {
   font-weight: 300;
   font-size: .9em;
@@ -88,7 +99,7 @@ textarea {
 
 .grid-title {
   grid-area: title;
-  padding-left: 5%;
+  padding: 2% 0 5% 20%;
   /* grid-column: 1 / 4;
   grid-row: 1; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -105,10 +116,6 @@ textarea {
   margin-right: 6%;
   /* grid-row: 2; */
   text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 110%;
-  color: #919191;
 }
 
 .grid-signup {
@@ -229,15 +236,26 @@ textarea {
 
 }
 
+.heatmail-logo {
+  float: left;
+}
+
 .heatmail-title {
   margin: 0;
   color: #646262;
-  padding-left: 45px;
-  padding-bottom: 5px;
-  /* position: absolute; */
-  /* top: 50%; */
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  padding-left: 19%;
+  padding-top: 3%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  font-size: 110%;
+  color: #646262;
+
+
+  /* padding-bottom: 5px; */
+  /* position: absolute;
+  top: 5%; */
+  /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
 }
 
 

@@ -76,7 +76,9 @@ function App() {
   return (
     <div className="grid">
       <div className="grid-title">
-        <img src="./heatMailLogo.png" height="40" width="40" />
+        <div className="heatmail-logo">
+        <img src="./heatMailLogo.png" height="35" width="35" />
+        </div>
         <p className="heatmail-title">heatMail</p>
       </div>
       <div className="grid-text">

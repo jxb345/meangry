@@ -79,7 +79,7 @@ function App() {
         <div className="heatmail-logo">
         <img src="./heatMailLogo.png" height="35" width="35" />
         </div>
-        <p className="heatmail-title">heatMail</p>
+        <div className="heatmail-title">heatMail</div>
       </div>
       <div className="grid-text">
         {preview === null ? (
@@ -97,7 +97,11 @@ function App() {
               />
             </div>
             <div className="explanation-text">
-              That message ignites an emotional surge <br /> that <i>needs</i>{" "}
+              That message ignites an emotional surge
+             that needs an outlet - but don't reply
+             <br/>
+             Instead, send an anon note to a random.
+              {/* That message ignites an emotional surge <br /> that <i>needs</i>{" "}
               an outlet - but DON&apos;T{" "}
               <span>
                 {" "}
@@ -109,7 +113,7 @@ function App() {
               </span>
               <span className="explanation-text-last">
                 <br /> Instead, send an <strong>anon</strong> note to a random.
-              </span>
+              </span> */}
             </div>
           </div>
         ) : emailSent === false ? (

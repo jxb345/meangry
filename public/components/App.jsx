@@ -98,7 +98,7 @@ function App() {
             </div>
             <div className="explanation-text">
               That message ignites an emotional surge
-             that needs an outlet - but don't reply
+             that needs an outlet <br/> but don't reply
              <br/>
              Instead, send an anon note to a random.
               {/* That message ignites an emotional surge <br /> that <i>needs</i>{" "}

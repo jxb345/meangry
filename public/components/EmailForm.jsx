@@ -32,7 +32,7 @@ const EmailForm = (props) => {
         type="text"
         id="body"
         className="body"
-        rows="11"
+        rows="9"
         cols="69"
         placeholder="because..."
         onChange={handleBodyChange}

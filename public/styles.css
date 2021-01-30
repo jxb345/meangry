@@ -45,7 +45,7 @@ textarea {
 .explanation-text {
   font-weight: 300;
   font-size: .9em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   letter-spacing: 1px;
   line-height: 1.7em;
   /* height: 85px; */
@@ -109,6 +109,7 @@ textarea {
   font-weight: bolder;
   font-size: 125%;
   /* position: relative; */
+  float: left;;
 }
 
 .grid-text {
@@ -190,8 +191,9 @@ textarea {
 }
 
 .preview-button {
-  padding-top: 2%;
-  padding-left: 12%;
+  /* padding-top: 2%;
+  padding-left: 12%; */
+  padding: 2% 0 5% 12%;
   color: #646262;
 }
 
@@ -239,8 +241,8 @@ textarea {
 }
 
 .heatmail-logo {
-  float: left;
-  margin-left: 25%
+  /* float: left;
+  margin-left: 25% */
 }
 
 .heatmail-title {
@@ -248,8 +250,8 @@ textarea {
   margin-right: 40%;
   color: #646262;
   /* padding-left: 19%; */
-  padding-top: 3%;
-  padding-bottom: 5%;
+  /* padding-top: 3%; */
+  padding-bottom: 2%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
   font-size: 110%;

@@ -93,7 +93,7 @@ function App() {
               You feel{" "}
               <img
                 className="thought-bubble-you-are"
-                src="./bubble-dg.png"
+                src="./bubble.png"
                 height="48px"
                 width="78px"
                 // height="58px"

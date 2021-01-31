@@ -77,7 +77,12 @@ function App() {
     <div className="grid">
       <div className="grid-title">
         <div className="heatmail-logo">
-        <img src="./heatMailLogo.png" height="35" width="35" />
+        <img src="./heatMailLogo.png"
+        // height="35"
+        // width="35"
+        height="25px"
+        width="25px"
+        />
         </div>
         <div className="heatmail-title">heatMail</div>
       </div>
@@ -98,9 +103,19 @@ function App() {
             </div>
             <div className="explanation-text">
               That message ignites an emotional surge
-             that needs an outlet <br/> but don't reply
+             that <i>needs</i> an outlet but...
              <br/>
-             Instead, send an anon note to a random.
+             <strong>DON'T</strong>
+             <span>
+                {" "}
+                <a href="http://localhost:3600/doNotReply">
+                  <button title="do NOT reply" className="reply-graphic">
+                    REPLY
+                  </button>
+                </a>
+              </span>
+             <br/>
+             Just send an anon note to a random.
               {/* That message ignites an emotional surge <br /> that <i>needs</i>{" "}
               an outlet - but DON&apos;T{" "}
               <span>

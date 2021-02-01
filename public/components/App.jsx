@@ -90,7 +90,7 @@ function App() {
         {preview === null ? (
           <div>
             <div className="you-are-title">
-              You feel{" "}
+               You feel{" "}
               <img
                 className="thought-bubble-you-are"
                 src="./bubble.png"
@@ -102,8 +102,9 @@ function App() {
               />
             </div>
             <div className="explanation-text">
-              That message ignites an emotional surge
-             that <i>needs</i> an outlet but...
+              That message ignites an emotional
+              <br/>
+             surge that <i>needs</i> an outlet but
              <br/>
              <strong>DON'T</strong>
              <span>
@@ -115,7 +116,9 @@ function App() {
                 </a>
               </span>
              <br/>
-             Just send an anon note to a random.
+             <span className="explanation-text-last">
+                <br /> Just send anonymously to a random...
+              </span>
               {/* That message ignites an emotional surge <br /> that <i>needs</i>{" "}
               an outlet - but DON&apos;T{" "}
               <span>

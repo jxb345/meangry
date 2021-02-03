@@ -106,7 +106,7 @@ function App() {
               <br/>
              surge that <i>needs</i> an outlet but
              <br/>
-             <strong>DON'T</strong>
+             DON'T
              <span>
                 {" "}
                 <a href="http://localhost:3600/doNotReply">
@@ -115,10 +115,9 @@ function App() {
                   </button>
                 </a>
               </span>
-             <br/>
-             <span className="explanation-text-last">
-                <br /> Just send anonymously to a random...
-              </span>
+             <div className="explanation-text-last">
+                Just send anonymously to a random...
+              </div>
               {/* That message ignites an emotional surge <br /> that <i>needs</i>{" "}
               an outlet - but DON&apos;T{" "}
               <span>

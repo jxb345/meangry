@@ -232,17 +232,19 @@ function App() {
           </button>
         )}
         {preview === null ? (
-          <div className="preview-button">
-            <input
-              type="checkbox"
-              id="preview"
-              name="preview"
-              onChange={togglePreview}
-              defaultChecked
-            />
-            <label htmlFor="preview">
-              &nbsp;&nbsp;preview before sending email
-            </label>
+          <div className="preview-button-container">
+            <div className="preview-button">
+                <input
+                  type="checkbox"
+                  id="preview"
+                  name="preview"
+                  onChange={togglePreview}
+                  defaultChecked
+                  />
+                <label htmlFor="preview">
+                  &nbsp;&nbsp;preview before sending email
+                </label>
+              </div>
           </div>
         ) : (
           <p></p>

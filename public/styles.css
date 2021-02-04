@@ -279,11 +279,14 @@ padding-bottom: 2%;
 .preview {
   /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
-    font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: medium;
   border-radius: 3px;
-  width: 89%;
-  margin-left: 5%;
+  padding-left: 5%;
+  width: 90%;
+  margin-bottom: 7%;
+  /* width: 89%; */
+  /* margin-left: 5%; */
   /* added margin-left: 5%
   and commented out position: relative
   and commented out right: -37%
@@ -297,9 +300,10 @@ padding-bottom: 2%;
   /* font-family: "Times New Roman", Times, serif; */
   font-size: large;
   margin-top: 2.5%;
-  padding: 2.5% 2% 2% 2%;
-  width: 97.5%;
-  height: 232px;
+  /* padding: 2.5% 2% 2% 2%; */
+  /* width: 97.5%;
+  height: 232px; */
+  height: 200px;
   border-radius: 4px;
   background-color: #f7f7f7;
   overflow: auto;
@@ -310,13 +314,13 @@ padding-bottom: 2%;
 .subject-preview {
   /* font-family: "Times New Roman", Times, serif; */
   font-size: large;
-  padding: 1.5% 1.5% 2% 2%;
+  /* padding: 1.5% 1.5% 2% 2%; */
   border-radius: 4px;
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
   background-color: #f7f7f7;
-  margin-bottom: 2%;
-  width: 98%;
-  height: 17px;
+  height: 40px;
+  margin-bottom: 7%;
+  /* height: 17px; */
 }
 
 
@@ -333,6 +337,21 @@ padding-bottom: 2%;
   margin: 0 auto;
   display: inline;
 }
+
+.edit-send-buttons-wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -4px;
+  margin-bottom: 13%;
+}
+
+.edit-send-buttons {
+  display: inline-block;
+  margin: 4px;
+  width: 35%;
+}
+
 
 
 .reply-graphic {

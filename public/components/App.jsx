@@ -135,19 +135,27 @@ function App() {
           </div>
         ) : emailSent === false ? (
           <div className="preview-explanation-text-wrapper">
-            <div className="preview-title">
+            {/* <div className="preview-title"> */}
+            <div className="you-are-title">
               Preview{" "}
               <img
                 className="thought-bubble-preview"
                 src="./bubble-dg.png"
-                height="58px"
-                width="88px"
+                height="48px"
+                width="78px"
+                // height="58px"
+                // width="88px"
                 alt="thought bubble"
               />
             </div>
-            <div className="preview-explanation-text">
-              Check your message below before sending. <br />
-              Follow all <strong>IMPORTANT</strong> rules in yellow. <br />
+            {/* <div className="preview-explanation-text"> */}
+            <div className="explanation-text">
+              Read your message thoroughly
+               {/* below before sending */}
+               .
+              <br />
+              Follow all IMPORTANT rules.
+              <br />
               Click
               <span>
                 {" "}
@@ -159,7 +167,9 @@ function App() {
                   Send
                 </button>
               </span>{" "}
-              to feel that cathartic release.
+              <div className="explanation-text-last">
+              ...to feel that cathartic release.
+              </div>
             </div>
           </div>
         ) : (

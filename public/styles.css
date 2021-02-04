@@ -276,6 +276,50 @@ padding-bottom: 2%;
   overflow: auto;
 }
 
+.preview {
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
+    font-family: "Times New Roman", Times, serif;
+  font-size: medium;
+  border-radius: 3px;
+  width: 89%;
+  margin-left: 5%;
+  /* added margin-left: 5%
+  and commented out position: relative
+  and commented out right: -37%
+  since relative would overlap <Sidebar> when
+  resizing window
+  /* position: relative;
+  right: -37px; */
+}
+
+.body-preview {
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: large;
+  margin-top: 2.5%;
+  padding: 2.5% 2% 2% 2%;
+  width: 97.5%;
+  height: 232px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  overflow: auto;
+  white-space: pre-wrap;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.subject-preview {
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: large;
+  padding: 1.5% 1.5% 2% 2%;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
+  background-color: #f7f7f7;
+  margin-bottom: 2%;
+  width: 98%;
+  height: 17px;
+}
+
+
 .preview-button-container {
   width: 100%;
   text-align: center;

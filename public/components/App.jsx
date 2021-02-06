@@ -94,8 +94,8 @@ function App() {
               <img
                 className="thought-bubble-you-are"
                 src="./bubble.png"
-                height="48px"
-                width="78px"
+                height="43px"
+                width="73px"
                 // height="58px"
                 // width="88px"
                 alt="thought bubble"
@@ -139,10 +139,11 @@ function App() {
             <div className="you-are-title">
               Preview{" "}
               <img
-                className="thought-bubble-preview"
+                // className="thought-bubble-preview"
+                className="thought-bubble-you-are"
                 src="./bubble-dg.png"
-                height="48px"
-                width="78px"
+                height="43px"
+                width="73px"
                 // height="58px"
                 // width="88px"
                 alt="thought bubble"

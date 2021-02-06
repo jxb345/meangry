@@ -84,7 +84,7 @@ textarea {
 
 @media (min-width: 500px) {
   .button-preview {
-    width: 30%;
+    width: 40%;
   }
   .grid {
     grid-template-columns: 1fr 2fr 1fr;
@@ -124,13 +124,13 @@ textarea {
   overflow: auto;
   /* height: 85px; */
   height: 35%;
-  /* padding-top: 3%; */
+  padding-top: 3%;
 
 }
 
 @media (min-width: 700px) {
   .button-preview {
-    width: 15%;
+    width: 20%;
   }
   .explanation-text {
     font-size: .9em;
@@ -179,7 +179,7 @@ padding-bottom: 2%;
 .grid-text {
   grid-area: text;
   /* grid-column: 2 / 3; */
-  margin-top: 5%;
+  /* padding-top: 5%; */
   margin-left: 6%;
   margin-right: 6%;
   /* grid-row: 2; */
@@ -283,8 +283,8 @@ padding-bottom: 2%;
   font-size: medium;
   border-radius: 3px;
   padding-left: 5%;
-  width: 90%;
-  margin-bottom: 7%;
+  width: 89.5%;
+  margin-bottom: 10%;
   /* width: 89%; */
   /* margin-left: 5%; */
   /* added margin-left: 5%
@@ -300,10 +300,10 @@ padding-bottom: 2%;
   /* font-family: "Times New Roman", Times, serif; */
   font-size: large;
   margin-top: 2.5%;
-  /* padding: 2.5% 2% 2% 2%; */
+  padding: 2.5% 2% 2% 2%;
   /* width: 97.5%;
   height: 232px; */
-  height: 200px;
+  height: 181px;
   border-radius: 4px;
   background-color: #f7f7f7;
   overflow: auto;
@@ -314,11 +314,11 @@ padding-bottom: 2%;
 .subject-preview {
   /* font-family: "Times New Roman", Times, serif; */
   font-size: large;
-  /* padding: 1.5% 1.5% 2% 2%; */
+  padding: 1.5% 1.5% 2% 2%;
   border-radius: 4px;
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
   background-color: #f7f7f7;
-  height: 40px;
+  height: 30px;
   margin-bottom: 7%;
   /* height: 17px; */
 }
@@ -389,19 +389,13 @@ padding-bottom: 2%;
   color: #919191
 }
 
-
-
-
-
-.heatmail-logo {
-  /* float: left;
-  margin-left: 25% */
-}
-
-
-
 .signup-button {
   margin-top: 5%;
+}
+
+.thought-bubble-you-are {
+  position: relative;
+  top: -6px;
 }
 
 

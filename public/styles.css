@@ -35,6 +35,33 @@ textarea {
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
 }
 
+.body-preview {
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: large;
+  margin-top: 2.5%;
+  padding: 2.5% 2% 2% 2%;
+  /* width: 97.5%;
+  height: 232px; */
+  height: 181px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  overflow: auto;
+  white-space: pre-wrap;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.subject-preview {
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: large;
+  padding: 1.5% 1.5% 2% 2%;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
+  background-color: #f7f7f7;
+  height: 30px;
+  margin-bottom: 7%;
+  /* height: 17px; */
+}
+
 .email-signup {
   width: 80%;
   height: 35px;
@@ -223,6 +250,7 @@ padding-bottom: 2%;
    textarea {
      width: 73%;
    }
+
 }
 
 .grid-body {
@@ -296,32 +324,39 @@ padding-bottom: 2%;
   right: -37px; */
 }
 
-.body-preview {
-  /* font-family: "Times New Roman", Times, serif; */
-  font-size: large;
-  margin-top: 2.5%;
-  padding: 2.5% 2% 2% 2%;
-  /* width: 97.5%;
-  height: 232px; */
-  height: 181px;
-  border-radius: 4px;
-  background-color: #f7f7f7;
-  overflow: auto;
-  white-space: pre-wrap;
-  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
-}
 
-.subject-preview {
-  /* font-family: "Times New Roman", Times, serif; */
-  font-size: large;
+
+@media (min-width: 700px) {
+  .preview {
+    width: 72%;
+    padding-left: 14%;
+    margin-bottom: 4%;
+  }
+  .body-preview {
+    /* margin-top: 2.5%;
+    padding: 2.5% 2% 2% 2%; */
+    /* width: 97.5%;
+    height: 232px; */
+    height: 195px;
+    /* border-radius: 4px;
+    overflow: auto;
+    white-space: pre-wrap;
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1); */
+  }
+  .subject-preview {
+  /* font-size: large;
   padding: 1.5% 1.5% 2% 2%;
   border-radius: 4px;
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
   background-color: #f7f7f7;
   height: 30px;
-  margin-bottom: 7%;
-  /* height: 17px; */
+  margin-bottom: 7%; */
+  height: 25px;
+  margin-bottom: 4%;
 }
+}
+}
+
 
 
 .preview-button-container {

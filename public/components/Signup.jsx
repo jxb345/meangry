@@ -71,7 +71,7 @@ const Signup = () => {
         <br />
         <br />
       </div>
-      <div className="signup-tally">{users} signed up to receive heatMail</div>
+      <div className="signup-tally">{users} users receiving heatMail</div>
     </div>
   );
 }

@@ -155,8 +155,9 @@ textarea {
 
 .grid-text {
   grid-area: text;
-  margin-left: 6%;
-  margin-right: 6%;
+  margin: 5% 6% 0 6%;
+  /* margin-left: 6%;
+  margin-right: 6%; */
   text-align: center;
 }
 
@@ -256,7 +257,7 @@ textarea {
 }
 
 .sent-preview {
-  padding: 25% 5% 10% 0;
+  padding: 25% 0 10% 0;
   font-size: 1.2em;
   color: #646262;
   text-align: center;
@@ -314,10 +315,15 @@ textarea {
 /* media queries */
 
 @media (min-width: 500px) {
+  .back-button {
+    width: 20%;
+  }
   .button-preview {
     width: 20%;
   }
-
+  .button-send {
+    width: 20%;
+  }
   .edit-send-buttons {
     width: 20%;
   }
@@ -331,6 +337,11 @@ textarea {
       "sign-up buttons"
       "sign-up contact";
   }
+
+  .grid-text {
+    margin: 0 6% 0 6%;
+  }
+
   .grid-signup {
     padding-top: 200px;
   }
@@ -355,6 +366,9 @@ textarea {
   }
 
   .button-preview {
+    width: 15%;
+  }
+  .button-send {
     width: 15%;
   }
 
@@ -389,6 +403,13 @@ textarea {
   .signup-button {
     width: 45%;
   }
+
+  .signup-tally {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .9em;
+    letter-spacing: 0.05rem;
+  }
+
 
   .subject {
     width: 70%;

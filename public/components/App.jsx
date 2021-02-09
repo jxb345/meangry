@@ -238,7 +238,7 @@ function App() {
             </div>
           )
         ) : (
-          <button type="button" onClick={handleConfirmationSent}>
+          <button type="button" className="back-button" onClick={handleConfirmationSent}>
             Back
           </button>
         )}

@@ -22,6 +22,10 @@ textarea {
   width: 89.5%;
 }
 
+.back-button {
+  margin-bottom: 25%;
+}
+
 .body {
   margin: 0 auto;
   /* background-color: #f7f7f7; */
@@ -250,6 +254,15 @@ textarea {
   letter-spacing: 0.09em;
   color: #646262;
 }
+
+.sent-preview {
+  padding: 25% 5% 10% 0;
+  font-size: 1.2em;
+  color: #646262;
+  text-align: center;
+  line-height: 2em;
+}
+
 
 .signup-button {
   margin-top: 5%;

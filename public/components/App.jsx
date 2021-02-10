@@ -86,9 +86,19 @@ function App() {
         </div>
         <div className="heatmail-title">heatMail</div>
       </div>
+      {subject === "" && body === "" ? (
+        <div></div>
+      ) : emailSent === false ? (
+        <div className="grid-sidebar-rules">
+          <Sidebar />
+        </div>
+      ) : (
+        <div></div>
+      )}
+    { subject === "" && body === "" ? (
       <div className="grid-text">
         {preview === null ? (
-          <div>
+          <div className="title-explanation">
             <div className="you-are-title">
                You feel{" "}
               <img
@@ -176,7 +186,13 @@ function App() {
         ) : (
           <div></div>
         )}
-      </div>
+      </div> )  : emailSent === false ? (
+        <div className="grid-sidebar-rules">
+          <Sidebar />
+        </div>
+      ):
+      <div>
+      </div> }
       <div className="grid-signup">
         <Signup />
       </div>
@@ -261,7 +277,7 @@ function App() {
           <p></p>
         )}
       </div>
-      {subject === "" && body === "" ? (
+      {/* {subject === "" && body === "" ? (
         <div></div>
       ) : emailSent === false ? (
         <div className="grid-sidebar-rules">
@@ -269,7 +285,7 @@ function App() {
         </div>
       ) : (
         <div></div>
-      )}
+      )} */}
       <div className="grid-contact">
         <span>&#169;&nbsp;heatMail 2021</span>&nbsp;&nbsp;&nbsp;&nbsp;
           <a href="mailto:too.angrily@gmail.com">Contact</a>

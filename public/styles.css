@@ -101,6 +101,8 @@ textarea {
   grid-template-rows: 60px 170px 320px 75px 115px; */
   grid-template-areas:
     "title"
+    /* added rules */
+    "rules"
     "text"
     "form"
     "buttons"
@@ -126,7 +128,7 @@ textarea {
 
 .grid-sidebar-rules {
   grid-area: rules;
-  display: none;
+  /* display: none; */
   /* grid-row: 2 / 4;
   grid-column: 3; */
   border-radius: 4px;
@@ -138,7 +140,7 @@ textarea {
   /* position: relative;
   right: 4%;
   top: 30%; */
-  padding: 6%;
+  /* padding: 6%; */
   color: #646262;
   box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.2);
   overflow: auto;

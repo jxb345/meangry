@@ -3,6 +3,7 @@ import Signup from "./Signup.jsx";
 import EmailForm from "./EmailForm.jsx";
 import ExplanationText from "./ExplanationText.jsx"
 import Preview from "./Preview.jsx";
+import PreviewExplanationText from "./PreviewExplanationText.jsx"
 import Sidebar from "./Sidebar.jsx";
 
 function App() {
@@ -100,12 +101,19 @@ function App() {
       <div className="grid-text">
         {preview === null ? (
           <ExplanationText />
-          // <div className="title-explanation">
+        ) : emailSent === false ? (
+          <PreviewExplanationText
+            handleSendEmail={handleSendEmail}
+            sendButton={sendButton}
+            />
+          // <div className="preview-explanation-text-wrapper">
+          //   {/* <div className="preview-title"> */}
           //   <div className="you-are-title">
-          //      You feel{" "}
+          //     Preview{" "}
           //     <img
+          //       // className="thought-bubble-preview"
           //       className="thought-bubble-you-are"
-          //       src="./bubble.png"
+          //       src="./bubble-dg.png"
           //       height="43px"
           //       width="73px"
           //       // height="58px"
@@ -113,65 +121,30 @@ function App() {
           //       alt="thought bubble"
           //     />
           //   </div>
+          //   {/* <div className="preview-explanation-text"> */}
           //   <div className="explanation-text">
-          //     That message ignites an emotional
-          //     <br/>
-          //    surge that <i>needs</i> an outlet but
-          //    <br/>
-          //    DON'T
-          //    <span>
+          //     Read your message thoroughly
+          //      {/* below before sending */}
+          //      .
+          //     <br />
+          //     Follow all IMPORTANT rules.
+          //     <br />
+          //     Click
+          //     <span>
           //       {" "}
-          //       <a href="http://localhost:3600/doNotReply">
-          //         <button title="do NOT reply" className="reply-graphic">
-          //           REPLY
-          //         </button>
-          //       </a>
-          //     </span>
-          //    <div className="explanation-text-last">
-          //       Just send anonymously to a random...
+          //       <button
+          //         className="reply-graphic"
+          //         onClick={handleSendEmail}
+          //         disabled={sendButton}
+          //       >
+          //         Send
+          //       </button>
+          //     </span>{" "}
+          //     <div className="explanation-text-last">
+          //     ...to feel that cathartic release.
           //     </div>
           //   </div>
           // </div>
-        ) : emailSent === false ? (
-          <div className="preview-explanation-text-wrapper">
-            {/* <div className="preview-title"> */}
-            <div className="you-are-title">
-              Preview{" "}
-              <img
-                // className="thought-bubble-preview"
-                className="thought-bubble-you-are"
-                src="./bubble-dg.png"
-                height="43px"
-                width="73px"
-                // height="58px"
-                // width="88px"
-                alt="thought bubble"
-              />
-            </div>
-            {/* <div className="preview-explanation-text"> */}
-            <div className="explanation-text">
-              Read your message thoroughly
-               {/* below before sending */}
-               .
-              <br />
-              Follow all IMPORTANT rules.
-              <br />
-              Click
-              <span>
-                {" "}
-                <button
-                  className="reply-graphic"
-                  onClick={handleSendEmail}
-                  disabled={sendButton}
-                >
-                  Send
-                </button>
-              </span>{" "}
-              <div className="explanation-text-last">
-              ...to feel that cathartic release.
-              </div>
-            </div>
-          </div>
         ) : (
           <div></div>
         )}

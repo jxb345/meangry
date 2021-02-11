@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Signup from "./Signup.jsx";
 import EmailForm from "./EmailForm.jsx";
+import ExplanationText from "./ExplanationText.jsx"
 import Preview from "./Preview.jsx";
 import Sidebar from "./Sidebar.jsx";
 
@@ -98,51 +99,39 @@ function App() {
     { subject === "" && body === "" ? (
       <div className="grid-text">
         {preview === null ? (
-          <div className="title-explanation">
-            <div className="you-are-title">
-               You feel{" "}
-              <img
-                className="thought-bubble-you-are"
-                src="./bubble.png"
-                height="43px"
-                width="73px"
-                // height="58px"
-                // width="88px"
-                alt="thought bubble"
-              />
-            </div>
-            <div className="explanation-text">
-              That message ignites an emotional
-              <br/>
-             surge that <i>needs</i> an outlet but
-             <br/>
-             DON'T
-             <span>
-                {" "}
-                <a href="http://localhost:3600/doNotReply">
-                  <button title="do NOT reply" className="reply-graphic">
-                    REPLY
-                  </button>
-                </a>
-              </span>
-             <div className="explanation-text-last">
-                Just send anonymously to a random...
-              </div>
-              {/* That message ignites an emotional surge <br /> that <i>needs</i>{" "}
-              an outlet - but DON&apos;T{" "}
-              <span>
-                {" "}
-                <a href="http://localhost:3600/doNotReply">
-                  <button title="do NOT reply" className="reply-graphic">
-                    REPLY
-                  </button>
-                </a>
-              </span>
-              <span className="explanation-text-last">
-                <br /> Instead, send an <strong>anon</strong> note to a random.
-              </span> */}
-            </div>
-          </div>
+          <ExplanationText />
+          // <div className="title-explanation">
+          //   <div className="you-are-title">
+          //      You feel{" "}
+          //     <img
+          //       className="thought-bubble-you-are"
+          //       src="./bubble.png"
+          //       height="43px"
+          //       width="73px"
+          //       // height="58px"
+          //       // width="88px"
+          //       alt="thought bubble"
+          //     />
+          //   </div>
+          //   <div className="explanation-text">
+          //     That message ignites an emotional
+          //     <br/>
+          //    surge that <i>needs</i> an outlet but
+          //    <br/>
+          //    DON'T
+          //    <span>
+          //       {" "}
+          //       <a href="http://localhost:3600/doNotReply">
+          //         <button title="do NOT reply" className="reply-graphic">
+          //           REPLY
+          //         </button>
+          //       </a>
+          //     </span>
+          //    <div className="explanation-text-last">
+          //       Just send anonymously to a random...
+          //     </div>
+          //   </div>
+          // </div>
         ) : emailSent === false ? (
           <div className="preview-explanation-text-wrapper">
             {/* <div className="preview-title"> */}

@@ -1,8 +1,16 @@
-import React from 'react';
+import React from "react";
 
 const Buttons = (props) => {
-
-  const { props } = { backButton, emailSent, handleEdit, handleSendEmail, preview, previewChecked, sendButton, togglePreview,  }
+  const {
+    backButton,
+    emailSent,
+    handleEdit,
+    handleSendEmail,
+    preview,
+    previewChecked,
+    sendButton,
+    togglePreview,
+  } = { props };
 
   const handleConfirmationSent = () => {
     setPreview(null);
@@ -13,82 +21,80 @@ const Buttons = (props) => {
     setSendButton("disabled");
   };
 
-
   const handlePreviewClick = () => {
     setPreview(true);
     setPreviewChecked(false);
     setBackButton(true);
   };
 
-  const togglePreview = () => {
-    setPreviewChecked(!previewChecked);
-  };
-
-
   return (
     <div className="grid-buttons">
-    {previewChecked ? (
-      <button
-        className="button-preview"
-        type="button"
-        onClick={handlePreviewClick}
-      >
-        Preview
-      </button>
-    ) : !emailSent ? (
-      !backButton ? (
+      {previewChecked ? (
         <button
-          className="button-send"
+          className="button-preview"
           type="button"
-          onClick={handleSendEmail}
-          disabled={sendButton}
+          onClick={handlePreviewClick}
         >
-          Send
+          Preview
         </button>
-      ) : (
-        <div className="edit-send-buttons-wrapper">
+      ) : !emailSent ? (
+        !backButton ? (
           <button
-            className="edit-send-buttons"
-            type="button"
-            onClick={handleEdit}
-          >
-            Edit
-          </button>
-          <button
-            className="edit-send-buttons"
+            className="button-send"
             type="button"
             onClick={handleSendEmail}
             disabled={sendButton}
           >
             Send
           </button>
-        </div>
-      )
-    ) : (
-      <button type="button" className="back-button" onClick={handleConfirmationSent}>
-        Back
-      </button>
-    )}
-    {preview === null ? (
-      <div className="preview-button-container">
-        <div className="preview-button">
+        ) : (
+          <div className="edit-send-buttons-wrapper">
+            <button
+              className="edit-send-buttons"
+              type="button"
+              onClick={handleEdit}
+            >
+              Edit
+            </button>
+            <button
+              className="edit-send-buttons"
+              type="button"
+              onClick={handleSendEmail}
+              disabled={sendButton}
+            >
+              Send
+            </button>
+          </div>
+        )
+      ) : (
+        <button
+          type="button"
+          className="back-button"
+          onClick={handleConfirmationSent}
+        >
+          Back
+        </button>
+      )}
+      {preview === null ? (
+        <div className="preview-button-container">
+          <div className="preview-button">
             <input
               type="checkbox"
               id="preview"
               name="preview"
               onChange={togglePreview}
               defaultChecked
-              />
+            />
             <label htmlFor="preview">
               &nbsp;&nbsp;preview before sending email
             </label>
           </div>
-      </div>
-    ) : (
-      <p></p>
-    )}
-  </div>
-    )
-}
+        </div>
+      ) : (
+        <p></p>
+      )}
+    </div>
+  );
+};
 
-export default Buttons
+export default Buttons;

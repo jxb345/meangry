@@ -22,12 +22,6 @@ function App() {
     setPreviewChecked(true);
     setBackButton(false);
   };
-  // moved to Buttons.jsx
-    // const handlePreviewClick = () => {
-    //   setPreview(true);
-    //   setPreviewChecked(false);
-    //   setBackButton(true);
-    // };
 
   const handleSendEmail = () => {
     setPreview(true);
@@ -37,21 +31,7 @@ function App() {
       body: body,
     };
     postEmail(email);
-    // commenting out .then as it caused an error;
-    // I have not removed it yet b/c I don't know
-    // why it was included in the first place
-    // .then((data) => {})
   };
-
-  // moved to Buttons.jsx
-  // const handleConfirmationSent = () => {
-  //   setPreview(null);
-  //   setPreviewChecked(true);
-  //   setBody("");
-  //   setEmailSent(false);
-  //   setBackButton(false);
-  //   setSendButton("disabled");
-  // };
 
   const postEmail = (email) => {
     fetch("/send", {

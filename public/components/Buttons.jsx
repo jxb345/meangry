@@ -2,23 +2,46 @@ import React from 'react';
 
 const Buttons = (props) => {
 
+  const { props } = { backButton, emailSent, handleEdit, handleSendEmail, preview, previewChecked, sendButton, togglePreview,  }
+
+  const handleConfirmationSent = () => {
+    setPreview(null);
+    setPreviewChecked(true);
+    setBody("");
+    setEmailSent(false);
+    setBackButton(false);
+    setSendButton("disabled");
+  };
+
+
+  const handlePreviewClick = () => {
+    setPreview(true);
+    setPreviewChecked(false);
+    setBackButton(true);
+  };
+
+  const togglePreview = () => {
+    setPreviewChecked(!previewChecked);
+  };
+
+
   return (
     <div className="grid-buttons">
-    {props.previewChecked ? (
+    {previewChecked ? (
       <button
         className="button-preview"
         type="button"
-        onClick={props.handlePreviewClick}
+        onClick={handlePreviewClick}
       >
         Preview
       </button>
-    ) : !props.emailSent ? (
-      !props.backButton ? (
+    ) : !emailSent ? (
+      !backButton ? (
         <button
           className="button-send"
           type="button"
-          onClick={props.handleSendEmail}
-          disabled={props.sendButton}
+          onClick={handleSendEmail}
+          disabled={sendButton}
         >
           Send
         </button>
@@ -27,33 +50,33 @@ const Buttons = (props) => {
           <button
             className="edit-send-buttons"
             type="button"
-            onClick={props.handleEdit}
+            onClick={handleEdit}
           >
             Edit
           </button>
           <button
             className="edit-send-buttons"
             type="button"
-            onClick={props.handleSendEmail}
-            disabled={props.sendButton}
+            onClick={handleSendEmail}
+            disabled={sendButton}
           >
             Send
           </button>
         </div>
       )
     ) : (
-      <button type="button" className="back-button" onClick={props.handleConfirmationSent}>
+      <button type="button" className="back-button" onClick={handleConfirmationSent}>
         Back
       </button>
     )}
-    {props.preview === null ? (
+    {preview === null ? (
       <div className="preview-button-container">
         <div className="preview-button">
             <input
               type="checkbox"
               id="preview"
               name="preview"
-              onChange={props.togglePreview}
+              onChange={togglePreview}
               defaultChecked
               />
             <label htmlFor="preview">

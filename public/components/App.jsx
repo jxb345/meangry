@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Signup from "./Signup.jsx";
+import Buttons from "./Buttons.jsx";
 import EmailForm from "./EmailForm.jsx";
-import ExplanationText from "./ExplanationText.jsx"
+import ExplanationText from "./ExplanationText.jsx";
 import Preview from "./Preview.jsx";
-import PreviewExplanationText from "./PreviewExplanationText.jsx"
+import PreviewExplanationText from "./PreviewExplanationText.jsx";
 import Sidebar from "./Sidebar.jsx";
+import Signup from "./Signup.jsx";
 
 function App() {
   const [subject, setSubject] = useState("");
@@ -106,45 +107,6 @@ function App() {
             handleSendEmail={handleSendEmail}
             sendButton={sendButton}
             />
-          // <div className="preview-explanation-text-wrapper">
-          //   {/* <div className="preview-title"> */}
-          //   <div className="you-are-title">
-          //     Preview{" "}
-          //     <img
-          //       // className="thought-bubble-preview"
-          //       className="thought-bubble-you-are"
-          //       src="./bubble-dg.png"
-          //       height="43px"
-          //       width="73px"
-          //       // height="58px"
-          //       // width="88px"
-          //       alt="thought bubble"
-          //     />
-          //   </div>
-          //   {/* <div className="preview-explanation-text"> */}
-          //   <div className="explanation-text">
-          //     Read your message thoroughly
-          //      {/* below before sending */}
-          //      .
-          //     <br />
-          //     Follow all IMPORTANT rules.
-          //     <br />
-          //     Click
-          //     <span>
-          //       {" "}
-          //       <button
-          //         className="reply-graphic"
-          //         onClick={handleSendEmail}
-          //         disabled={sendButton}
-          //       >
-          //         Send
-          //       </button>
-          //     </span>{" "}
-          //     <div className="explanation-text-last">
-          //     ...to feel that cathartic release.
-          //     </div>
-          //   </div>
-          // </div>
         ) : (
           <div></div>
         )}
@@ -177,7 +139,17 @@ function App() {
           />
         )}
       </div>
-      <div className="grid-buttons">
+      <Buttons
+        preview={preview}
+        backButton={backButton}
+        emailSent={emailSent}
+        handlePreviewClick={handlePreviewClick}
+        handleSendEmail={handleSendEmail}
+        sendButton={sendButton}
+        handleEdit={handleEdit}
+        togglePreview={togglePreview}
+      />
+      {/* <div className="grid-buttons">
         {previewChecked ? (
           <button
             className="button-preview"
@@ -238,7 +210,7 @@ function App() {
         ) : (
           <p></p>
         )}
-      </div>
+      </div> */}
       {/* {subject === "" && body === "" ? (
         <div></div>
       ) : emailSent === false ? (

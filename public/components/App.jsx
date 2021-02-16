@@ -6,6 +6,7 @@ import Preview from "./Preview.jsx";
 import PreviewExplanationText from "./PreviewExplanationText.jsx";
 import Sidebar from "./Sidebar.jsx";
 import Signup from "./Signup.jsx";
+import Title from "./Title.jsx"
 
 function App() {
   const [subject, setSubject] = useState("");
@@ -75,17 +76,7 @@ function App() {
 
   return (
     <div className="grid">
-      <div className="grid-title">
-        <div className="heatmail-logo">
-        <img src="./heatMailLogo.png"
-        // height="35"
-        // width="35"
-        height="25px"
-        width="25px"
-        />
-        </div>
-        <div className="heatmail-title">heatMail</div>
-      </div>
+      <Title />
       {subject === "" && body === "" ? (
         <div></div>
       ) : emailSent === false ? (

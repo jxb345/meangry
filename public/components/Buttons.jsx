@@ -29,7 +29,6 @@ const Buttons = (props) => {
 
   useEffect (() => {
     console.log('pC', previewChecked)
-    console.log('backButton ------', backButton)
   })
 
   return (

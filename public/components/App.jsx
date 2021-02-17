@@ -17,23 +17,6 @@ function App() {
   const [backButton, setBackButton] = useState(false);
   const [sendButton, setSendButton] = useState("disabled");
 
-  // const handleConfirmationSent = () => {
-  //   setPreview(null);
-  //   setPreviewChecked(true);
-  //   setBody("");
-  //   setEmailSent(false);
-  //   setBackButton(false);
-  //   setSendButton("disabled");
-  // };
-
-  // const handlePreviewClick = () => {
-  //   setPreview(true);
-  //   setPreviewChecked(false);
-  //   setBackButton(true);
-  // };
-
-  // hC andhP from Buttons
-
   const handleEdit = () => {
     setPreview(null);
     setPreviewChecked(true);

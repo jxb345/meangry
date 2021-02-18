@@ -43,7 +43,7 @@ html
         transition-duration: 0.3s;
         letter-spacing: .09rem;
       }
-      h3 {
+      h4 {
         color: #646262
       }
       img {
@@ -51,9 +51,24 @@ html
         height: 55px;
         padding-left: 23%;
       }
+      p {
+        padding-left: 1%;
+      }
       .button {
         color: white;
         text-decoration: none;
+      }
+
+      @media (min-width: 500px) {
+        body {
+          padding-left: 22%;
+        }
+        div {
+          width: 60%;
+        }
+        img {
+          padding-left: 20%;
+        }
       }
 
   body
@@ -64,7 +79,7 @@ html
     br
     img(src='/heatMailTitle.png' style='width:135px; height:55px')
     div
-      h3 About
+      h4 About
       p(style="text-align:left;")
         | This tidy, little webapp was conceived and built by...!
         | Thanks to <a href="https://nodemailer.com/about/">Nodemailer</a> for doing the heavy-lifting by providing the email support.  You can support their work <a href="https://nodemailer.com/about/#support-nodemailer">HERE</a>.

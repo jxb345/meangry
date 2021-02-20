@@ -7,59 +7,15 @@ html
       title= subject
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
-    style(type='text/css').
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      button {
-        border-radius: 3px;
-        height: 45px;
-        width: 90px;
-        background-color: #F34B2E;
-        color: white;
-        margin: 0 auto;
-        display: block;
-        border: none;
-        font-weight: 700;
-        font-size: 15px;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-weight: bold;
-        transition-duration: 0.3s;
-        letter-spacing: .09rem;
-      }
-      img {
-        width: 135px;
-        height: 55px;
-      }
-      p {
-        padding-bottom: 4%
-      }
-       .gray-box {
-        margin: auto;
-        display: block;
-        font-family: arial, sans-serif;
-        color: #2F4F4F;
-        font-size: 1em;
-        padding: 10% 3% 1% 3%;
-        width: 80%;
-        height: 25%;
-        background-color: #F5F5F5;
-        border-radius: 4px;
-        text-align: center;
-      }
-      .img-container img {
-        margin: auto;
-        display: block;
-      }
+    style(type='text/css')
+      include pug.css
   body
+    div(class="title")
+      div(class="heatmail-logo")
+        img(src="./heatMailLogo.png" style='height:25px; width:25px')
+      div(class="heatmail-title")
+        div heatMail
     br
-    br
-    br
-    br
-    br
-    div(class="img-container")
-      img(src='/heatMailTitle.png' style='width:135px; height:55px')
     div(class="gray-box")
       p Trust us - do NOT Reply!
       br

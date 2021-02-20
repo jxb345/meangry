@@ -8,39 +8,15 @@ html
       title= subject
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
-    style(type='text/css').
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      body {
-         margin-left: 25%;
-      }
-      div {
-        font-family: arial, sans-serif;
-        color: #2F4F4F;
-        font-size: 17px;
-        font-weight: 500;
-        padding: 4%;
-        padding-top: 13%;
-        width: 50%;
-        height: 37%;
-        background-color: #F5F5F5;
-        border-radius: 4px;
-        text-align: center;
-      }
-      img {
-        width: 135px;
-        height: 55px;
-      }
-
+    style(type='text/css')
+      include pug.css
   body
+    div(class="title")
+      div(class="heatmail-logo")
+        img(src="./heatMailLogo.png" style='height:25px; width:25px')
+      div(class="heatmail-title")
+        div heatMail
     br
-    br
-    br
-    br
-    br
-    img(src='/heatMailTitle.png' style='width:135px; height:55px')
     div
       h3 Thanks for sharing!
 

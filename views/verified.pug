@@ -7,53 +7,15 @@ html
       title= subject
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
-    style(type='text/css').
-      a {
-        color: white;
-        text-decoration: none;
-      }
-      body {
-         margin-left: 25%;
-      }
-      div {
-        font-family: arial, sans-serif;
-        color: #2F4F4F;
-        font-size: 17px;
-        padding: 3%;
-        width: 60%;
-        height: 20%;
-        background-color: #F5F5F5;
-        border-radius: 4px;
-        text-align: center;
-      }
+    style(type='text/css')
+      include pug.css
 
-      button {
-        border-radius: 3px;
-        height: 45px;
-        width: 90px;
-        background-color: #F34B2E;
-        color: white;
-        margin: 0 auto;
-        display: block;
-        border: none;
-        font-weight: 700;
-        font-size: 15px;
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-weight: bold;
-        transition-duration: 0.3s;
-        letter-spacing: .07rem;
-      }
-      img {
-        width: 135px;
-        height: 55px;
-      }
   body
-    br
-    br
-    br
-    br
-    br
-    img(src='/heatMailTitle.png' style='width:135px; height:55px')
+    div(class="title")
+      div(class="heatmail-logo")
+        img(src="./heatMailLogo.png" style='height:25px; width:25px')
+      div(class="heatmail-title")
+        div heatMail
     div
       h3 Thanks! You'll now begin receiving heatMail!
 

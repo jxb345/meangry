@@ -17,10 +17,25 @@ function App() {
   const [backButton, setBackButton] = useState(false);
   const [sendButton, setSendButton] = useState("disabled");
 
+  const handleConfirmationSent = () => {
+    setPreview(null);
+    setPreviewChecked(true);
+    setBody("");
+    setEmailSent(false);
+    setBackButton(false);
+    setSendButton("disabled");
+  };
+
   const handleEdit = () => {
     setPreview(null);
     setPreviewChecked(true);
     setBackButton(false);
+  };
+
+  const handlePreviewClick = () => {
+    setPreview(true);
+    setPreviewChecked(false);
+    setBackButton(true);
   };
 
   const handleSendEmail = () => {
@@ -112,6 +127,7 @@ function App() {
       </div>
       <Buttons
         preview={preview}
+        setPreview={setPreview}
         previewChecked={previewChecked}
         backButton={backButton}
         emailSent={emailSent}
@@ -119,6 +135,13 @@ function App() {
         sendButton={sendButton}
         handleEdit={handleEdit}
         togglePreview={togglePreview}
+        setPreviewChecked={setPreviewChecked}
+        setBody={setBody}
+        setEmailSent={setEmailSent}
+        setBackButton={setBackButton}
+        setSendButton={setSendButton}
+        handleConfirmationSent={handleConfirmationSent}
+        handlePreviewClick={handlePreviewClick}
       />
       {/* {subject === "" && body === "" ? (
         <div></div>

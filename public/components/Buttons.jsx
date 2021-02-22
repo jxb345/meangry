@@ -10,22 +10,9 @@ const Buttons = (props) => {
     previewChecked,
     sendButton,
     togglePreview,
+    handleConfirmationSent,
+    handlePreviewClick
   } = props;
-
-  const handleConfirmationSent = () => {
-    setPreview(null);
-    setPreviewChecked(true);
-    setBody("");
-    setEmailSent(false);
-    setBackButton(false);
-    setSendButton("disabled");
-  };
-
-  const handlePreviewClick = () => {
-    setPreview(true);
-    setPreviewChecked(false);
-    setBackButton(true);
-  };
 
   useEffect (() => {
     console.log('pC', previewChecked)

@@ -127,7 +127,6 @@ function App() {
       </div>
       <Buttons
         preview={preview}
-        setPreview={setPreview}
         previewChecked={previewChecked}
         backButton={backButton}
         emailSent={emailSent}
@@ -136,10 +135,6 @@ function App() {
         handleEdit={handleEdit}
         togglePreview={togglePreview}
         setPreviewChecked={setPreviewChecked}
-        setBody={setBody}
-        setEmailSent={setEmailSent}
-        setBackButton={setBackButton}
-        setSendButton={setSendButton}
         handleConfirmationSent={handleConfirmationSent}
         handlePreviewClick={handlePreviewClick}
       />

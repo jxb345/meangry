@@ -75,15 +75,6 @@ function App() {
   return (
     <div className="grid">
       <Title />
-      {subject === "" && body === "" ? (
-        <div></div>
-      ) : emailSent === false ? (
-        <div className="grid-sidebar-rules">
-          <Sidebar />
-        </div>
-      ) : (
-        <div></div>
-      )}
     { subject === "" && body === "" ? (
       <div className="grid-text">
         {preview === null ? (

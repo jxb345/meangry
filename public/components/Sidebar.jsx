@@ -7,7 +7,9 @@ const Sidebar = () => {
         <img className="error-img" src="./warning-64.png" height="35" width="35" alt=""/>
       </div>
       <div className="rules-listed">
-        NO names, locations, bigoted or violent language.
+        NO names, locations,
+        <br/>
+        bigoted or violent language.
       </div>
     </div>
   );

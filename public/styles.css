@@ -75,7 +75,6 @@ textarea {
 }
 
 .explanation-text {
-  /* background-color: #f7f7f7; */
   border-radius: 4px;
   font-weight: 300;
   font-size: 0.8em;
@@ -238,13 +237,15 @@ textarea {
 }
 
 .rules-listed {
-  /* text-align: left; */
-  font-size: .9em;
-  font-weight: 5  00;
-  font-family: "Courier New", Courier, monospace;
-  line-height: 1.2;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  line-height: 1.7em;
+  font-weight: 300;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* line-height: 1.2; */
   padding-top: 4%;
-  color: #919191;
+  color: #646262;
 }
 
 .rules-title {

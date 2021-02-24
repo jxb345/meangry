@@ -75,6 +75,7 @@ function App() {
   return (
     <div className="grid">
       <Title />
+      {/*  */}
     { subject === "" && body === "" ? (
       <div className="grid-text">
         {preview === null ? (
@@ -87,7 +88,8 @@ function App() {
         ) : (
           <div></div>
         )}
-      </div> )  : emailSent === false ? (
+      </div>
+       )  : emailSent === false ? (
         <div className="grid-sidebar-rules">
           <Sidebar />
         </div>

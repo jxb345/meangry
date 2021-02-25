@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Buttons from "./Buttons.jsx";
 import EmailForm from "./EmailForm.jsx";
 import ExplanationText from "./ExplanationText.jsx";
+import Footer from "./Footer.jsx";
 import Preview from "./Preview.jsx";
 import PreviewExplanationText from "./PreviewExplanationText.jsx";
 import Sidebar from "./Sidebar.jsx";
@@ -140,12 +141,7 @@ function App() {
       ) : (
         <div></div>
       )} */}
-      <div className="grid-contact">
-        <span>&#169;&nbsp;heatMail 2021</span>&nbsp;&nbsp;&nbsp;&nbsp;
-          <a href="mailto:too.angrily@gmail.com">Contact</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/about">About</a>
-      </div>
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 
@@ -6,7 +7,7 @@ const ExplanationText = () => {
   return (
     <div className="title-explanation">
       <div className="you-are-title">
-        You feel{" "}
+        You{" "}
         <img
           className="thought-bubble-you-are"
           src="./bubble.png"

@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 button {
   border-radius: 3px;
   height: 45px;
@@ -111,7 +115,7 @@ textarea {
 
 .grid-body {
   grid-area: form;
-  padding-top: 1%;
+  padding-top: 6%;
 }
 
 .grid-buttons {
@@ -123,6 +127,10 @@ textarea {
   text-align: center;
   color: #919191;
   padding-top: 8%;
+}
+
+.grid-contact a {
+  color: #919191;
 }
 
 .grid-sidebar-rules {
@@ -336,6 +344,13 @@ textarea {
       "sign-up contact";
   }
 
+  .grid-body {
+    padding-top: 3%;
+  }
+
+  .grid-contact {
+    padding-top: 5%;
+  }
   .grid-text {
     margin: 0 6% 0 6%;
   }
@@ -382,6 +397,10 @@ textarea {
       "sign-up buttons ."
       "sign-up contact .";
   }
+  .grid-contact {
+    padding-top: 2%;
+  }
+
   .grid-signup {
     padding-top: 85%;
   }
@@ -417,7 +436,7 @@ textarea {
   }
 
   .you-are-title {
-    font-size: 2.4em;
+    font-size: 2.1em;
   }
 }
 

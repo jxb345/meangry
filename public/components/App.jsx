@@ -132,15 +132,6 @@ function App() {
         handleConfirmationSent={handleConfirmationSent}
         handlePreviewClick={handlePreviewClick}
       />
-      {/* {subject === "" && body === "" ? (
-        <div></div>
-      ) : emailSent === false ? (
-        <div className="grid-sidebar-rules">
-          <Sidebar />
-        </div>
-      ) : (
-        <div></div>
-      )} */}
       <Footer />
     </div>
   );

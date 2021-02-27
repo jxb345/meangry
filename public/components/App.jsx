@@ -7,7 +7,7 @@ import Preview from "./Preview.jsx";
 import PreviewExplanationText from "./PreviewExplanationText.jsx";
 import Sidebar from "./Sidebar.jsx";
 import Signup from "./Signup.jsx";
-import Title from "./Title.jsx"
+import Title from "./Title.jsx";
 
 function App() {
   const [subject, setSubject] = useState("");
@@ -77,9 +77,9 @@ function App() {
     <div className="grid">
       <Title />
       {/*  */}
-    { subject === "" && body === "" ? (
+      {/* { subject === "" && body === "" ? (
       <div className="grid-text">
-        {preview === null ? (
+        { preview === null ? (
           <ExplanationText />
         ) : emailSent === false ? (
           <PreviewExplanationText
@@ -96,7 +96,15 @@ function App() {
         </div>
       ):
       <div>
-      </div> }
+      </div> } */}
+        <div className="grid-text">
+      { subject === "" && body === "" ? (
+          <ExplanationText />
+          ) : (
+            <Sidebar />
+            )
+          }
+          </div>
       <div className="grid-signup">
         <Signup />
       </div>

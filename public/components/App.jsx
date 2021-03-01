@@ -5,7 +5,6 @@ import ExplanationText from "./ExplanationText.jsx";
 import InfoText from "./InfoText.jsx";
 import Footer from "./Footer.jsx";
 import Preview from "./Preview.jsx";
-import Sidebar from "./Sidebar.jsx";
 import Signup from "./Signup.jsx";
 import Title from "./Title.jsx";
 

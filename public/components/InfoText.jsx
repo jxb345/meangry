@@ -14,7 +14,9 @@ const InfoText = (props) => {
   return (
     <div>
       { preview === null ?
-      <Sidebar />
+      <div className="grid-sidebar-rules">
+        <Sidebar />
+      </div>
     :
     <PreviewExplanationText
       handleSendEmail={handleSendEmail}

@@ -124,8 +124,8 @@ textarea {
 
 .grid-sidebar-rules {
   grid-area: rules;
-  border-left: 2px solid #f93b2b;
-  border-right: 2px solid #f93b2b;
+  /* border-left: 6px solid #f93b2b;
+  border-right: 6px solid #f93b2b; */
   margin: 0 auto;
   margin-top: 4%;
   margin-bottom: 3%;
@@ -314,12 +314,20 @@ textarea {
   .grid-contact {
     padding-top: 5%;
   }
-  .grid-text {
-    margin: 0 6% 0 6%;
-  }
 
   .grid-signup {
     padding-top: 200px;
+  }
+
+  .grid-sidebar-rules {
+    width: 55%;
+    height: 50%;
+    border-left: 6px solid #f93b2b;
+    border-right: 6px solid #f93b2b;
+
+  }
+  .grid-text {
+    margin: 0 6% 0 6%;
   }
 
   .heatmail-title {
@@ -363,6 +371,13 @@ textarea {
   .grid-contact {
     padding-top: 2%;
   }
+
+  .grid-sidebar-rules {
+    width: 40%;
+    margin-top: 0;
+    margin-bottom: 4.5%;
+  }
+
 
   .grid-signup {
     padding-top: 85%;

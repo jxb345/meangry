@@ -5,7 +5,6 @@ import ExplanationText from "./ExplanationText.jsx";
 import InfoText from "./InfoText.jsx";
 import Footer from "./Footer.jsx";
 import Preview from "./Preview.jsx";
-import PreviewExplanationText from "./PreviewExplanationText.jsx";
 import Sidebar from "./Sidebar.jsx";
 import Signup from "./Signup.jsx";
 import Title from "./Title.jsx";
@@ -102,7 +101,11 @@ function App() {
       { subject === "" && body === "" ? (
           <ExplanationText />
           ) : (
-            <Sidebar />
+          <InfoText
+            handleSendEmail={handleSendEmail}
+            preview={preview}
+            sendButton={sendButton}
+          />
             )
           }
           </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Buttons from "./Buttons.jsx";
 import EmailForm from "./EmailForm.jsx";
 import ExplanationText from "./ExplanationText.jsx";
+import InfoText from "./InfoText.jsx";
 import Footer from "./Footer.jsx";
 import Preview from "./Preview.jsx";
 import PreviewExplanationText from "./PreviewExplanationText.jsx";

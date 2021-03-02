@@ -7,7 +7,7 @@ const ExplanationText = () => {
   return (
     <div className="title-explanation">
       <div className="you-are-title">
-        you{" "}
+        you&#8202;:{" "}{" "}{" "}{" "}
         <img
           className="thought-bubble-you-are"
           src="./bubble.png"

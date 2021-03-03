@@ -97,7 +97,7 @@ function App() {
       <div>
       </div> } */}
         <div className="grid-text">
-      { subject === "" && body === "" ? (
+      { body === "" ? (
           <ExplanationText />
           ) : (
           <InfoText

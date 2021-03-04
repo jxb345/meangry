@@ -14,8 +14,10 @@ const InfoText = (props) => {
   return (
     <div>
       { preview === null ?
-      <div className="grid-sidebar-rules">
-        <Sidebar />
+      <div className="grid-sidebar-container">
+        <div className="grid-sidebar-rules">
+          <Sidebar />
+        </div>
       </div>
     :
     <PreviewExplanationText

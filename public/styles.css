@@ -285,6 +285,12 @@ textarea {
 
 /* media queries */
 
+@media (min-width: 350px) {
+  .grid-sidebar-rules {
+    margin: 4% auto .75% auto;
+  }
+}
+
 @media (min-width: 500px) {
   .back-button {
     width: 20%;
@@ -328,8 +334,6 @@ textarea {
     border-right: 4px solid #f93b2b;
     margin: 4% auto 2.5% auto;
     /* margin: 4% auto 4.25% auto; */
-
-
   }
   .grid-text {
     margin: 0 6% 0 6%;
@@ -363,12 +367,15 @@ textarea {
   }
   .explanation-text {
     font-size: 0.9em;
+    /* padding: 0 2% 1% 2%; */
+    padding: 0 2% 0 2%;
   }
   .grid {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
       "title .  ."
-      "sign-up text rules"
+      "sign-up text ."
+      /* "sign-up text rules" */
       "sign-up form ."
       "sign-up buttons ."
       "sign-up contact .";
@@ -385,11 +392,11 @@ textarea {
 
   .grid-sidebar-rules {
     width: 40%;
-    height: 130px;
     /* margin-bottom: .25%; */
     /* margin-right: auto;
     margin-left: auto; */
-    margin: 4% auto 2% auto;
+    padding-bottom: 1%;
+    margin: 0 auto 2.25% auto;
   }
 
   .grid-signup {
@@ -404,6 +411,13 @@ textarea {
     padding-left: 14%;
     margin-bottom: 4%;
   }
+
+  .preview-button-container {
+    /* padding: .5% 0 7% 0; */
+    padding: 1% 0 7% 0;
+    margin-top: .5%;
+  }
+
   .signup-button {
     width: 45%;
   }

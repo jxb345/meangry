@@ -7,11 +7,11 @@ const PreviewExplanationText = (props) => {
     <div className="preview-explanation-text-wrapper">
       {/* <div className="preview-title"> */}
       <div className="you-are-title">
-        Preview{" "}
+        preview{" "}
         <img
           // className="thought-bubble-preview"
           className="thought-bubble-you-are"
-          src="./bubble-dg.png"
+          src="./t-bubble-reg.png"
           height="43px"
           width="73px"
           // height="58px"

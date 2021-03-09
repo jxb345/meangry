@@ -25,7 +25,7 @@ const PreviewExplanationText = (props) => {
         {/* below before sending */}
         .
         <br />
-        Follow all IMPORTANT rules.
+        Follow all NO rules.
         <br />
         Click
         <span>

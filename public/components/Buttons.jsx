@@ -47,6 +47,7 @@ const Buttons = (props) => {
             >
               Edit
             </button>
+              &nbsp;&nbsp;
             <button
               className="edit-send-buttons"
               type="button"

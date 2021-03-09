@@ -40,10 +40,10 @@ textarea {
 
 .body-preview {
   font-size: large;
-  margin-top: 2.5%;
-  padding: 2.5% 2% 2% 2%;
+  margin-top: 2%;
+  padding: 2% 2% 2% 2%;
   /* height: 181px; */
-  height: 190px;
+  height: 191px;
   border-radius: 4px;
   background-color: #f7f7f7;
   overflow: auto;
@@ -53,7 +53,7 @@ textarea {
 
 .edit-send-buttons {
   display: inline-block;
-  margin: 4px;
+  /* margin: 4px; */
   width: 35%;
 }
 
@@ -61,7 +61,7 @@ textarea {
   width: 100%;
   text-align: center;
   position: relative;
-  top: -4px;
+  top: -10px;
   margin-bottom: 13%;
 }
 
@@ -297,6 +297,12 @@ textarea {
   .back-button {
     width: 20%;
   }
+  .body-preview {
+    margin-top: .5%;
+    padding: 2% 2% 2% 2%;
+    /* height: 181px; */
+    height: 191px;
+  }
   .button-preview {
     width: 20%;
   }
@@ -305,6 +311,15 @@ textarea {
   }
   .edit-send-buttons {
     width: 20%;
+  }
+
+  .edit-send-buttons-wrapper {
+    /* width: 100%;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    margin-bottom: 13%; */
+    margin-top: 2.75%;
   }
 
   .grid {
@@ -348,6 +363,12 @@ textarea {
   .preview {
     margin-bottom: 3.5%;
   }
+  .subject-preview {
+      padding: 1% 1.5% 2% 2%;
+      margin-bottom: 4.5%;
+  }
+
+
   .preview-button-container {
     padding: .5% 0 7% 0;
   }
@@ -392,8 +413,7 @@ textarea {
   }
 
   .grid-buttons {
-    /* padding: 0 0 .5% 0; */
-    padding: .5% 0 .5% 0;
+    padding: 0 0 .5% 0;
   }
 
   .grid-contact {

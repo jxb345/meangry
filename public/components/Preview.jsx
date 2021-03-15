@@ -2,12 +2,12 @@ import React from "react";
 
 const Preview = (props) => {
 
-  const { subject, body } = props;
+  const { body, emailSent, subject,  } = props;
 
 
   return (
     <div>
-      {!props.emailSent ? (
+      {!emailSent ? (
         <div className="preview">
           <div className="subject-preview">{subject}</div>
           <div className="body-preview">{body}</div>

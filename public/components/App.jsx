@@ -76,31 +76,12 @@ function App() {
     <div className="grid">
       <Title />
       {/*  */}
-      {/* { subject === "" && body === "" ? (
-      <div className="grid-text">
-        { preview === null ? (
-          <ExplanationText />
-        ) : emailSent === false ? (
-          <PreviewExplanationText
-            handleSendEmail={handleSendEmail}
-            sendButton={sendButton}
-            />
-        ) : (
-          <div></div>
-        )}
-      </div>
-       )  : emailSent === false ? (
-        <div className="grid-sidebar-rules">
-          <Sidebar />
-        </div>
-      ):
-      <div>
-      </div> } */}
         <div className="grid-text">
       { body === "" ? (
           <ExplanationText />
           ) : (
           <InfoText
+            emailSent={emailSent}
             handleSendEmail={handleSendEmail}
             preview={preview}
             sendButton={sendButton}

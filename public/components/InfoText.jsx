@@ -4,7 +4,7 @@ import PreviewExplanationText from "./PreviewExplanationText.jsx";
 
 const InfoText = (props) => {
 
-  const { handleSendEmail, preview, sendButton } = props
+  const { emailSent, handleSendEmail, preview, sendButton } = props
 
   useEffect(() => {
     console.log('preview in infotext', preview)
@@ -21,6 +21,7 @@ const InfoText = (props) => {
       </div>
     :
     <PreviewExplanationText
+      emailSent={emailSent}
       handleSendEmail={handleSendEmail}
       sendButton={sendButton}
     />

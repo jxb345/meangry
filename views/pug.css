@@ -63,11 +63,20 @@ p {
 }
 
 @media (min-width: 600px) {
+  p {
+    padding-bottom: 2%
+  }
   .gray-box {
     width: 60%;
     padding: 5% 3% 1% 3%;
   }
-  p {
-    padding-bottom: 2%
+  .heatmail-title {
+    padding: 0.5% 0 1% 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .gray-box {
+    width: 50%;
   }
 }

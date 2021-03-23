@@ -235,7 +235,7 @@ textarea {
 
 .sent-preview {
   padding: 25% 0 10% 0;
-  font-size: 1sem;
+  font-size: 1em;
   color: #646262;
   text-align: center;
   line-height: 2em;
@@ -356,8 +356,14 @@ textarea {
     margin: 0 6% 0 6%;
   }
 
+  .heatmail-logo {
+    vertical-align: middle;
+  }
+
+
   .heatmail-title {
     border-bottom: none;
+    padding-bottom: 0;
   }
 
   .preview {
@@ -375,6 +381,7 @@ textarea {
   .signup-button {
     width: 55%;
   }
+
 
 }
 
@@ -456,6 +463,11 @@ textarea {
     font-size: .9em;
     letter-spacing: 0.05rem;
   }
+
+  .sent-preview {
+    font-size: 1.1em;
+  }
+
 
 
   .subject {

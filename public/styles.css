@@ -296,6 +296,7 @@ textarea {
 @media (min-width: 500px) {
   .back-button {
     width: 20%;
+    margin-bottom: 50%;
   }
   .body-preview {
     margin-top: .5%;
@@ -404,8 +405,17 @@ textarea {
   }
 
   .body-preview {
-    height: 216px;
+    height: 218px;
+    padding: 2.5% 2% 2% 2.25%;
   }
+
+
+  /* .body-preview {
+    margin-top: .5%;
+    padding: 2.75% 2% 2% 2.75%;
+    height: 191px;
+  } */
+
   .button-preview {
     width: 15%;
   }
@@ -481,16 +491,21 @@ textarea {
     font-size: 1.1em;
   }
 
-
-
   .subject {
     width: 70%;
   }
 
   .subject-preview {
-    height: 29px;
     margin-bottom: 4%;
+    height: 15px;
+    padding: 2% 1.5% 2% 2.5%;
   }
+
+  /* .subject-preview {
+    padding: 2.5% 1.5% 2% 3%;
+    margin-bottom: 4.5%;
+    height: 22px;
+} */
 
   textarea {
     width: 73%;

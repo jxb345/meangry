@@ -41,6 +41,8 @@ const send = (to, identifier, subject, body, verifyEmail) => {
         user: process.env.EMAILUSER,
         pass: process.env.PASS,
       },
+      debug: false,
+      logger: false,
     }),
   });
 

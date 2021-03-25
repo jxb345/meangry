@@ -41,9 +41,9 @@ textarea {
 .body-preview {
   font-size: large;
   margin-top: 2%;
-  padding: 2% 2% 2% 2%;
+  padding: 2.75% 2% 2% 3%;
   /* height: 181px; */
-  height: 191px;
+  height: 192px;
   border-radius: 4px;
   background-color: #f7f7f7;
   overflow: auto;
@@ -61,7 +61,7 @@ textarea {
   width: 100%;
   text-align: center;
   position: relative;
-  top: -10px;
+  top: -13px;
   margin-bottom: 13%;
 }
 
@@ -262,11 +262,11 @@ textarea {
 
 .subject-preview {
   font-size: large;
-  padding: 1.5% 1.5% 2% 2%;
+  padding: 3.75% 1.5% 2% 3%;
   border-radius: 4px;
   box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.1);
   background-color: #f7f7f7;
-  height: 30px;
+  height: 25px;
   margin-bottom: 7%;
 }
 

@@ -405,7 +405,7 @@ textarea {
   }
 
   .body-preview {
-    height: 218px;
+    height: 214px;
     padding: 2.5% 2% 2% 2.25%;
   }
 
@@ -497,8 +497,8 @@ textarea {
 
   .subject-preview {
     margin-bottom: 4%;
-    height: 15px;
-    padding: 2% 1.5% 2% 2.5%;
+    height: 23px;
+    padding: 2.5% 1.5% 2% 2.5%;
   }
 
   /* .subject-preview {

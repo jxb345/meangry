@@ -61,6 +61,11 @@ app.post("/feedback", (req, res) => {
   })
 })
 
+app.get("/info", (req, res) => {
+  res.render("info");
+})
+
+
 app.get("/remove/:emailId", (req, res) => {
   const emailIdToRemove = req.params.emailId;
   removeEmailAddress(emailIdToRemove, (identifier) => {

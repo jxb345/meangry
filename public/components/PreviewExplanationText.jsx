@@ -24,8 +24,7 @@ const PreviewExplanationText = (props) => {
           />
         </div>
         <div className="explanation-text">
-          Read your message thoroughly
-          .
+          Read your message thoroughly.
           <br />
           Follow all NO rules.
           <br />

@@ -41,7 +41,7 @@ html
         color: white;
         text-decoration: none;
       }
-      .gray-container {
+      .gray-box {
         margin: auto;
         display: block;
         font-family: arial, sans-serif;
@@ -60,6 +60,27 @@ html
         display: block;
       }
 
+       @media (min-width: 500px) {
+        p {
+          padding-bottom: 2%
+        }
+        textarea {
+          width: 380px;
+          height: 145px;
+        }
+        .gray-box {
+          width: 50%;
+          height: 35%;
+          padding: 2% 3% 1% 3%;
+          padding: 4% 2% 4% 2%;
+
+        }
+        .heatmail-title {
+          padding: 0.5% 0 1% 0;
+        }
+      }
+
+
 
 
 
@@ -71,7 +92,7 @@ html
     br
     div(class="img-container")
       img(src='/heatMailTitle.png' style='width:135px; height:55px')
-    div(class="gray-container")
+    div(class="gray-box")
       h4 About
       p(style="text-align:left;")
         | This tidy, little webapp was conceived and built by...!

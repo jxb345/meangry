@@ -32,11 +32,26 @@ p {
   font-size: 1em;
   padding: 10% 3% 1% 3%;
   width: 80%;
-  height: 25%;
+  height: 35%;
   background-color: #F5F5F5;
   border-radius: 4px;
   text-align: center;
 }
+
+.gray-box-info {
+  margin: auto;
+  display: block;
+  font-family: arial, sans-serif;
+  color: #2F4F4F;
+  font-size: 1em;
+  padding: 10% 3% 1% 3%;
+  width: 80%;
+  height: 55%;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  text-align: left;
+}
+
 .heatmail-title {
   margin: 0;
   color: #646262;
@@ -60,6 +75,10 @@ p {
 .img-container img {
   margin: auto;
   display: block;
+}
+
+.left-justified  {
+  text-align: left;
 }
 
 @media (min-width: 600px) {

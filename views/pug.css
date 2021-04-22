@@ -38,6 +38,20 @@ p {
   text-align: center;
 }
 
+.gray-box-do-not-reply {
+  margin: auto;
+  display: block;
+  font-family: arial, sans-serif;
+  color: #2F4F4F;
+  font-size: 1em;
+  padding: 10% 3% 1% 3%;
+  width: 80%;
+  height: 35%;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  text-align: center;
+}
+
 .gray-box-info {
   margin: auto;
   display: block;
@@ -50,6 +64,35 @@ p {
   background-color: #F5F5F5;
   border-radius: 4px;
   text-align: left;
+}
+
+.gray-box-thanks-feedback {
+  margin: auto;
+  display: block;
+  font-family: arial, sans-serif;
+  color: #2F4F4F;
+  font-size: 1em;
+  padding: 10% 3% 1% 3%;
+  width: 80%;
+  height: 15%;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.gray-box-verify {
+  margin: auto;
+  display: block;
+  font-family: arial, sans-serif;
+  color: #2F4F4F;
+  font-size: 1em;
+  padding: 3% 3% 1% 3%;
+  width: 80%;
+  height: 40%;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .heatmail-title {
@@ -89,6 +132,20 @@ p {
     width: 60%;
     padding: 5% 3% 1% 3%;
   }
+  .gray-box-thanks-feedback {
+    width: 50%;
+    padding: 5% 3% 1% 3%;
+  }
+  .gray-box-do-not-reply {
+    width: 50%;
+    height: 25%;
+    padding: 5% 3% 1% 3%;
+
+  }
+  .gray-box-verify {
+    width: 70%;
+    height: 30%;
+  }
   .heatmail-title {
     padding: 0.5% 0 1% 0;
   }
@@ -97,5 +154,8 @@ p {
 @media (min-width: 800px) {
   .gray-box {
     width: 50%;
+  }
+  .gray-box-verify {
+    width: 60%;
   }
 }

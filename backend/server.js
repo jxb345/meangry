@@ -92,6 +92,7 @@ app.get("/users", (req, res) => {
 
 app.get("/verify/:emailId", (req, res) => {
   const emailIdToVerify = req.params.emailId;
+  console.log('emailtoverify', emailIdToVerify)
   verifyEmailAddress(emailIdToVerify, () => {
     res.render("verified");
   });

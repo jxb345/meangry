@@ -422,6 +422,16 @@ textarea {
   .button-send {
     width: 15%;
   }
+
+  .edit-send-buttons-wrapper {
+    /* width: 100%;
+    text-align: center;
+    position: relative;
+    top: -10px;
+    margin-bottom: 13%; */
+    margin: -1% 0 9.25% 0;
+  }
+
   .explanation-text {
     font-size: 0.9em;
     /* padding: 0 2% 1% 2%; */

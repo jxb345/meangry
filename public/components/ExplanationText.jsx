@@ -10,7 +10,7 @@ const ExplanationText = () => {
         you&#8202;{" "}{" "}{" "}{" "}
         <img
           className="thought-bubble-you-are"
-          src="./t-bubble-reg.png"
+          src="./dark-grey-bubble.png"
           height="43px"
           width="73px"
           // height="58px"

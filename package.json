@@ -24,7 +24,7 @@
     "dotenv": "^8.2.0",
     "email-templates": "^7.0.5",
     "enzyme": "^3.11.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.9.7",
     "nodemailer": "^6.4.6",
     "pm2": "^4.5.6",
